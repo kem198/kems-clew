@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#313539">
+    <title>Works | KeM's Clew | けんころの毛糸玉</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/vender/jquery-3.6.1.min.js"></script>
+    <script src="./js/vender/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/vender/masonry.pkgd.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body id="content">
+    <header id="top">
+        <div class="wrapper">
+            <p id="title"><a href="./index.html">KeM's Clew</a></p>
+            <hr>
+            <p id="catch">けんころの毛糸玉</p>
+        </div>
+    </header>
+    <div class="wrapper">
+        <nav id="breadcrumb">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+        <h1>Works</h1>
+        <div class="main-container">
+            <nav id="side">
+                <section>
+                    <h2>Filter</h2>
+                    <form class="filter-form" id="works-filter">
+                        <section>
+                            <h3>Category</h3>
+                            <ul id="category">
+                                <li class="form-item"><input type="radio" name="filter" id="filter-all" value="all" checked><label for="filter-all"> All</label></li>
+                                <li class="form-item"><input type="radio" name="filter" id="filter-developments" value="developments"><label for="filter-developments"> Developments</label></li>
+                                <li class="form-item"><input type="radio" name="filter" id="filter-illustrations" value="illustrations"><label for="filter-illustrations"> Illustrations</label></li>
+                                <li class="form-item"><input type="radio" name="filter" id="filter-others" value="others"><label for="filter-others"> Others</label></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Tag</h3>
+                            <p>タグ機能は準備中です。</p>
+                            <ul id="tags">
+                                <li>2019</li>
+                                <li>2020</li>
+                                <li>2021</li>
+                                <li>2022</li>
+                                <li>C</li>
+                                <li>Python</li>
+                                <li>Raspberry-Pi</li>
+                                <li>ShellScript</li>
+                                <li>スプラトゥーン</li>
+                                <li>スマブラ</li>
+                                <li>ゼルダの伝説</li>
+                                <li>ファンアート</li>
+                                <li>もだねちゃん</li>
+                                <li>世界樹の迷宮</li>
+                            </ul>
+                        </section>
+                    </form>
+                </section>
+            </nav>
+            <main>
+                <section>
+                    <h2>2022</h2>
+                    <div class="works-wrap">
+                        <ul class="works" id="works">
+                            <!-- masonry でグリッドレイアウトを生成 -->
+                        </ul>
+                        <button class="load-more" id="load-more">more<br><i class="fa-solid fa-caret-down"></i></button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <ul>
+                <li><a href="https://github.com/kenkenpa198"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.pixiv.net/users/7791923"><i class="fa-solid fa-palette"></i> Pixiv</a></li>
+                <li><a href="https://twitter.com/KeM198_tw"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://mstdn.jp/@KeM198"><i class="fa-brands fa-mastodon"></i> Mastodon</a></li>
+            </ul>
+            <p id="copy">&copy; KeM198 (kenkenpa198) 2022</p>
+            <div id="go-top">
+                <a href="#top">
+                    <p><i class="fa-solid fa-caret-up"></i></p>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表示処理の後に読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/338ea6a4d5.js" crossorigin="anonymous"></script>
+    <script></script>
+</body>
+</html>

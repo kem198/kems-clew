@@ -1,0 +1,564 @@
+/* ==================================================
+ * Common
+ * ================================================== */
+:root {
+    /* wrapper */
+    --wrapper-width-default: 1100px;
+    --wrapper-width-small: 720px;
+
+    /* 色 */
+    --color-main: #313539;
+    --color-tag-active: #cfd;
+    --color-tag-deactive: #ddd;
+    --color-text-black: #333;
+    --color-text-white: #fff;
+    --color-text-gray: #777;
+    --color-text-thin: #bbb;
+
+    /* フォント */
+    --font-family-default: 'Noto Sans JP', sans-serif, "Font Awesome 6 Free","Font Awesome 6 Brands";
+    --font-size-default: 17px;
+    --font-size-small: 0.85rem;
+    --font-size-big: 1.2rem;
+    --font-weight-light: 300;
+    --font-weight-default: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* margin と padding */
+
+    /* あしらい */
+    --box-shadow-default: 0 10px 25px 0 rgba(85, 85, 85, 0.3);
+
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    font-size: var(--font-size-default);
+    font-weight: var(--font-weight-default);
+    font-family: var(--font-family-default);
+    color: var(--color-text-black);
+}
+
+body#home {
+    background-position: right;
+    background-attachment: fixed;
+    background-size: contain;
+    background-image: linear-gradient(to left, transparent 0%, transparent 20%, #fff 100%), url(../images/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 820px) {
+    /* Home の背景位置を調整してキービジュアルとして用いる */
+    body#home {
+        background-position: 70%;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
+
+.wrapper {
+    max-width: var(--wrapper-width-default);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+p, li {
+    line-height: 1.4rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+a:link {
+    color: var(--color-text-black);
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:visited {
+    color: var(--color-text-black);
+}
+
+/* iOS でボタン類が青色になってしまう件を防ぐ */
+select, button {
+    color: var(--color-text-black);
+}
+
+/* ==================================================
+ * Header
+ * ================================================== */
+header {
+    background-color: var(--color-main);
+    color: var(--color-text-white);
+    font-size: 1.2em;
+    padding: 16px 0 16px 16px;
+}
+
+header .wrapper {
+    display: contents;
+}
+
+header p {
+    margin: 0;
+    line-height: 1rem;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+}
+
+header a:link {
+    color: var(--color-text-white);
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: 1;
+}
+
+header a:visited {
+    color: var(--color-text-white);
+}
+
+header #title {
+    margin: 0;
+    text-align: left;
+    line-height: 1;
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+header hr {
+    border: 1px solid var(--color-text-white) ;
+    border-bottom: 0;
+    margin: 5px 0;
+}
+
+#content header #title {
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-default);
+}
+
+#content header #catch {
+    display: none;
+}
+
+@media screen and (max-width: 820px) {
+    /* Home へ1画面分の margin を設定しファーストビュー表示領域を作成する */
+    #home header {
+        margin-bottom: 100vh;
+        margin-bottom: 100svh;
+    }
+}
+
+/* ==================================================
+ * スクロールボタン
+ * ================================================== */
+
+ #home #scroll {
+    display: none;  /* メディアクエリが発動しない大きな画面の時は非表示 */
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 2vh;
+    width: auto;
+    text-align: center;
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-light);
+}
+
+#home #scroll p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px; /* スクロールボタンが押しやすいように padding などを設定 */
+}
+
+@media screen and (max-width: 820px) {
+    /* Home へ スクロールボタンを表示する */
+    #home #scroll {
+        display: inline-block;
+    }
+}
+
+/* ==================================================
+ * パンくずリスト
+ * ================================================== */
+nav#breadcrumb {
+    margin: 16px 0;
+    color: var(--color-text-thin);
+}
+
+nav#breadcrumb > ul {
+    padding-left: 0; /* デフォルトの padding を削除 */
+    font-size: 0; /* inline-block の余白を削除 */
+}
+
+nav#breadcrumb > ul > li {
+    display: inline-block;
+    font-size: var(--font-size-small);
+  }
+
+nav#breadcrumb > ul > li:after {
+    content: "/";
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+nav#breadcrumb a {
+    color: var(--color-text-gray);
+    text-decoration: none;
+}
+
+nav#breadcrumb a:hover {
+    color: var(--color-text-gray);
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* ==================================================
+ * コンテンツページ Flexbox レイアウト
+ * ================================================== */
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.main-container > nav#side {
+    width: 320px;
+    min-width: 320px; /* Masonry の fitWidth で可変してしまわないように設定 */
+}
+
+.main-container > main {
+    flex: 1;
+}
+
+@media screen and (max-width: 1035px) {
+    /* Flexbox を解除しサイドメニューとメインコンテンツを1カラムで表示する */
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* width の解除 */
+    .main-container > nav#side {
+        width: auto;
+    }
+
+}
+
+/* ==================================================
+ * コンテンツページ サイドメニュー
+ * ================================================== */
+nav#side {
+    margin-top: 32px;
+    box-shadow: var(--box-shadow-default);
+    border-radius: 8px;
+    background-color: var(--color-text-white);
+}
+
+nav#side h2 {
+    display: block;
+    margin: 0 0 24px;
+    padding: 12px;
+    border-radius: 8px 8px 0 0;
+    background: var(--color-main);
+    color: var(--color-text-white);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+}
+
+nav#side .filter-form {
+    padding: 0 20px 20px;
+}
+
+nav#side .filter-form label {
+    cursor: pointer;
+    user-select: none;
+}
+
+nav#side h3 {
+    /* margin: 24px 0 16px; */
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-black);
+}
+
+ul#category {
+    padding-left: 20px;
+}
+
+ul#category > li {
+    list-style: none;
+}
+
+ul#tags {
+    padding-left: 12px; /* デフォルトの padding を削除 */
+    font-size: 0; /* inline-block の余白を削除 */
+}
+
+ul#tags > li {
+    display: inline-block;
+    margin: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--color-tag-deactive);
+    font-size: var(--font-size-small);
+  }
+
+ul#tags > li:before {
+    content: "#";
+}
+
+/* ==================================================
+ * コンテンツページ メインエリア
+ * ================================================== */
+
+main {
+    width: 100%;
+}
+
+h1 {
+    margin: 16px 0 60px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-black);
+}
+
+main h2 {
+    /* display: inline-block; */
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding-right: 32px;
+    padding-bottom: 2px;
+    width: fit-content;
+    border-bottom: 1px solid var(--color-text-black);
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-black);
+}
+
+main h2 > a:link {
+    color: var(--color-text-black);
+    text-decoration: none;
+}
+
+main h2 > a:visited {
+    color: var(--color-text-black);
+}
+
+/* ==================================================
+ * Works Masonry レイアウト
+ * ================================================== */
+
+#home .works-wrap {
+    width: 55vw; /* 背景に被らないように表示する */
+}
+
+#content .works-wrap {
+    max-width: 748px; /* 最大3列まで表示する */
+    margin: 0 auto;
+}
+
+.works {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#home .works {
+    margin: 0;
+}
+
+@media screen and (max-width: 820px) {
+    #home .works-wrap {
+        width: 100%;
+    }
+
+    #home .works {
+        margin: 0 auto;
+    }
+
+    #content .works-wrap {
+        width: 100%;
+    }
+}
+
+.works-item {
+    margin-top: 16px;
+    margin-bottom: 0;
+    width: 200px;
+    list-style: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.works-item:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* 画像の読み込み中は非表示にする */
+/* 画像の読込完了後、JS 処理で .is-loading が削除され表示される */
+.works-item.is-loading {
+    opacity: 0;
+}
+
+.works-item .caption {
+    display: none;
+}
+
+.works-item img {
+    width: 100%;
+    border-radius: 8px;
+    vertical-align: top; /* a タグでできる隙間を消す */
+    object-fit: cover;
+    filter: drop-shadow(0 10px 20px #bbb);
+    transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
+}
+
+/* Home の4枚目に配置する more  */
+.works-item .item-more {
+    margin: 0;
+    width:100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-weight: var(--font-weight-light);
+    line-height: 200px;
+    filter: drop-shadow(0 10px 20px #bbb);
+    transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
+}
+
+.works-item a {
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+/* 追加読み込みボタン */
+.load-more {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75em 0;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    font-weight: var(--font-weight-light);
+    background: #fff;
+    filter: drop-shadow(0 10px 20px #bbb);
+    transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.load-more a:link {
+    color: var(--color-text-black);
+    text-decoration: underline;
+}
+
+
+.load-more:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+/* ==================================================
+ * clew の説明
+ * ================================================== */
+div#desc-crew {
+    margin-top: 60px;
+    padding: 1rem;
+    width: fit-content;
+    border-left: 6px solid rgb(255, 234, 172);
+    background: rgba(255, 246, 218, 0.7);
+    text-align: left;
+    font-size: var(--font-size-small);
+}
+
+div#desc-crew p:first-child {
+    margin-top: 0;
+}
+
+div#desc-crew p:last-child {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* ==================================================
+ * Footer
+ * ================================================== */
+footer {
+    position: sticky;
+    top: 100vh;
+    margin-top: 40px;
+    padding: 30px 0;
+    text-align: center;
+    background-color: var(--color-main);
+    color: var(--color-text-white);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+}
+
+#home footer {
+    margin-top: 16px;
+}
+
+footer .wrapper {
+    display: contents;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    padding-left: 0; /* デフォルトの padding を削除 */
+    font-size: 0; /* inline-block の余白を削除 */
+}
+
+footer ul > li {
+    display: inline-block;
+    margin: 0 8px 10px;
+    font-size: var(--font-size-small);
+}
+
+footer p#copy {
+    margin: 8px 0 0;
+}
+
+footer #go-top {
+    margin-bottom: 0px;
+    text-align: right;
+    font-size: var(--font-size-big);
+}
+
+footer #go-top p {
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 0;
+}
+
+footer a:link {
+    text-decoration: none;
+    color: var(--color-text-white);
+}
+
+footer a:visited {
+    color: var(--color-text-white);
+}
