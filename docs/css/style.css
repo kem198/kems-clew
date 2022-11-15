@@ -339,7 +339,7 @@ h1 {
 
 main h2 {
     /* display: inline-block; */
-    margin-top: 32px;
+    margin-top: 48px;
     margin-bottom: 24px;
     padding-right: 32px;
     padding-bottom: 2px;
@@ -347,6 +347,12 @@ main h2 {
     border-bottom: 1px solid var(--color-text-black);
     font-size: 1.6rem;
     font-weight: var(--font-weight-black);
+}
+
+/* .works-item { margin-top: 16px; } の打ち消し用 */
+/* 単純に 24px -16px = 8px だと詰まって見えたので 10px で指定している */
+main h2.works-h2 {
+    margin-bottom: 10px;
 }
 
 main h2 > a:link {
