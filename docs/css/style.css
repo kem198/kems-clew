@@ -304,6 +304,23 @@ ul#category > li {
     list-style: none;
 }
 
+ul#category > li label {
+    margin-left: 0.3rem;
+}
+
+ul#category > li .desc {
+    color: var(--color-text-gray);
+    font-size: var(--font-size-small);
+}
+
+ul#category > li .desc:before {
+    content: "/";
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    color: var(--color-text-gray);
+    font-size: var(--font-size-small);
+}
+
 ul#tags {
     padding-left: 12px; /* デフォルトの padding を削除 */
     font-size: 0; /* inline-block の余白を削除 */
