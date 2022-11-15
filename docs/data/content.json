@@ -265,6 +265,15 @@
         "title": "Hello, World!",
         "category": "illustrations",
         "images" : {
+            "thumb": "images/20210710_modane_moda.jpg",
+            "large": "images/20210710_modane_moda.jpg"
+        },
+        "date": "2021-07-10"
+    },
+    {
+        "title": "Hello, World!",
+        "category": "illustrations",
+        "images" : {
             "thumb": "images/20210711_dual_ichigo.jpg",
             "large": "images/20210711_dual_ichigo.jpg"
         },
@@ -413,15 +422,6 @@
             "large": "images/20220108_modane_cur_close.png"
         },
         "date": "2022-01-08"
-    },
-    {
-        "title": "Hello, World!",
-        "category": "illustrations",
-        "images" : {
-            "thumb": "images/20220322_modane_moda.jpg",
-            "large": "images/20220322_modane_moda.jpg"
-        },
-        "date": "2022-03-22"
     },
     {
         "title": "Hello, World!",
