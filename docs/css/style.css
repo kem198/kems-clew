@@ -3,8 +3,7 @@
  * ================================================== */
 :root {
     /* wrapper */
-    --wrapper-width-default: 1100px;
-    --wrapper-width-small: 720px;
+    --wrapper-padding: 16px;
 
     /* 色 */
     --color-main: #313539;
@@ -32,13 +31,35 @@
 
 }
 
+/* wrapper の幅をメディアクエリで定義 */
+/* PC 向け（大）のレイアウト */
+@media (width >= 1120px) {
+    :root {
+        --wrapper-width: 1120px;
+    }
+}
+
+/* PC 向け（小）のレイアウト */
+@media (960px <= width < 1120px) {
+    :root {
+        --wrapper-width: 960px;
+    }
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
+    :root {
+        --wrapper-width: 100vw;
+    }
+}
+
 html {
-    height: 100%;
+    height: 100%; /* タブレット以下向けのレイアウト時に body#home { background-position } を綺麗に表示するために必要 */
     scroll-behavior: smooth;
 }
 
 body {
-    height: 100%;
+    height: 100%; /* タブレット以下向けのレイアウト時に body#home { background-position } を綺麗に表示するために必要 */
     font-size: var(--font-size-default);
     font-weight: var(--font-weight-default);
     font-family: var(--font-family-default);
@@ -53,7 +74,8 @@ body#home {
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 820px) {
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
     /* Home の背景位置を調整してキービジュアルとして用いる */
     body#home {
         background-position: 70%;
@@ -63,11 +85,16 @@ body#home {
 }
 
 .wrapper {
-    max-width: var(--wrapper-width-default);
+    max-width: var(--wrapper-width);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: var(--wrapper-padding);
+    padding-right: var(--wrapper-padding);
+    box-sizing: border-box; /* デフォルト値の content-box だとメディアクエリのブレークポイントと wrapper のサイズがズレるため指定 */
+
+    /* テスト用 */
+    /* border: 1px solid #f00; */
+    /* height: 500px; */
 }
 
 p, li {
@@ -153,7 +180,8 @@ header hr {
     display: none;
 }
 
-@media screen and (max-width: 820px) {
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
     /* Home へ1画面分の margin を設定しファーストビュー表示領域を作成する */
     #home header {
         margin-bottom: 100vh;
@@ -184,7 +212,8 @@ header hr {
     padding: 10px 20px; /* スクロールボタンが押しやすいように padding などを設定 */
 }
 
-@media screen and (max-width: 820px) {
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
     /* Home へ スクロールボタンを表示する */
     #home #scroll {
         display: inline-block;
@@ -246,14 +275,15 @@ nav#breadcrumb a:hover {
     flex: 1;
 }
 
-@media screen and (max-width: 1035px) {
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
     /* Flexbox を解除しサイドメニューとメインコンテンツを1カラムで表示する */
     .main-container {
         flex-direction: column;
         justify-content: center;
     }
 
-    /* width の解除 */
+    /* フィルターメニューの width を解除して横いっぱいに表示 */
     .main-container > nav#side {
         width: auto;
     }
@@ -383,44 +413,58 @@ main h2 > a:visited {
 
 /* ==================================================
  * Works Masonry レイアウト
- * ================================================== */
+ * ==================================================
+ * .works-wrap : Masonry レイアウトを囲んでいる要素。列数の調整などに用いる。
+ * .works      : Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
+ * .works-item : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
 
-#home .works-wrap {
-    width: 55vw; /* 背景に被らないように表示する */
+/* Home ページ以外では .works-wrap を固定幅で設定する。
+ * この設定が無いと4列の状態から3列の幅へ可変させたときに3列に戻らない。 */
+/* PC 向け（大）のレイアウト */
+@media (width >= 1120px) {
+    #content .works-wrap {
+        max-width: 748px; /* 最大3列まで表示する */
+        margin: 0 auto;
+    }
+}
+/* PC 向け（小）のレイアウト */
+@media (960px <= width < 1120px) {
+    #content .works-wrap {
+        max-width: 574px; /* 最大2列まで表示する */
+    }
+}
+/* タブレット・SP 向けのレイアウト */
+@media (width < 960px) {
+    #content .works-wrap {
+        width: 100%; /* 幅いっぱいで表示する */
+    }
 }
 
-#content .works-wrap {
-    max-width: 748px; /* 最大3列まで表示する */
-    margin: 0 auto;
+/* Home ページかつ PC（小・大）の場合、width に制限を設けてカラム落ちさせ、背景が見えるようにする */
+@media (width >= 960px) {
+    #home .works-wrap {
+        width: 55vw;
+    }
 }
 
+/* .works の Masonry レイアウト中央寄せ指定
+ * 左右の margin を auto で指定 & jQuery 側の fitWidth: 'true' 指定で中央ぞろえになる */
 .works {
     margin: 0 auto;
     padding: 0;
 }
 
-#home .works {
-    margin: 0;
-}
-
-@media screen and (max-width: 820px) {
-    #home .works-wrap {
-        width: 100%;
-    }
-
+/* Home ページかつ PC（小・大）の場合、左右の margin auto を解除し左揃えにする */
+@media (width >= 960px) {
     #home .works {
-        margin: 0 auto;
-    }
-
-    #content .works-wrap {
-        width: 100%;
+        margin: 0;
     }
 }
 
 .works-item {
     margin-top: 16px;
     margin-bottom: 0;
-    width: 200px;
+    width: 232px;
     list-style: none;
     border-radius: 8px;
     transition: 0.5s;
@@ -437,10 +481,7 @@ main h2 > a:visited {
     opacity: 0;
 }
 
-.works-item .caption {
-    display: none;
-}
-
+/* アイテムの画像は角丸のカードのような見た目で表示 */
 .works-item img {
     width: 100%;
     border-radius: 8px;
@@ -450,7 +491,7 @@ main h2 > a:visited {
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
 
-/* Home の4枚目に配置する more  */
+/* Home の4枚目に配置する Works ページへの繊維用ボタン  */
 .works-item .item-more {
     margin: 0;
     width:100%;
@@ -459,7 +500,7 @@ main h2 > a:visited {
     background: rgba(255, 255, 255, 0.7);
     text-align: center;
     font-weight: var(--font-weight-light);
-    line-height: 200px;
+    line-height: 232px;
     filter: drop-shadow(0 10px 20px #bbb);
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
@@ -469,6 +510,9 @@ main h2 > a:visited {
     opacity: 1;
 }
 
+.works-item .caption {
+    display: none;
+}
 
 /* 追加読み込みボタン */
 .load-more {
@@ -488,12 +532,10 @@ main h2 > a:visited {
     transition: 0.5s;
 }
 
-
 .load-more a:link {
     color: var(--color-text-black);
     text-decoration: underline;
 }
-
 
 .load-more:hover {
     transform: scale(1.05);

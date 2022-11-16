@@ -13,12 +13,12 @@ $(function () {
         // Home の場合は3つのみを表示するため addItemCount へ3を再代入する
         if ($('#home').length) {
             var addItemCount = 3;
-        } 
+        }
 
         // オプションを設定して masonry を準備
         $container.masonry({
             itemSelector: '.works-item', // 要素のセレクタ
-            columnWidth: 200,            // カラムの幅
+            columnWidth: 232,            // カラムの幅
             gutter: 16,                  // カラム間の左右の隙間
             fitWidth: 'true',            // 親の幅を自動調整して中央揃え
             transitionDuration: 'none'   // デフォルトの transition を削除（CSS と競合するため）
@@ -83,7 +83,7 @@ $(function () {
                         '</a>' +
                     '</div>';
                 elements.push($(itemMore).get(0));
-            } 
+            }
 
             // DOM 要素の配列をコンテナに挿入し Masonry レイアウトを実行
             $container
