@@ -28,26 +28,23 @@
 
     /* あしらい */
     --box-shadow-default: 0 10px 25px 0 rgba(85, 85, 85, 0.3);
-
 }
 
 /* wrapper の幅をメディアクエリで定義 */
 /* PC 向け（大）のレイアウト */
-@media (width >= 1120px) {
+@media (min-width: 1120px) {
     :root {
         --wrapper-width: 1120px;
     }
 }
-
 /* PC 向け（小）のレイアウト */
-@media (960px <= width < 1120px) {
+@media (min-width: 960.1px) and (max-width: 1119.9px) {
     :root {
         --wrapper-width: 960px;
     }
 }
-
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     :root {
         --wrapper-width: 100vw;
     }
@@ -75,7 +72,7 @@ body#home {
 }
 
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     /* Home の背景位置を調整してキービジュアルとして用いる */
     body#home {
         background-position: 70%;
@@ -181,7 +178,7 @@ header hr {
 }
 
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     /* Home へ1画面分の margin を設定しファーストビュー表示領域を作成する */
     #home header {
         margin-bottom: 100vh;
@@ -213,7 +210,7 @@ header hr {
 }
 
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     /* Home へ スクロールボタンを表示する */
     #home #scroll {
         display: inline-block;
@@ -275,7 +272,7 @@ nav#breadcrumb a:hover {
 }
 
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     /* Flexbox を解除しサイドメニューとメインコンテンツを1カラムで表示する */
     .main-container {
         flex-direction: column;
@@ -420,27 +417,27 @@ main h2 > a:visited {
 /* Home ページ以外では .works-wrap を固定幅で設定する。
  * この設定が無いと4列の状態から3列の幅へ可変させたときに3列に戻らない。 */
 /* PC 向け（大）のレイアウト */
-@media (width >= 1120px) {
+@media (min-width: 1120px) {
     #content .works-wrap {
         max-width: 748px; /* 最大3列まで表示する */
         margin: 0 auto;
     }
 }
 /* PC 向け（小）のレイアウト */
-@media (960px <= width < 1120px) {
+@media (min-width: 960.1px) and (max-width: 1119.9px) {
     #content .works-wrap {
         max-width: 574px; /* 最大2列まで表示する */
     }
 }
 /* タブレット・SP 向けのレイアウト */
-@media (width < 960px) {
+@media (max-width: 960px) {
     #content .works-wrap {
         width: 100%; /* 幅いっぱいで表示する */
     }
 }
 
 /* Home ページかつ PC（小・大）の場合、width に制限を設けてカラム落ちさせ、背景が見えるようにする */
-@media (width >= 960px) {
+@media (min-width: 960.1px) {
     #home .works-wrap {
         width: 55vw;
     }
@@ -454,7 +451,7 @@ main h2 > a:visited {
 }
 
 /* Home ページかつ PC（小・大）の場合、左右の margin auto を解除し左揃えにする */
-@media (width >= 960px) {
+@media (min-width: 960.1px) {
     #home .works {
         margin: 0;
     }
