@@ -267,8 +267,7 @@ nav#breadcrumb a:hover {
 }
 
 .main-container > nav#side {
-    width: 320px;
-    min-width: 320px; /* Masonry の fitWidth で可変してしまわないように設定 */
+    width: 328px; /* PC 向け（大）のレイアウトの時に Masonry レイアウト側が 幅ピッタリになるように逆算して設定 */
 }
 
 .main-container > main {
