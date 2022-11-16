@@ -1,13 +1,3 @@
----
-title        : Hello, World!
-category     : others
-created      : 1970-01-01
-last-modified: 2022-11-16
-header-date  : true
-path:
-  - /
----
-
 <!-- omit in toc -->
 # Hello, World!
 
