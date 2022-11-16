@@ -237,8 +237,8 @@ nav#breadcrumb > ul > li {
 
 nav#breadcrumb > ul > li:after {
     content: "/";
-    margin-right: 0.3rem;
-    margin-left: 0.3rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
 }
 
 nav#breadcrumb a {
