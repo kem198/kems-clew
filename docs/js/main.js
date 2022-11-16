@@ -18,7 +18,7 @@ $(function () {
         // オプションを設定して masonry を準備
         $container.masonry({
             itemSelector: '.works-item', // 要素のセレクタ
-            columnWidth: 232,            // カラムの幅
+            columnWidth: 216,            // カラムの幅
             gutter: 16,                  // カラム間の左右の隙間
             fitWidth: 'true',            // 親の幅を自動調整して中央揃え
             transitionDuration: 'none'   // デフォルトの transition を削除（CSS と競合するため）

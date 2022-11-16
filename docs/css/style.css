@@ -264,7 +264,7 @@ nav#breadcrumb a:hover {
 }
 
 .main-container > nav#side {
-    width: 328px; /* PC 向け（大）のレイアウトの時に Masonry レイアウト側が 幅ピッタリになるように逆算して設定 */
+    width: 320px; /* PC 向け（大）のレイアウトの時に Masonry レイアウト側が 幅ピッタリになるように逆算して設定 */
 }
 
 .main-container > main {
@@ -460,7 +460,7 @@ main h2 > a:visited {
 .works-item {
     margin-top: 16px;
     margin-bottom: 0;
-    width: 232px;
+    width: 216px;
     list-style: none;
     border-radius: 8px;
     transition: 0.5s;
@@ -496,7 +496,7 @@ main h2 > a:visited {
     background: rgba(255, 255, 255, 0.7);
     text-align: center;
     font-weight: var(--font-weight-light);
-    line-height: 232px;
+    line-height: 216px;
     filter: drop-shadow(0 10px 20px #bbb);
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
