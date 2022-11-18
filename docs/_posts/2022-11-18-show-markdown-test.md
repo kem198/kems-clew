@@ -1,7 +1,7 @@
 ---
 title: マークダウン記法の表示テスト用ページ
 layout: post
-page-category: content
+page-category: note
 created: 2022-11-18
 updated: 2022-11-18
 ---

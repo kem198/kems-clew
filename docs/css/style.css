@@ -169,12 +169,12 @@ header hr {
     margin: 5px 0;
 }
 
-#content header #title {
+#content header #title, #note header #title {
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-default);
 }
 
-#content header #catch {
+#content header #catch, #note header #catch {
     display: none;
 }
 
