@@ -95,12 +95,7 @@ body#home {
     /* height: 500px; */
 }
 
-p {
-    text-align: justify;
-    word-break: break-all; /* 長い英単語を改行させて直前の和文を伸びなくする */
-}
-
-  p, li {
+p, li {
     line-height: 1.4rem;
 }
 
@@ -214,7 +209,6 @@ header hr {
     display: inline-block;
     margin: 0;
     padding: 10px 20px; /* スクロールボタンが押しやすいように padding などを設定 */
-    text-align: center;
 }
 
 /* タブレット・SP 向けのレイアウト */
@@ -408,6 +402,11 @@ main h2 > a:link {
 
 main h2 > a:visited {
     color: var(--color-text-black);
+}
+
+main p {
+    text-align: justify;
+    word-break: break-all; /* 長い英単語を改行させて直前の和文を伸びなくする */
 }
 
 /* ==================================================
