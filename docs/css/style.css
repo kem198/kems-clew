@@ -95,10 +95,6 @@ body#home {
     /* height: 500px; */
 }
 
-p {
-    text-align: justify;
-}
-
 p, li {
     line-height: 1.4rem;
 }
