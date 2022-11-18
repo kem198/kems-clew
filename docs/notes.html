@@ -1,0 +1,27 @@
+---
+title: Notes
+layout: default
+page-category: content
+---
+
+<div id="notes">
+    <!-- パンくずリスト -->
+    <nav id="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインエリア -->
+    <main>
+        <h1>Notes</h1>
+        <ul class="myposts">
+        {% for post in site.posts %}
+            <li>
+                <span class="postDate">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </main>
+</div>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="post">
+    <main>
+    <!-- パンくずリスト -->
+    <nav id="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/notes">Notes</a></li>
+        </ul>
+    </nav>
+
+    <!-- 作成日・更新日 -->
+    <ul class="timestamp">
+        <li>作成日: {{ page.created }}</li>
+        <li>更新日: {{ page.updated }}</li>
+    </ul>
+
+    <!-- コンテンツ -->
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    </main>
+</div>
