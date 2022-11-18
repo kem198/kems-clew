@@ -95,7 +95,12 @@ body#home {
     /* height: 500px; */
 }
 
-p, li {
+p {
+    text-align: justify;
+    word-break: break-all; /* 長い英単語を改行させて直前の和文を伸びなくする */
+}
+
+  p, li {
     line-height: 1.4rem;
 }
 
