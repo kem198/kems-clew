@@ -297,7 +297,7 @@ nav#breadcrumb a:hover {
  * コンテンツページ サイドメニュー
  * ================================================== */
 nav#side {
-    margin-top: 32px;
+    margin-top: 0;
     box-shadow: var(--box-shadow-default);
     border-radius: 8px;
     background-color: var(--color-text-white);
@@ -381,7 +381,7 @@ main {
 }
 
 h1 {
-    margin: 16px 0 40px;
+    margin: 16px 0 72px;
     text-align: center;
     font-size: 3.5rem;
     font-weight: var(--font-weight-black);
@@ -397,12 +397,6 @@ main h2 {
     border-bottom: 1px solid var(--color-text-black);
     font-size: 1.6rem;
     font-weight: var(--font-weight-black);
-}
-
-/* .works-item { margin-top: 16px; } の打ち消し用 */
-/* 単純に 24px -16px = 8px だと詰まって見えたので 10px で指定している */
-main h2.works-h2 {
-    margin-bottom: 10px;
 }
 
 main h2 > a:link {
@@ -465,8 +459,8 @@ main h2 > a:visited {
 }
 
 .works-item {
-    margin-top: 16px;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
     width: 216px;
     list-style: none;
     border-radius: 8px;
