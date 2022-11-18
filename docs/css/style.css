@@ -95,6 +95,10 @@ body#home {
     /* height: 500px; */
 }
 
+p {
+    text-align: justify;
+}
+
 p, li {
     line-height: 1.4rem;
 }
@@ -222,7 +226,7 @@ header hr {
 /* ==================================================
  * パンくずリスト
  * ================================================== */
- nav#breadcrumb {
+nav#breadcrumb {
     margin: 16px 0;
     color: var(--color-text-thin);
 }
@@ -234,6 +238,7 @@ nav#breadcrumb > ul {
 
 nav#breadcrumb > ul > li {
     display: inline-block;
+    margin-bottom: 0;
     font-size: var(--font-size-small);
   }
 
@@ -570,14 +575,40 @@ div#desc-crew p:last-child {
 #notes {
     margin-left: auto;
     margin-right: auto;
-    max-width: 756px;
+    max-width: 824px;
+}
+
+body#note {
+    background: #f5f6f6;
 }
 
 #note main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 756px;
+    max-width: 824px;
 }
+
+#note .note-bg {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* SP 向けのレイアウト */
+@media (max-width: 414px) {
+
+    /* SP サイズではノート表示をオフにする */
+    body#note {
+        background: none;
+    }
+
+    #note .note-bg {
+        padding: 0;
+        background: none;
+        border-radius: 0;
+    }
+}
+
 
 #note h1 {
     text-align: left;
@@ -592,6 +623,8 @@ div#desc-crew p:last-child {
 }
 
 #note .timestamp {
+    margin-top: 0;
+    margin-bottom: 2rem;
     list-style: none;
 }
 
