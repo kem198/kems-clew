@@ -222,7 +222,7 @@ header hr {
 /* ==================================================
  * パンくずリスト
  * ================================================== */
-nav#breadcrumb {
+ nav#breadcrumb {
     margin: 16px 0;
     color: var(--color-text-thin);
 }
@@ -573,29 +573,29 @@ div#desc-crew p:last-child {
     max-width: 756px;
 }
 
-#post main {
+#note main {
     margin-left: auto;
     margin-right: auto;
     max-width: 756px;
 }
 
-#post h1 {
+#note h1 {
     text-align: left;
     font-size: 2.4rem;
 }
 
-#post h2 {
+#note h2 {
     display: block;
     width: auto;
     border-bottom: 1px solid #aaa;
     font-weight: var(--font-weight-bold);
 }
 
-#post .timestamp {
+#note .timestamp {
     list-style: none;
 }
 
-#post .timestamp li {
+#note .timestamp li {
     text-align: right;
     font-size: var(--font-size-small);
 }
