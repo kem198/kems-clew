@@ -214,6 +214,7 @@ header hr {
     display: inline-block;
     margin: 0;
     padding: 10px 20px; /* スクロールボタンが押しやすいように padding などを設定 */
+    text-align: center;
 }
 
 /* タブレット・SP 向けのレイアウト */
