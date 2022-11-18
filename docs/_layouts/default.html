@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#313539">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/zenburn.css" | relative_url }}">
+    <script src="./js/vender/jquery-3.6.1.min.js"></script>
+    <script src="./js/vender/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/vender/masonry.pkgd.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body id="{{ page.page-category }}">
+    <header id="top">
+        <div class="wrapper">
+            <p id="title"><a href="/">KeM's Clew</a></p>
+            <hr>
+            <p id="catch">けんころの毛糸玉</p>
+        </div>
+    </header>
+    <div id="scroll">
+        <a href="#scroll-goal">
+            <p>Scroll<br><i class="fa-solid fa-caret-down"></i></p>
+        </a>
+    </div>
+    <div class="wrapper">
+        {{ content }}
+    </div>
+    <footer>
+        <div class="wrapper">
+            <ul>
+                <li><a href="https://github.com/kenkenpa198"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.pixiv.net/users/7791923"><i class="fa-solid fa-palette"></i> Pixiv</a></li>
+                <li><a href="https://twitter.com/KeM198_tw"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://mstdn.jp/@KeM198"><i class="fa-brands fa-mastodon"></i> Mastodon</a></li>
+            </ul>
+            <p id="copy">&copy; KeM198 (kenkenpa198) 2022</p>
+            <div id="go-top">
+                <a href="#top">
+                    <p><i class="fa-solid fa-caret-up"></i></p>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表示処理の後に読み込み -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/338ea6a4d5.js" crossorigin="anonymous"></script>
+</body>
+</html>
