@@ -417,32 +417,36 @@ main p {
  * .works      : Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
  * .works-item : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
 
-/* Home ページ以外では .works-wrap を固定幅で設定する。
+/* .works-wrap を固定幅で設定する。
  * この設定が無いと4列の状態から3列の幅へ可変させたときに3列に戻らない。 */
 /* PC 向け（大）のレイアウト */
 @media (min-width: 1120px) {
+    /* 3列・中央寄せで表示する */
     #content .works-wrap {
-        max-width: 748px; /* 最大3列まで表示する */
+        width: 680px;
         margin: 0 auto;
     }
-}
-/* PC 向け（小）のレイアウト */
-@media (min-width: 960.1px) and (max-width: 1119.9px) {
-    #content .works-wrap {
-        max-width: 574px; /* 最大2列まで表示する */
-    }
-}
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    #content .works-wrap {
-        width: 100%; /* 幅いっぱいで表示する */
+    /* Home では4列まで・中央寄せを解除して背景を見せる */
+    #home .works-wrap {
+        width: 55vw;
+        margin: 0;
     }
 }
 
-/* Home ページかつ PC（小・大）の場合、width に制限を設けてカラム落ちさせ、背景が見えるようにする */
-@media (min-width: 960.1px) {
-    #home .works-wrap {
-        width: 55vw;
+/* PC 向け（小）のレイアウト */
+@media (min-width: 960.1px) and (max-width: 1119.9px) {
+    /* 2列・左寄せで表示する */
+    .works-wrap {
+        width: 448px; 
+    }
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    /* 最大3列・中央寄せで表示する */
+    .works-wrap {
+        max-width: 680px;
+        margin: 0 auto;
     }
 }
 
@@ -504,11 +508,6 @@ main p {
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
 
-.works-item a {
-    text-decoration: none;
-    opacity: 1;
-}
-
 .works-item .caption {
     display: none;
 }
@@ -516,11 +515,11 @@ main p {
 /* 追加読み込みボタン */
 .load-more {
     display: block;
-    margin-top: 30px;
+    margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
     padding: 0.75em 0;
-    width: 70%;
+    width: 80%;
     border: none;
     border-radius: 8px;
     font-weight: var(--font-weight-light);
@@ -535,14 +534,19 @@ main p {
     opacity: 0;
 }
 
-.load-more a:link {
-    color: var(--color-text-black);
-    text-decoration: underline;
-}
-
 .load-more:hover {
     transform: scale(1.05);
     opacity: 0.7;
+}
+
+.works-wrap a {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.works-wrap a:link {
+    color: var(--color-text-black);
+    text-decoration: none;
 }
 
 /* ==================================================
@@ -664,7 +668,7 @@ code.language-plaintext {
 footer {
     position: sticky;
     top: 100vh;
-    margin-top: 40px;
+    margin-top: 72px;
     padding: 30px 0;
     text-align: center;
     background-color: var(--color-main);
