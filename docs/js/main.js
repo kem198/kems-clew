@@ -100,7 +100,7 @@ $(function () {
                 });
 
             // アイテムのリンクへ Colorbox を設定
-            $container.find('a').colorbox({
+            $container.find('a').not('.item-more a').colorbox({
                 maxWidth: '90%',
                 maxHeight: '90%',
                 opacity: '0.8',     // 背景の透明度
@@ -110,11 +110,6 @@ $(function () {
                     return $(this).find('.inner').html();
                 }
             })
-
-            // Home の場合は配列最後の more から colorbox を解除する
-            if ($('#home').length) {
-                $container.find('.item-more a').colorbox.remove();
-            }
 
             // 追加済みアイテム数の更新
             added += slicedData.length;
