@@ -386,7 +386,7 @@ h1 {
 
 main h2 {
     /* display: inline-block; */
-    margin-top: 48px;
+    margin-top: 32px;
     margin-bottom: 24px;
     padding-right: 1.5rem;
     padding-bottom: 0.3rem;
@@ -550,29 +550,6 @@ main p {
 }
 
 /* ==================================================
- * clew の説明
- * ================================================== */
-div#desc-crew {
-    margin-top: 60px;
-    padding: 1rem;
-    width: fit-content;
-    border-left: 6px solid rgb(255, 234, 172);
-    background: rgba(255, 246, 218, 0.7);
-    text-align: left;
-    font-size: var(--font-size-small);
-}
-
-div#desc-crew p:first-child {
-    margin-top: 0;
-}
-
-div#desc-crew p:last-child {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    text-align: right;
-}
-
-/* ==================================================
  * Note
  * ================================================== */
 
@@ -638,6 +615,19 @@ body#note {
     font-size: var(--font-size-small);
 }
 
+/* 引用 */
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em 0 1em 1em;
+    border-left: 4px solid #dfe0e0 ;
+    color: rgba(0,0,0,.6);
+}
+
+blockquote p {
+    margin: 0;
+}
+
 /* コードブロック */
 pre {
     padding: 1rem;
@@ -658,9 +648,7 @@ code.language-plaintext {
     border-radius: 4px;
     padding: 0.1rem 0.4rem;
     overflow-wrap: break-word;
-
 }
-
 
 /* ==================================================
  * Footer
@@ -675,10 +663,6 @@ footer {
     color: var(--color-text-white);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-light);
-}
-
-#home footer {
-    margin-top: 16px;
 }
 
 footer .wrapper {
