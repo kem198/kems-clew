@@ -65,7 +65,7 @@ $(function () {
                                 '<span class="inner">' +
                                     '<b class="title">' + item.title + '</b>' +
                                     '<time class="date" datatime="' + item.date + '">' +
-                                        item.date.replace(/-0?/g, '/') + // 正規表現で -0 または - を / へ置換 
+                                        item.date +
                                     '</time>' +
                                 '</span>' +
                             '</span>' +
