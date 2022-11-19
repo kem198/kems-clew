@@ -150,6 +150,10 @@ $(function () {
             addItems(true);
         }
 
+        // 画像をクリックしても閉じる
+        $('#colorbox').on('click', function () {
+            $.colorbox.close();
+        })
     });
 
 });
