@@ -239,3 +239,8 @@
 #colorbox .title {
     margin-right: 0.5rem;
 }
+
+/* Colorbox の画像にホバーしても指にする（JS 側でどこをクリックしても閉じるように制御） */
+#colorbox {
+    cursor: pointer;
+}
