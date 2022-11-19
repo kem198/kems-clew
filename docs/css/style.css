@@ -621,6 +621,7 @@ body#note {
 #note .timestamp {
     margin-top: 0;
     margin-bottom: 2rem;
+    color: var(--color-text-gray);
     list-style: none;
 }
 
