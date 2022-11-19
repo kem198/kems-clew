@@ -77,9 +77,9 @@ $(function () {
             // Home の場合は配列の最後に more ボタン を挿入する
             if ($('#home').length) {
                 var itemMore =
-                    '<div class="works-item">' +
+                    '<div class="works-item item-more">' +
                         '<a href="./works.html">' +
-                            '<p class="item-more">more <i class="fa-solid fa-caret-right"></i></p>' +
+                            '<p>more <i class="fa-solid fa-caret-right"></i></p>' +
                         '</a>' +
                     '</div>';
                 elements.push($(itemMore).get(0));
@@ -110,6 +110,11 @@ $(function () {
                     return $(this).find('.inner').html();
                 }
             })
+
+            // Home の場合は配列最後の more から colorbox を解除する
+            if ($('#home').length) {
+                $container.find('.item-more a').colorbox.remove();
+            }
 
             // 追加済みアイテム数の更新
             added += slicedData.length;

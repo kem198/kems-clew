@@ -490,8 +490,8 @@ main p {
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
 
-/* Home の4枚目に配置する Works ページへの繊維用ボタン  */
-.works-item .item-more {
+/* Home の4枚目に配置する Works ページへの遷移用ボタン  */
+.item-more p {
     margin: 0;
     width:100%;
     height: 100%;
