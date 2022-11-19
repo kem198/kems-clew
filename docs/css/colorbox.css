@@ -227,10 +227,10 @@
     font-size: 0.9rem;
 }
 
-/* 上側に設定されていた margin を下側へ再設定 */
+/* 上側に設定されていた margin を上下に再設定 */
 /* タイトルを左下に配置するため */
 #cboxContent {
-    margin-top: 0;
+    margin-top: 2rem;
     margin-bottom: 2.5rem;
     background: #000;
 }
