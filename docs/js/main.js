@@ -65,7 +65,7 @@ $(function () {
                                 '<span class="inner">' +
                                     '<b class="title">' + item.title + '</b>' +
                                     '<time class="date" datatime="' + item.date + '">' +
-                                        item.date.replace(/-0?/g, '/') + // 正規表現で -0 または - を / へ置換 
+                                        item.date +
                                     '</time>' +
                                 '</span>' +
                             '</span>' +
@@ -98,6 +98,18 @@ $(function () {
                         $container.masonry();
                     }
                 });
+
+            // アイテムのリンクへ Colorbox を設定
+            $container.find('a').colorbox({
+                maxWidth: '90%',
+                maxHeight: '90%',
+                opacity: '0.8',     // 背景の透明度
+                returnFocus: false, // モーダルを閉じたときにそのモーダルのトリガーとなったリンクにフォーカスを戻さない  True の場合 iOS Safari だと青い選択が表示されるため
+                reposition: false,  // ウインドウがリサイズされたときにモーダルの位置を変更しない True だと iOS で拡大時にクラッシュするため
+                title: function () {
+                    return $(this).find('.inner').html();
+                }
+            })
 
             // 追加済みアイテム数の更新
             added += slicedData.length;
