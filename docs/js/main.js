@@ -89,8 +89,9 @@ $(function () {
             $container
                 .append(elements)
                 .imagesLoaded(function () {
-                    $(elements).removeClass('is-loading');
-                    $container.masonry('appended', elements);
+                    $('.load-more').removeClass('is-loading'); // ロードボタンを表示する
+                    $(elements).removeClass('is-loading');     // DOM 要素を表示する
+                    $container.masonry('appended', elements);  // masonry へ DOM 要素の配列を渡して実行
 
                     // フィルタリング時は再配置
                     if (filter) {

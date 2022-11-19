@@ -531,6 +531,10 @@ main p {
     transition: 0.5s;
 }
 
+.load-more.is-loading {
+    opacity: 0;
+}
+
 .load-more a:link {
     color: var(--color-text-black);
     text-decoration: underline;
