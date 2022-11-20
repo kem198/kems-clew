@@ -1,6 +1,11 @@
 $(function () {
+
+    /* ==================================================
+     * Works Masonry レイアウト
+     * ================================================== */
     $('#works').each(function () {
 
+        // 変数・配列の宣言
         var $container = $(this),
             $loadMoreButton = $('#load-more'), // 追加ボタン
             $filter = $('#works-filter'),     // フィルタリングのフォーム
@@ -9,8 +14,7 @@ $(function () {
             allData = [],                     // すべての JSON データ
             filteredData = [];                // フィルタリングされた JSON データ
 
-
-        // Home の場合は3つのみを表示するため addItemCount へ3を再代入する
+        // Home の場合は3つのみを表示するため addItemCount へ 3 を再代入する
         if ($('#home').length) {
             var addItemCount = 3;
         }
@@ -23,31 +27,6 @@ $(function () {
             fitWidth: 'true',            // 親の幅を自動調整して中央揃え
             transitionDuration: 'none'   // デフォルトの transition を削除（CSS と競合するため）
         });
-
-        // JSON を取得し initWorks 関数を実行
-        $.getJSON('./data/content.json', initWorks);
-
-        // Works ギャラリーを初期化する関数
-        function initWorks (data) {
-
-            // 取得した JSON データを格納
-            allData = data;
-
-            // 新しい順（降順）で表示するため配列を逆順にする
-            allData.reverse();
-
-            // 最初の状態ではフィルタリングせずそのまま全データを渡す
-            filteredData = allData;
-
-            // 最初のアイテム群を表示
-            addItems();
-
-            // 追加ボタンがクリックされたら追加で表示
-            $loadMoreButton.on('click', addItems);
-
-            // フィルターのラジオボタンが変更されたらフィルタリングを実行
-            $filter.on('change', 'input[type="radio"]', filterItems);
-        }
 
         // アイテムを生成しドキュメントに挿入する関数
         function addItems (filter) {
@@ -111,6 +90,11 @@ $(function () {
                 }
             })
 
+            // Colorbpx の画像をクリックしても閉じる
+            $('#colorbox').on('click', function () {
+                $.colorbox.close();
+            })
+
             // 追加済みアイテム数の更新
             added += slicedData.length;
 
@@ -150,10 +134,30 @@ $(function () {
             addItems(true);
         }
 
-        // 画像をクリックしても閉じる
-        $('#colorbox').on('click', function () {
-            $.colorbox.close();
-        })
+        // Works ギャラリーを初期化する関数
+        function initWorks (data) {
+
+            // 取得した JSON データを格納
+            allData = data;
+
+            // 新しい順（降順）で表示するため配列を逆順にする
+            allData.reverse();
+
+            // 最初の状態ではフィルタリングせずそのまま全データを渡す
+            filteredData = allData;
+
+            // 最初のアイテム群を表示
+            addItems();
+
+            // 追加ボタンがクリックされたら追加で表示
+            $loadMoreButton.on('click', addItems);
+
+            // フィルターのラジオボタンが変更されたらフィルタリングを実行
+            $filter.on('change', 'input[type="radio"]', filterItems);
+        }
+
+        // JSON を取得し initWorks 関数を実行
+        $.getJSON('./data/content.json', initWorks);
     });
 
 });
