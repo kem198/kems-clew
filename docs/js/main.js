@@ -57,7 +57,7 @@ $(function () {
             // Home の場合は配列の最後に more ボタン を挿入する
             if ($('#home').length) {
                 var itemMore =
-                    '<div class="works-item item-more">' +
+                    '<div id="home-more" class="works-item">' +
                         '<a href="./works.html">' +
                             '<p>more <i class="fa-solid fa-caret-right"></i></p>' +
                         '</a>' +
@@ -69,7 +69,7 @@ $(function () {
             $container
                 .append(elements)
                 .imagesLoaded(function () {
-                    $('.load-more').removeClass('is-loading'); // ロードボタンを表示する
+                    $('#load-more').removeClass('is-loading'); // ロードボタンを表示する
                     $(elements).removeClass('is-loading');     // DOM 要素を表示する
                     $container.masonry('appended', elements);  // masonry へ DOM 要素の配列を渡して実行
 
@@ -80,14 +80,14 @@ $(function () {
                 });
 
             // アイテムのリンクへ Colorbox を設定
-            $container.find('a').not('.item-more a').colorbox({
+            $container.find('a').not('#home-more a').colorbox({
                 maxWidth: '90%',
                 maxHeight: '90%',
                 opacity: '0.8',     // 背景の透明度
                 returnFocus: false, // モーダルを閉じたときにそのモーダルのトリガーとなったリンクにフォーカスを戻さない  True の場合 iOS Safari だと青い選択が表示されるため
                 reposition: false,  // ウインドウがリサイズされたときにモーダルの位置を変更しない True だと iOS で拡大時にクラッシュするため
                 title: function () {
-                    return $(this).find('.inner').html();
+                    return $(this).children('.inner').html();
                 }
             })
 
@@ -207,7 +207,7 @@ $(function () {
 
             // フィルターのタグがクリックされたら選択状態にする
             $('label').on('click', function () {
-                var $selectedTag = $(this).find('.tag')
+                var $selectedTag = $(this).children('.tag')
                 $selectedTag.addClass('tag-selected');
                 $('.tag').not($selectedTag).removeClass('tag-selected'); // 選択されたタグ以外は非選択状態にする
             });

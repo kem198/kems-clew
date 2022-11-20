@@ -529,7 +529,7 @@ main p {
 }
 
 /* Home の4枚目に配置する Works ページへの遷移用ボタン  */
-.item-more p {
+#home-more p {
     margin: 0;
     width:100%;
     height: 100%;
