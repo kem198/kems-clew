@@ -325,6 +325,15 @@ nav#side .filter-form label:hover {
     opacity: 0.7;
 }
 
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    /* タブレット・SP ではホバー時の透明化を解除する */
+    /* ホバーで色が薄くなった状態が持続してしまうため */
+    nav#side .filter-form label:hover {
+        opacity: 1;
+    }
+}
+
 nav#side h3 {
     /* margin: 24px 0 16px; */
     font-size: 1.2rem;
