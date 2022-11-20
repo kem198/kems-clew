@@ -374,6 +374,11 @@ ul#tags input {
     display: none;
 }
 
+/* タブレット・SP 端末でタップ時のグレー表示をしない */
+ul#tags label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 li.tag {
     display: inline-block;
     margin: 6px;
