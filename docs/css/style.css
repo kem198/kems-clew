@@ -550,9 +550,10 @@ main p {
 }
 
 /* ==================================================
- * Note
+ * Note / マークダウン
  * ================================================== */
 
+/* 背景・全体のあしらい */
 #notes {
     margin-left: auto;
     margin-right: auto;
@@ -590,19 +591,7 @@ body#note {
     }
 }
 
-
-#note h1 {
-    text-align: left;
-    font-size: 2.4rem;
-}
-
-#note h2 {
-    display: block;
-    width: auto;
-    border-bottom: 1px solid #aaa;
-    font-weight: var(--font-weight-bold);
-}
-
+/* タイムスタンプ */
 #note .timestamp {
     margin-top: 0;
     margin-bottom: 2rem;
@@ -615,8 +604,26 @@ body#note {
     font-size: var(--font-size-small);
 }
 
+/* 見出し */
+#note h1 {
+    text-align: left;
+    font-size: 2.4rem;
+}
+
+#note h2 {
+    display: block;
+    width: auto;
+    border-bottom: 1px solid #aaa;
+    font-weight: var(--font-weight-bold);
+}
+
+/* 画像の埋め込み */
+#note img {
+    max-width: 100%;
+}
+
 /* 引用 */
-blockquote {
+#note blockquote {
     margin-left: 0;
     margin-right: 0;
     padding: 1em 0 1em 1em;
@@ -624,12 +631,12 @@ blockquote {
     color: rgba(0,0,0,.6);
 }
 
-blockquote p {
+#note blockquote p {
     margin: 0;
 }
 
-/* コードブロック */
-pre {
+/* コードブロック・コードスパン */
+#note pre {
     padding: 1rem;
     border-radius: 8px;
     color: #fff;
@@ -637,13 +644,12 @@ pre {
     overflow: auto;
 }
 
-code {
+#note code {
     font-family: var(--font-family-mono);
     font-size: var(--font-size-small);
 }
 
-/* コードスパン */
-code.language-plaintext {
+#note code.language-plaintext {
     background: rgba(0,0,0,.08);
     border-radius: 4px;
     padding: 0.1rem 0.4rem;
