@@ -622,6 +622,36 @@ body#note {
     max-width: 100%;
 }
 
+/* テーブル */
+#note table {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    border-color: #333;
+}
+
+/* SP 向けのレイアウト */
+@media (max-width: 414px) {
+
+    /* SP サイズではスクロール可能にする */
+    #note table {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+}
+
+#note table th,
+#note table td {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ccc;
+}
+
+#note table tr:nth-child(2n) {
+    background: #eee;
+}
+
 /* 引用 */
 #note blockquote {
     margin-left: 0;
