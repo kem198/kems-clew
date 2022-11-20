@@ -12,6 +12,7 @@ $(function () {
             addItemCount = 16,                // 一度に表示するアイテム数
             added = 0,                        // 表示済みのアイテム数
             allData = [],                     // すべての JSON データ
+            tags = [],                        // JSON から取得したタグの配列
             filteredData = [];                // フィルタリングされた JSON データ
 
         // Home の場合は3つのみを表示するため addItemCount へ 3 を再代入する
@@ -19,7 +20,7 @@ $(function () {
             var addItemCount = 3;
         }
 
-        // オプションを設定して masonry を準備
+        // オプションを設定して Masonry を準備
         $container.masonry({
             itemSelector: '.works-item', // 要素のセレクタ
             columnWidth: 216,            // カラムの幅
@@ -106,6 +107,33 @@ $(function () {
             }
         }
 
+        // タグを JSON から取得してサイドメニューへ表示する関数
+        function appendTags (data) {
+
+            // 取得した JSON 内のタグ情報を二次元配列として格納
+            var multiTags = [];
+            for (var i in data) {
+                if (data[i].tags) {
+                    multiTags.push(data[i].tags);
+                }
+            }
+
+            // 一次元に変換したタグ配列から重複を排除した Set オブジェクトを作成
+            var setTags = new Set(multiTags.flat());
+            console.log(setTags);
+
+            // Set オブジェクトを昇順の配列として代入
+            tags = Array.from(setTags).sort();
+            console.log(tags);
+
+            // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
+            $.each(tags, function (i, item) {
+                var tagHTML = '<li class="tag">' + item + '</li>';
+                console.log(tagHTML);
+                $('#tags').append(tagHTML);
+            });
+        }
+
         // アイテムをフィルタリングする関数
         function filterItems () {
             var key = $(this).val(), // チェックされたラジオボタンの value
@@ -155,6 +183,9 @@ $(function () {
             // フィルターのラジオボタンが変更されたらフィルタリングを実行
             $filter.on('change', 'input[type="radio"]', filterItems);
         }
+
+        // JSON を取得し appendTags 関数を実行
+        $.getJSON('./data/content.json', appendTags);
 
         // JSON を取得し initWorks 関数を実行
         $.getJSON('./data/content.json', initWorks);
