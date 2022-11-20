@@ -9,7 +9,7 @@ $(function () {
         var $container = $(this),
             $loadMoreButton = $('#load-more'), // 追加ボタン
             $filter = $('#works-filter'),     // フィルタリングのフォーム
-            addItemCount = 16,                // 一度に表示するアイテム数
+            addItemCount = 12,                // 一度に表示するアイテム数
             added = 0,                        // 表示済みのアイテム数
             allData = [],                     // すべての JSON データ
             tags = [],                        // JSON から取得したタグの配列
@@ -120,16 +120,22 @@ $(function () {
 
             // 一次元に変換したタグ配列から重複を排除した Set オブジェクトを作成
             var setTags = new Set(multiTags.flat());
-            console.log(setTags);
+            // console.log(setTags);
 
             // Set オブジェクトを昇順の配列として代入
             tags = Array.from(setTags).sort();
-            console.log(tags);
+            // console.log(tags);
 
             // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
             $.each(tags, function (i, item) {
-                var tagHTML = '<li class="tag">' + item + '</li>';
-                console.log(tagHTML);
+                var tagHTML =
+                    '<label for=' + item + '>' +
+                        '<li class="tag">' +
+                            '<input type="radio" name="filter" id="' + item + '" value="' + item + '">' +
+                            item +
+                        '</li>' +
+                    '</label>';
+                // console.log(tagHTML);
                 $('#tags').append(tagHTML);
             });
         }
@@ -148,14 +154,30 @@ $(function () {
             filteredData = [];
             added = 0;
 
-            if (key === 'all') {
-                // all がチェックされた場合、すべての JSON データを格納
+            if (key === 'All') {
+                // All がチェックされた場合、すべての JSON データを格納
                 filteredData = allData;
-            } else {
-                // all 以外の場合、キーと一致するデータを抽出
+
+                // works-h2 を非表示
+                $('#works-h2').removeClass('filter-selected');
+
+            } else if (["Developments", "Illustrations", "Others"].includes(key)) {
+                // All 以外のカテゴリの場合、キーと一致するデータを抽出
                 filteredData = $.grep(allData, function (item) {
                     return item.category === key;
                 });
+
+                // works-h2 を表示
+                $('#works-h2').text(key).addClass('filter-selected');
+
+            } else {
+                // All, カテゴリ以外の場合、キーを item.tags に含むデータを抽出
+                filteredData = $.grep(allData, function (item) {
+                    return item.tags.includes(key);
+                });
+
+                // works-h2 を表示
+                $('#works-h2').text('#' + key).addClass('filter-selected');
             }
 
             // アイテムを追加
@@ -182,6 +204,13 @@ $(function () {
 
             // フィルターのラジオボタンが変更されたらフィルタリングを実行
             $filter.on('change', 'input[type="radio"]', filterItems);
+
+            // フィルターのタグがクリックされたら選択状態にする
+            $('label').on('click', function () {
+                var $selectedTag = $(this).find('.tag')
+                $selectedTag.addClass('tag-selected');
+                $('.tag').not($selectedTag).removeClass('tag-selected'); // 選択されたタグ以外は非選択状態にする
+            });
         }
 
         // JSON を取得し appendTags 関数を実行

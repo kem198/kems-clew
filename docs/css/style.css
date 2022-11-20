@@ -7,8 +7,8 @@
 
     /* 色 */
     --color-main: #313539;
-    --color-tag-active: #cfd;
-    --color-tag-deactive: #ddd;
+    --color-tag-selected: #70d49c;
+    --color-tag-unselected: #ddd;
     --color-text-black: #333;
     --color-text-white: #fff;
     --color-text-gray: #777;
@@ -315,9 +315,14 @@ nav#side .filter-form {
     padding: 0 20px 20px;
 }
 
+nav#side .filter-form input,
 nav#side .filter-form label {
     cursor: pointer;
     user-select: none;
+}
+
+nav#side .filter-form label:hover {
+    opacity: 0.7;
 }
 
 nav#side h3 {
@@ -356,17 +361,35 @@ ul#tags {
     font-size: 0; /* inline-block の余白を削除 */
 }
 
-ul#tags > li {
+ul#tags input {
+    display: none;
+}
+
+li.tag {
     display: inline-block;
     margin: 6px;
     padding: 4px 10px;
     border-radius: 20px;
-    background: var(--color-tag-deactive);
+    background: var(--color-tag-unselected);
     font-size: var(--font-size-small);
+    user-select: none;
+    cursor: pointer;
   }
 
-ul#tags > li:before {
+li.tag:before {
     content: "#";
+}
+
+li.tag:hover {
+    opacity: 0.7;
+}
+
+li.tag.tag-selected {
+    background: var(--color-tag-selected);
+}
+
+li.tag.tag-selected:hover {
+    opacity: 0.85;
 }
 
 /* ==================================================
@@ -424,7 +447,7 @@ main p {
     /* 3列・中央寄せで表示する */
     #content .works-wrap {
         width: 680px;
-        margin: 0 auto;
+        margin: 0;
     }
     /* Home では4列まで・中央寄せを解除して背景を見せる */
     #home .works-wrap {
@@ -450,6 +473,17 @@ main p {
     }
 }
 
+/* 見出し 初期状態では非表示*/
+#works-h2 {
+    display: none;
+    margin-top: 0;
+}
+
+/* フィルターが付与されたら表示 */
+#works-h2.filter-selected {
+    display: block;
+}
+
 /* .works の Masonry レイアウト中央寄せ指定
  * 左右の margin を auto で指定 & jQuery 側の fitWidth: 'true' 指定で中央ぞろえになる */
 .works {
@@ -459,7 +493,7 @@ main p {
 
 /* Home ページかつ PC（小・大）の場合、左右の margin auto を解除し左揃えにする */
 @media (min-width: 960.1px) {
-    #home .works {
+    .works {
         margin: 0;
     }
 }
