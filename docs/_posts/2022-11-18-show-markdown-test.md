@@ -106,16 +106,16 @@ __ボールド（アンダースコア2個）__
 
 ### 6.1. 相対パス指定
 
-`./../../images/20221117_preview.jpg`  
-![代替テキスト](./../../images/20221117_preview.jpg)
+`./../images/20221108_hello_mastodon.jpg`  
+![代替テキスト](./../images/20221108_hello_mastodon.jpg)
 
 ### 6.2. 絶対パス指定
 
-`/docs/images/20221117_preview.jpg`  
-![代替テキスト](/docs/images/20221117_preview.jpg)
+`/docs/images/20221108_hello_mastodon.jpg`  
+![代替テキスト](/docs/images/20221108_hello_mastodon.jpg)
 
-`/images/20221117_preview.jpg`  
-![代替テキスト](/images/20221117_preview.jpg)
+`/images/20221108_hello_mastodon.jpg`  
+![代替テキスト](/images/20221108_hello_mastodon.jpg)
 
 ## 7. テーブル
 
