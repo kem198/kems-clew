@@ -389,16 +389,8 @@ li.tag:before {
     content: "#";
 }
 
-li.tag:hover {
-    opacity: 0.7;
-}
-
 li.tag.tag-selected {
     background: var(--color-tag-selected);
-}
-
-li.tag.tag-selected:hover {
-    opacity: 0.85;
 }
 
 /* ==================================================
