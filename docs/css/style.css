@@ -200,10 +200,19 @@ header hr {
     left: 0;
     right: 0;
     bottom: 2vh;
-    width: auto;
+    width: 100px;
     text-align: center;
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-light);
+}
+
+/* タップできる範囲を親要素へ広げる */
+#scroll a {
+    display: block;
+}
+
+#scroll a:hover {
+    opacity: 1;
 }
 
 #scroll p {
@@ -766,8 +775,23 @@ footer p#copy {
 
 footer #go-top {
     margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: 0;
+    width: 50px;
     text-align: right;
     font-size: var(--font-size-big);
+}
+
+/* タブレット・SP 端末でタップ時のグレー表示をしない */
+footer #go-top a {
+    display: block;
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    footer #go-top a:hover {
+        opacity: 1;
+    }
 }
 
 footer #go-top p {
