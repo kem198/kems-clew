@@ -115,6 +115,16 @@
         "category": "Illustrations",
         "tags": ["2019", "スプラトゥーン"],
         "images" : {
+            "thumb": "images/works-thumb/20190403_coo.jpg",
+            "large": "images/works-large/20190403_coo.jpg"
+        },
+        "date": "2019-04-03"
+    },
+    {
+        "title": "untitled",
+        "category": "Illustrations",
+        "tags": ["2019", "スプラトゥーン"],
+        "images" : {
             "thumb": "images/works-thumb/20191116_odango.png",
             "large": "images/works-large/20191116_odango.png"
         },
@@ -139,6 +149,16 @@
             "large": "images/works-large/20191230_lady_fashion_selection.jpg"
         },
         "date": "2019-12-30"
+    },
+    {
+        "title": "untitled",
+        "category": "Illustrations",
+        "tags": ["2020", "世界樹の迷宮"],
+        "images" : {
+            "thumb": "images/works-thumb/20200101_morinezumi.jpg",
+            "large": "images/works-large/20200101_morinezumi.jpg"
+        },
+        "date": "2020-01-01"
     },
     {
         "title": "untitled",
@@ -189,6 +209,26 @@
             "large": "images/works-large/20201203_discordbot_mdn_tube.jpg"
         },
         "date": "2020-12-03"
+    },
+    {
+        "title": "modane wallpaper",
+        "category": "Illustrations",
+        "tags": ["2020", "もだねちゃん"],
+        "images" : {
+            "thumb": "images/works-thumb/20201224_modane_sakura.jpg",
+            "large": "images/works-large/20201224_modane_sakura.jpg"
+        },
+        "date": "2020-12-24"
+    },
+    {
+        "title": "untitled",
+        "category": "Illustrations",
+        "tags": ["2020", "もだねちゃん"],
+        "images" : {
+            "thumb": "images/works-thumb/20201224_modane_wallpaper.png",
+            "large": "images/works-large/20201224_modane_wallpaper.png"
+        },
+        "date": "2020-12-24"
     },
     {
         "title": "untitled",
@@ -309,6 +349,16 @@
             "large": "images/works-gif/20210526_mtp.gif"
         },
         "date": "2021-05-26"
+    },
+    {
+        "title": "untitled",
+        "category": "Illustrations",
+        "tags": ["2021", "もだねちゃん"],
+        "images" : {
+            "thumb": "images/works-thumb/20210529_modane_art.png",
+            "large": "images/works-large/20210529_modane_art.png"
+        },
+        "date": "2021-05-29"
     },
     {
         "title": "ネラってけスプラチャージャーコラボ！",
@@ -439,6 +489,16 @@
             "large": "images/works-large/20210923_rphpb.jpg"
         },
         "date": "2021-09-23"
+    },
+    {
+        "title": "untitled",
+        "category": "Illustrations",
+        "tags": ["2021", "もだねちゃん"],
+        "images" : {
+            "thumb": "images/works-thumb/20211014_moda.jpg",
+            "large": "images/works-large/20211014_moda.jpg"
+        },
+        "date": "2021-10-14"
     },
     {
         "title": "untitled",
