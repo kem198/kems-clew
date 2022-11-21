@@ -7,7 +7,7 @@
 
     /* 色 */
     --color-main: #313539;
-    --color-tag-selected: #70d49c;
+    --color-tag-selected: #82dda9;
     --color-tag-unselected: #ddd;
     --color-text-black: #333;
     --color-text-white: #fff;
@@ -344,29 +344,28 @@ nav#side .filter-form label:hover {
 }
 
 nav#side h3 {
-    /* margin: 24px 0 16px; */
     font-size: 1.2rem;
     font-weight: var(--font-weight-black);
 }
 
 ul#category {
-    padding-left: 20px;
+    padding-left: 16px;
 }
 
-ul#category > li {
+ul#category li {
     list-style: none;
 }
 
-ul#category > li label {
+ul#category li label {
     margin-left: 0.3rem;
 }
 
-ul#category > li .desc {
+ul#category li .desc {
     color: var(--color-text-gray);
     font-size: var(--font-size-small);
 }
 
-ul#category > li .desc:before {
+ul#category li .desc:before {
     content: "/";
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -375,7 +374,7 @@ ul#category > li .desc:before {
 }
 
 ul#tags {
-    padding-left: 12px; /* デフォルトの padding を削除 */
+    padding-left: 16px;
     font-size: 0; /* inline-block の余白を削除 */
 }
 
@@ -383,28 +382,25 @@ ul#tags input {
     display: none;
 }
 
-/* タブレット・SP 端末でタップ時のグレー表示をしない */
+
 ul#tags label {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    padding: 4px 10px 4px;
+    border-radius: 20px;
+    background: var(--color-tag-unselected);
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* タブレット・SP 端末でタップ時のグレー表示をしない */
+}
+
+/* タグがクリックされたら色を変更 */
+ul#tags input:checked + label {
+    background: var(--color-tag-selected);
 }
 
 li.tag {
     display: inline-block;
-    margin: 6px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: var(--color-tag-unselected);
+    margin-right: 8px;
+    margin-bottom: 16px;
     font-size: var(--font-size-small);
     user-select: none;
-    cursor: pointer;
-  }
-
-li.tag:before {
-    content: "#";
-}
-
-li.tag.tag-selected {
-    background: var(--color-tag-selected);
 }
 
 /* ==================================================

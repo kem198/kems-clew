@@ -129,12 +129,10 @@ $(function () {
             // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
             $.each(tags, function (i, item) {
                 var tagHTML =
-                    '<label for=' + item + '>' +
-                        '<li class="tag">' +
+                    '<li class="tag">' +
                             '<input type="radio" name="filter" id="' + item + '" value="' + item + '">' +
-                            item +
-                        '</li>' +
-                    '</label>';
+                            '<label for=' + item + '>#' + item + '</label>';
+                    '</li>' +
                 // console.log(tagHTML);
                 $('#tags').append(tagHTML);
             });
@@ -204,13 +202,6 @@ $(function () {
 
             // フィルターのラジオボタンが変更されたらフィルタリングを実行
             $filter.on('change', 'input[type="radio"]', filterItems);
-
-            // フィルターのタグがクリックされたら選択状態にする
-            $('label').on('click', function () {
-                var $selectedTag = $(this).children('.tag')
-                $selectedTag.addClass('tag-selected');
-                $('.tag').not($selectedTag).removeClass('tag-selected'); // 選択されたタグ以外は非選択状態にする
-            });
         }
 
         // JSON を取得し appendTags 関数を実行
