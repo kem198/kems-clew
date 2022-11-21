@@ -253,7 +253,7 @@
     {
         "title": "untitled",
         "category": "Illustrations",
-        "tags": ["2021", "ファンアート", "うごくメモ帳", "ポケモン"],
+        "tags": ["2021", "ファンアート", "うごくメモ帳", "ポケモン", "スマブラ"],
         "images" : {
             "thumb": "images/works-gif/20210526_smyi_2.gif",
             "large": "images/works-gif/20210526_smyi_2.gif"
@@ -293,7 +293,7 @@
     {
         "title": "おしゃべりぼっと！もだねちゃん",
         "category": "Developments",
-        "tags": ["2021", "もだねちゃん", "Python", "Docker", "PostgreSQL"],
+        "tags": ["2021", "もだねちゃん", "Python"],
         "images" : {
             "thumb": "images/works-thumb/20210731_discordbot_mdn.png",
             "large": "images/works-large/20210731_discordbot_mdn.png"
