@@ -253,7 +253,7 @@
     {
         "title": "untitled",
         "category": "Illustrations",
-        "tags": ["2021", "ファンアート", "うごくメモ帳"],
+        "tags": ["2021", "ファンアート", "うごくメモ帳", "ポケモン"],
         "images" : {
             "thumb": "images/works-gif/20210526_smyi_2.gif",
             "large": "images/works-gif/20210526_smyi_2.gif"
@@ -293,7 +293,7 @@
     {
         "title": "おしゃべりぼっと！もだねちゃん",
         "category": "Developments",
-        "tags": ["2021", "もだねちゃん", "Python"],
+        "tags": ["2021", "もだねちゃん", "Python", "Docker", "PostgreSQL"],
         "images" : {
             "thumb": "images/works-thumb/20210731_discordbot_mdn.png",
             "large": "images/works-large/20210731_discordbot_mdn.png"
@@ -523,7 +523,7 @@
     {
         "title": "Hello, Mastodon!",
         "category": "Illustrations",
-        "tags": ["2022"],
+        "tags": ["2022", "もだねちゃん"],
         "images" : {
             "thumb": "images/works-thumb/20221108_hello_mastodon.jpg",
             "large": "images/works-large/20221108_hello_mastodon.jpg"
