@@ -112,7 +112,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` を使用している。
 - [Masonry](https://masonry.desandro.com/)
 - [Colorbox](http://www.jacklmoore.com/colorbox/)
 
-## 4. 参考サイト
+## 4. 参考文献
 
 ### 4.1. ドメインの取得～公開
 
