@@ -101,7 +101,17 @@
         "date": "2019-01-19"
     },
     {
-        "title": "untitled",
+        "title": "ワクワクハジけろ バブルランチャー！",
+        "category": "Illustrations",
+        "tags": ["2019", "スプラトゥーン"],
+        "images" : {
+            "thumb": "images/works-thumb/20190403_wakuwaku_bubble.png",
+            "large": "images/works-large/20190403_wakuwaku_bubble.png"
+        },
+        "date": "2019-04-03"
+    },
+    {
+        "title": "ミヌいてイヌいて バレルスピナー！",
         "category": "Illustrations",
         "tags": ["2019", "スプラトゥーン"],
         "images" : {
