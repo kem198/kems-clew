@@ -205,10 +205,10 @@ $(function () {
         }
 
         // JSON を取得し appendTags 関数を実行
-        $.getJSON('./data/content.json', appendTags);
+        $.getJSON('/assets/data/content.json', appendTags);
 
         // JSON を取得し initWorks 関数を実行
-        $.getJSON('./data/content.json', initWorks);
+        $.getJSON('/assets/data/content.json', initWorks);
     });
 
 });
