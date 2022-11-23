@@ -639,5 +639,15 @@
             "large": "/assets/images/works-large/20221108_hello_mastodon.jpg"
         },
         "date": "2022-11-08"
+    },
+    {
+        "title": "KeM's Clew",
+        "category": "Developments",
+        "tags": ["2022", "HTML/CSS", "JavaScript"],
+        "images" : {
+            "thumb": "/assets/images/works-thumb/20221123_kems_clew.png",
+            "large": "/assets/images/works-large/20221123_kems_clew.png"
+        },
+        "date": "2022-11-23"
     }
 ]
