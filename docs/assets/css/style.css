@@ -639,7 +639,7 @@ body#note {
 /* タイムスタンプ */
 #note .timestamp {
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--color-text-gray);
     list-style: none;
 }
@@ -649,8 +649,13 @@ body#note {
     font-size: var(--font-size-small);
 }
 
+#note .timestamp li:last-child {
+    margin-bottom: 0;
+}
+
 /* 見出し */
 #note h1 {
+    margin-bottom: 2.5rem;
     text-align: left;
     font-size: 2.4rem;
 }
