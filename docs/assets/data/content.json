@@ -131,6 +131,16 @@
         "date": "2019-04-03"
     },
     {
+        "title": "レディ・ファッション・セレクション！",
+        "category": "Illustrations",
+        "tags": ["2019", "ファンアート", "スプラトゥーン"],
+        "images" : {
+            "thumb": "/assets/images/works-thumb/20190625_lady_fashion_selection.jpg",
+            "large": "/assets/images/works-large/20190625_lady_fashion_selection.jpg"
+        },
+        "date": "2019-06-25"
+    },
+    {
         "title": "untitled",
         "category": "Illustrations",
         "tags": ["2019", "スプラトゥーン"],
@@ -149,16 +159,6 @@
             "large": "/assets/images/works-large/20191201_sq4_on_sale.jpg"
         },
         "date": "2019-12-19"
-    },
-    {
-        "title": "レディ・ファッション・セレクション！",
-        "category": "Illustrations",
-        "tags": ["2019", "ファンアート", "スプラトゥーン"],
-        "images" : {
-            "thumb": "/assets/images/works-thumb/20191230_lady_fashion_selection.jpg",
-            "large": "/assets/images/works-large/20191230_lady_fashion_selection.jpg"
-        },
-        "date": "2019-12-30"
     },
     {
         "title": "untitled",
