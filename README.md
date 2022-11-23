@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # KeM's Clew
 
-kenkenpa198 の個人サイト [KeM's Clew](https://kems-clew.net) の実体となるファイル群を管理しているリポジトリ。  
+個人サイト [KeM's Clew](https://kems-clew.net) の実体となるファイル群を管理しているリポジトリ。  
 URL はこちら。
 
 - [https://kems-clew.net](https://kems-clew.net)
