@@ -539,6 +539,13 @@ main p {
     transform: translateZ(0); /* iOS Safari へ GPU レイヤーの作成を促し drop-shadow の表示バグを起こさないようにする */
 }
 
+/* Home のサムネイルは正方形で表示する */
+/* 画像サイズを保っていると home-more ボタンが右下に固定できないため */
+#home .works-item,
+#home .works-item img {
+    height: 216px;
+}
+
 /* Home の4枚目に配置する Works ページへの遷移用ボタン  */
 #home-more p {
     margin: 0;
