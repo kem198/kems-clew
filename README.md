@@ -158,6 +158,19 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 - [Masonry](https://masonry.desandro.com/)
 - [Colorbox](http://www.jacklmoore.com/colorbox/)
 
+なお画像レイアウトの DOM 要素は JavaScript が書き出すため、JavaScript が無効な環境ではコンテンツが正常に表示されない。  
+このため暫定策として以下の記述を該当するページに配置している。
+
+```html
+<!-- JavaScript が無効な環境で表示するコンテンツ -->
+<noscript>
+    <p>
+        JavaScript が無効のため、コンテンツを正常に表示できませんでした。<br>
+        お手数ですがブラウザの設定をお確かめの上、ページの再読み込みを行ってください。
+    </p>
+</noscript>
+```
+
 ## 3. 作業方法メモ
 
 ### 3.1. 環境構築
