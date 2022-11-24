@@ -7,7 +7,7 @@ updated: 2022-11-24
 ---
 
 標準 SQL を中心にまとめた自分用メモ。  
-実際に使えるコードは [mount_dir 上](../mount_dir/sql/) へ格納。
+[kenkenpa198/mssql-with-docker](https://github.com/kenkenpa198/mssql-with-docker) にて管理していたファイルをこちらへ引っ越し。
 
 <!-- omit in toc -->
 ## 目次
@@ -569,8 +569,10 @@ SELECT TOP 99999999
     CASE WHEN t.column_C IS NULL THEN 'NULL' ELSE 'NOT NULL' END AS column_C,
     COUNT(*) AS cnt
 FROM
-    [tb] t -- ★テーブル名を指定
+    [tb] t -- テーブル名を指定する
 GROUP BY
+    -- ROLLUP(()) で結果の先頭行に総計を出力する
+    -- 不要であれば外して OK
     ROLLUP((
         t.column_A,
         t.column_B,
@@ -589,7 +591,7 @@ ORDER BY
 ★のコメント部分へテーブル名を指定する。
 
 PostgreSQL の `\d tb` のイメージ。  
-SQL Server だと手軽に確認する方法が無いようなので作成した。
+SQL Server だと手軽に確認する方法が限られるようなので作成した。
 
 参考サイト :
 
