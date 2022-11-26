@@ -659,6 +659,7 @@ nav#notes-show-change > ul > li:after {
     content: "|";
     margin-right: 0.25rem;
     margin-left: 0.25rem;
+    font-weight: var(--font-weight-default)
 }
 
 nav#notes-show-change > ul > li:last-child:after {
