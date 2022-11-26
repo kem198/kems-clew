@@ -632,7 +632,54 @@ main p {
 }
 
 /* ==================================================
- * Note / 一覧ページ
+ * Notes / 切り替えメニュー
+ * ================================================== */
+nav#notes-show-change {
+    margin: 32px auto;
+    width: fit-content;
+    color: var(--color-text-thin);
+}
+
+nav#notes-show-change > ul {
+    padding-left: 0; /* デフォルトの padding を削除 */
+    font-size: 0; /* inline-block の余白を削除 */
+}
+
+nav#notes-show-change > ul > li {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: var(--font-size-small);
+  }
+
+nav#notes-show-change > ul > li.current {
+    font-weight: var(--font-weight-bold);
+}
+
+nav#notes-show-change > ul > li:after {
+    content: "|";
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+nav#notes-show-change > ul > li:last-child:after {
+    content: "";
+    margin-right: 0;
+    margin-left: 0;
+}
+
+nav#notes-show-change a {
+    color: var(--color-text-black);
+    text-decoration: none;
+}
+
+nav#notes-show-change a:hover {
+    /* color: var(--color-text-gray); */
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* ==================================================
+ * Notes / 一覧ページ / 共通・新着順
  * ================================================== */
 
 #notes .myposts {
@@ -701,9 +748,55 @@ main p {
     content: "#";
 }
 
+/* ==================================================
+ * Notes / 一覧ページ / カテゴリー・タグ
+ * ================================================== */
+
+#notes .myposts-filter {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 2rem;
+    list-style: none;
+}
+
+#notes h2.h2-filter {
+    margin-top: 64px;
+    width: auto;
+    border-bottom: 1px solid #aaa;
+}
+
+#notes h2.h2-filter:first-child {
+    margin-top: 0;
+}
+
+#notes h2.h2-tags:before {
+    content: "#";
+}
+
+#notes .myposts-filter > li {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: calc(50% - 1rem);
+    border-bottom: 0;
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    #notes .myposts-filter > li {
+        width: 100%;
+    }
+}
+
+#notes .myposts-filter > li:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+
 
 /* ==================================================
- * Note / マークダウン
+ * Notes / マークダウン
  * ================================================== */
 
 /* 背景・全体のあしらい */
