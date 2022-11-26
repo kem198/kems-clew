@@ -276,6 +276,8 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 - [About custom domains and GitHub Pages - GitHub Docs](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
 - [Jekyll • シンプルで、ブログのような、静的サイト | プレーンテキストを静的サイトやブログに変えましょう](http://jekyllrb-ja.github.io/)
+    - [Posts（ポスト） | Jekyll • シンプルで、ブログのような、静的サイト](http://jekyllrb-ja.github.io/docs/posts/)
+    - [タグフィルタ | Jekyll • シンプルで、ブログのような、静的サイト](http://jekyllrb-ja.github.io/docs/liquid/tags/#linking-to-posts)
 - [Neos21/neos21.net: Repository of Neo's World](https://github.com/Neos21/neos21.net)
 
 ### 4.3. HTML / CSS / JS

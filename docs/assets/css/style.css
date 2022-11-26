@@ -13,6 +13,8 @@
     --color-text-white: #fff;
     --color-text-gray: #777;
     --color-text-thin: #bbb;
+    --color-text-link: #009AC7;
+    --color-hr-thin: #ccc;
 
     /* フォント */
     --font-family-default: 'Noto Sans JP', sans-serif, "Font Awesome 6 Free","Font Awesome 6 Brands";
@@ -105,21 +107,22 @@ li {
 }
 
 a:link {
-    color: var(--color-text-black);
-    text-decoration: underline;
+    color: var(--color-text-link);
+    text-decoration: none;
 }
 
 a:hover {
     opacity: 0.7;
+    text-decoration: underline;
 }
 
 a:visited {
-    color: var(--color-text-black);
+    color: var(--color-text-link);
 }
 
 /* iOS でボタン類が青色になってしまう件を防ぐ */
 select, button {
-    color: var(--color-text-black);
+    color: var(--color-text-link);
 }
 
 /* ==================================================
@@ -189,7 +192,31 @@ header hr {
 }
 
 /* ==================================================
- * スクロールボタン
+ * Home / リンク周りの調整
+ * ================================================== */
+
+/* Notes, About のリンクのあしらい */
+#home main a {
+    color: var(--color-text-black);
+}
+
+#home .notes a,
+#home .about a {
+    text-decoration: underline;
+}
+
+#home .post-date,
+#home .about-description {
+    color: var(--color-text-gray);
+    font-size: var(--font-size-small);
+}
+
+#home .post-date {
+    margin-left: 0.25rem;
+}
+
+/* ==================================================
+ * Home / スクロールボタン
  * ================================================== */
 
 /* Home 以外ではスクロールボタンを非表示 */
@@ -209,6 +236,7 @@ header hr {
 /* タップできる範囲を親要素へ広げる */
 #scroll a {
     display: block;
+    color: var(--color-text-black);
 }
 
 #scroll a:hover {
@@ -554,6 +582,7 @@ main p {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.7);
     text-align: center;
+    color: var(--color-text-black);
     font-weight: var(--font-weight-light);
     line-height: 216px;
     filter: drop-shadow(0 10px 20px #bbb);
@@ -574,6 +603,7 @@ main p {
     width: 80%;
     border: none;
     border-radius: 8px;
+    color: var(--color-text-black);
     font-weight: var(--font-weight-light);
     background: #fff;
     filter: drop-shadow(0 10px 20px #bbb);
@@ -602,7 +632,171 @@ main p {
 }
 
 /* ==================================================
- * Note / マークダウン
+ * Notes / 切り替えメニュー
+ * ================================================== */
+nav#notes-show-change {
+    margin: 32px auto;
+    width: fit-content;
+    color: var(--color-text-thin);
+}
+
+nav#notes-show-change > ul {
+    padding-left: 0; /* デフォルトの padding を削除 */
+    font-size: 0; /* inline-block の余白を削除 */
+}
+
+nav#notes-show-change > ul > li {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: var(--font-size-small);
+  }
+
+nav#notes-show-change > ul > li.current {
+    font-weight: var(--font-weight-bold);
+}
+
+nav#notes-show-change > ul > li:after {
+    content: "|";
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+nav#notes-show-change > ul > li:last-child:after {
+    content: "";
+    margin-right: 0;
+    margin-left: 0;
+}
+
+nav#notes-show-change a {
+    color: var(--color-text-black);
+    text-decoration: none;
+}
+
+nav#notes-show-change a:hover {
+    /* color: var(--color-text-gray); */
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* ==================================================
+ * Notes / 一覧ページ / 共通・新着順
+ * ================================================== */
+
+#notes .myposts {
+    padding-left: 0;
+    list-style: none;
+}
+
+#notes .myposts > li {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-hr-thin);
+}
+
+#notes .myposts > li:first-child {
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-hr-thin);
+}
+
+#notes .post-description {
+    display: flex;
+    margin-bottom: 0.5rem;
+    gap: 0.5em;
+}
+
+#notes .post-description,
+#notes .post-excerpt,
+#notes .post-tags {
+    font-size: var(--font-size-small);
+    color: var(--color-text-gray);
+}
+
+#notes .post-category {
+    color: var(--color-text-black);
+}
+
+#notes .post-title {
+    font-weight: var(--font-weight-bold);
+}
+
+#notes .post-title a {
+    color: var(--color-text-black);
+}
+
+#notes .post-title a:hover {
+    text-decoration: underline;
+}
+
+#notes .post-excerpt > p:after {
+    content: "...";
+}
+
+#notes .post-tags {
+    padding-left: 0;
+}
+
+#notes .post-tags li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 20px;
+    background: var(--color-tag-unselected);
+}
+
+#notes .post-tags li:before {
+    content: "#";
+}
+
+/* ==================================================
+ * Notes / 一覧ページ / カテゴリー・タグ
+ * ================================================== */
+
+#notes .myposts-filter {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 2rem;
+    list-style: none;
+}
+
+#notes h2.h2-filter {
+    margin-top: 64px;
+    width: auto;
+    border-bottom: 1px solid #aaa;
+}
+
+#notes h2.h2-filter:first-child {
+    margin-top: 0;
+}
+
+#notes h2.h2-tags:before {
+    content: "#";
+}
+
+#notes .myposts-filter > li {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: calc(50% - 1rem);
+    border-bottom: 0;
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    #notes .myposts-filter > li {
+        width: 100%;
+    }
+}
+
+#notes .myposts-filter > li:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+
+
+/* ==================================================
+ * Notes / マークダウン
  * ================================================== */
 
 /* 背景・全体のあしらい */
