@@ -27,7 +27,7 @@ page-category: home
         <ul>
         {% for post in site.posts limit:3 %}
             <li>
-                <span class="postDate">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </li>
         {% endfor %}
