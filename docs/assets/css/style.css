@@ -13,6 +13,7 @@
     --color-text-white: #fff;
     --color-text-gray: #777;
     --color-text-thin: #bbb;
+    --color-text-link: #009AC7;
     --color-hr-thin: #ccc;
 
     /* フォント */
@@ -106,21 +107,22 @@ li {
 }
 
 a:link {
-    color: var(--color-text-black);
-    text-decoration: underline;
+    color: var(--color-text-link);
+    text-decoration: none;
 }
 
 a:hover {
     opacity: 0.7;
+    text-decoration: underline;
 }
 
 a:visited {
-    color: var(--color-text-black);
+    color: var(--color-text-link);
 }
 
 /* iOS でボタン類が青色になってしまう件を防ぐ */
 select, button {
-    color: var(--color-text-black);
+    color: var(--color-text-link);
 }
 
 /* ==================================================
@@ -190,7 +192,31 @@ header hr {
 }
 
 /* ==================================================
- * スクロールボタン
+ * Home / リンク周りの調整
+ * ================================================== */
+
+/* Notes, About のリンクのあしらい */
+#home main a {
+    color: var(--color-text-black);
+}
+
+#home .notes a,
+#home .about a {
+    text-decoration: underline;
+}
+
+#home .post-date,
+#home .about-description {
+    color: var(--color-text-gray);
+    font-size: var(--font-size-small);
+}
+
+#home .post-date {
+    margin-left: 0.25rem;
+}
+
+/* ==================================================
+ * Home / スクロールボタン
  * ================================================== */
 
 /* Home 以外ではスクロールボタンを非表示 */
@@ -210,6 +236,7 @@ header hr {
 /* タップできる範囲を親要素へ広げる */
 #scroll a {
     display: block;
+    color: var(--color-text-black);
 }
 
 #scroll a:hover {
@@ -555,6 +582,7 @@ main p {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.7);
     text-align: center;
+    color: var(--color-text-black);
     font-weight: var(--font-weight-light);
     line-height: 216px;
     filter: drop-shadow(0 10px 20px #bbb);
@@ -575,6 +603,7 @@ main p {
     width: 80%;
     border: none;
     border-radius: 8px;
+    color: var(--color-text-black);
     font-weight: var(--font-weight-light);
     background: #fff;
     filter: drop-shadow(0 10px 20px #bbb);
@@ -644,7 +673,7 @@ main p {
 }
 
 #notes .post-title a {
-    text-decoration: none;
+    color: var(--color-text-black);
 }
 
 #notes .post-title a:hover {
