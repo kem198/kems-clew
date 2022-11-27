@@ -294,7 +294,7 @@ nav#breadcrumb a:hover {
 }
 
 /* ==================================================
- * コンテンツページ Flexbox レイアウト
+ * Works / Flexbox レイアウト
  * ================================================== */
 .main-container {
     display: flex;
@@ -328,28 +328,13 @@ nav#breadcrumb a:hover {
 }
 
 /* ==================================================
- * コンテンツページ サイドメニュー
+ * Works / サイドメニュー
  * ================================================== */
 nav#side {
     margin-top: 0;
-    box-shadow: var(--box-shadow-default);
-    border-radius: 8px;
+    padding: 0 0 20px 20px;
+    border-left: 1px solid var(--color-hr-thin);
     background-color: var(--color-text-white);
-}
-
-nav#side h2 {
-    display: block;
-    margin: 0 0 24px;
-    padding: 12px;
-    border-radius: 8px 8px 0 0;
-    background: var(--color-main);
-    color: var(--color-text-white);
-    font-size: 1.4rem;
-    font-weight: var(--font-weight-bold);
-}
-
-nav#side .filter-form {
-    padding: 0 20px 20px;
 }
 
 nav#side .filter-form input,
@@ -364,6 +349,15 @@ nav#side .filter-form label:hover {
 
 /* タブレット・SP 向けのレイアウト */
 @media (max-width: 960px) {
+    /* ボーダーを左から上下側へ切り替える */
+    nav#side {
+        margin-bottom: 1rem;
+        padding: 28px 0 20px;
+        border-left: none;
+        border-top: 1px solid var(--color-hr-thin);
+        border-bottom: 1px solid var(--color-hr-thin);
+    }
+
     /* タブレット・SP ではホバー時の透明化を解除する */
     /* ホバーで色が薄くなった状態が持続してしまうため */
     nav#side .filter-form label:hover {
@@ -371,9 +365,19 @@ nav#side .filter-form label:hover {
     }
 }
 
-nav#side h3 {
+nav#side h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     font-weight: var(--font-weight-black);
+}
+
+nav#side section {
+    margin-top: 30px;
+}
+
+nav#side section:first-child{
+    margin-top: 0;
 }
 
 ul#category {
@@ -432,7 +436,7 @@ li.tag {
 }
 
 /* ==================================================
- * コンテンツページ メインエリア
+ * Works / ページ メインエリア
  * ================================================== */
 
 main {
@@ -473,7 +477,7 @@ main p {
 }
 
 /* ==================================================
- * Works Masonry レイアウト
+ * Works / Masonry レイアウト
  * ==================================================
  * .works-wrap : Masonry レイアウトを囲んでいる要素。列数の調整などに用いる。
  * .works      : Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
@@ -793,8 +797,6 @@ nav#notes-show-change a:hover {
     padding-top: 0;
     border-top: 0;
 }
-
-
 
 /* ==================================================
  * Notes / マークダウン
