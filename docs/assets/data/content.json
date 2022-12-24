@@ -649,5 +649,15 @@
             "large": "/assets/images/works/large/20221123_kems_clew.png"
         },
         "date": "2022-11-23"
+    },
+    {
+        "title": "バイト戦士 もだねちゃん！",
+        "category": "Illustrations",
+        "tags": ["2022", "もだねちゃん"],
+        "images" : {
+            "thumb": "/assets/images/works/thumb/20221218_modane_part.jpg",
+            "large": "/assets/images/works/large/20221218_modane_part.jpg"
+        },
+        "date": "2022-12-18"
     }
 ]
