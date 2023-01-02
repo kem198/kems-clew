@@ -289,3 +289,4 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 - [スクロールバーの出現によるガタつきを防ぐCSS | q-Az](https://q-az.net/appear-scrollbar-problem/)
 - [width,heighとpaddingの同時指定によるレイアウト崩れをbox-sizingdで防ぐ - Qiita](https://qiita.com/NeGI1009/items/a738cd96a345a7799e4b)
 - [簡単にモーダルウィンドウを実装できるjQueryプラグイン「Colorbox」｜I'll be NET](https://illbenet.jp/view/js-colorbox)
+- [TwitterやFacebookで表示されるOGPイメージをGithubPagesで簡単に実装する - Qiita](https://qiita.com/o_ob/items/6c71bc783df428116ef8)
