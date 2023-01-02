@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#313539">
 
-    <!-- OGP を利用するための meta タグ ここから -->
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}" />
+    <!-- OGP へページタイトルなどの情報を渡す ここから -->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}">
     {% if page.description %}
-        <meta property="og:description" content="{{ page.description }}" />
+        <meta property="og:description" content="{{ page.description }}">
     {% else %}
-        <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}" />
+        <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}">
     {% endif %}
-    <!-- OGP を利用するための meta タグ ここまで -->
+    <!-- OGP へページタイトルなどの情報を渡す ここまで -->
 
-    <!-- OGP 用のプレビュー画像設定 ここから -->
+    <!-- OGP で表示するプレビュー画像設定 ここから -->
     {% if page.preview %}
-        <meta property="og:image" content="{{ page.preview }}" />
+        <meta property="og:image" content="{{ page.preview }}">
     {% else %}
-        <meta property="og:image" content="https://kems-clew.net/assets/images/card.png" />
+        <meta property="og:image" content="https://kems-clew.net/assets/images/card.png">
     {% endif %}
-    <!-- OGP 用のプレビュー画像設定 ここまで -->
+    <!-- OGP で表示するプレビュー画像設定 ここまで -->
 
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
