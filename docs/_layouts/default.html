@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#"> <!-- prefix 属性で OGP のサポートを宣言 -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#313539">
+
+    <!-- OGP を利用するための meta タグ ここから -->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}" />
+    {% if page.description %}
+        <meta property="og:description" content="{{ page.description }}" />
+    {% else %}
+        <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}" />
+    {% endif %}
+    <!-- OGP を利用するための meta タグ ここまで -->
+
+    <!-- OGP 用のプレビュー画像設定 ここから -->
+    {% if page.preview %}
+        <meta property="og:image" content="{{ page.preview }}" />
+    {% else %}
+        <meta property="og:image" content="/apple-touch-icon.png" />
+    {% endif %}
+    <!-- OGP 用のプレビュー画像設定 ここまで -->
+
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
