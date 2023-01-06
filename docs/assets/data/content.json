@@ -591,6 +591,16 @@
         "date": "2022-01-08"
     },
     {
+        "title": "cj 関数",
+        "category": "Developments",
+        "tags": ["2022", "shell-script"],
+        "images" : {
+            "thumb": "/assets/images/works/gif/20220320_cj.gif",
+            "large": "/assets/images/works/gif/20220320_cj.gif"
+        },
+        "date": "2022-03-20"
+    },
+    {
         "title": "#かろえぐWIN",
         "category": "Illustrations",
         "tags": ["2022", "ファンアート", "ポケモン", "スマブラ"],
@@ -599,6 +609,26 @@
             "large": "/assets/images/works/large/20220504_kregwin.jpg"
         },
         "date": "2022-05-04"
+    },
+    {
+        "title": "moda 関数",
+        "category": "Developments",
+        "tags": ["2022", "shell-script", "もだねちゃん"],
+        "images" : {
+            "thumb": "/assets/images/works/gif/20220608_moda.gif",
+            "large": "/assets/images/works/gif/20220608_moda.gif"
+        },
+        "date": "2022-06-08"
+    },
+    {
+        "title": "acd 関数",
+        "category": "Developments",
+        "tags": ["2022", "shell-script", "git"],
+        "images" : {
+            "thumb": "/assets/images/works/gif/20220620_acd.gif",
+            "large": "/assets/images/works/gif/20220620_acd.gif"
+        },
+        "date": "2022-06-20"
     },
     {
         "title": "Modane CO2 Watcher",
