@@ -393,7 +393,7 @@
     {
         "title": "おしゃべりぼっと！もだねちゃん",
         "category": "Developments",
-        "tags": ["2021", "もだねちゃん", "Python"],
+        "tags": ["2021", "もだねちゃん", "python"],
         "images" : {
             "thumb": "/assets/images/works/thumb/20210731_discordbot_mdn.png",
             "large": "/assets/images/works/large/20210731_discordbot_mdn.png"
@@ -603,7 +603,7 @@
     {
         "title": "Modane CO2 Watcher",
         "category": "Developments",
-        "tags": ["2022", "もだねちゃん", "C", "Raspberry-Pi"],
+        "tags": ["2022", "もだねちゃん", "c", "raspberry-pi"],
         "images" : {
             "thumb": "/assets/images/works/thumb/20220807_modane_co2_watcher.jpg",
             "large": "/assets/images/works/large/20220807_modane_co2_watcher.jpg"
@@ -643,7 +643,7 @@
     {
         "title": "KeM's Clew",
         "category": "Developments",
-        "tags": ["2022", "HTML/CSS", "JavaScript"],
+        "tags": ["2022", "website", "javascript"],
         "images" : {
             "thumb": "/assets/images/works/thumb/20221123_kems_clew.png",
             "large": "/assets/images/works/large/20221123_kems_clew.png"
