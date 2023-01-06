@@ -12,5 +12,7 @@ vendor/
 
 # End of https://www.toptal.com/developers/gitignore/api/jekyll
 
-### my .ignore ###
+
+### My .gitignore ###
 _drafts/
+frontmatter.json.org
