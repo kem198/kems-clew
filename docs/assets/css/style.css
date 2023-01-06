@@ -503,7 +503,7 @@ main p {
 @media (min-width: 960.1px) and (max-width: 1119.9px) {
     /* 2列・左寄せで表示する */
     .works-wrap {
-        width: 448px; 
+        width: 448px;
     }
 }
 
@@ -737,6 +737,7 @@ nav#notes-show-change a:hover {
 }
 
 #notes .post-tags {
+    margin-top: 1em;
     padding-left: 0;
 }
 
