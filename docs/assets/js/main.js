@@ -79,10 +79,19 @@ $(function () {
                     }
                 });
 
+            // 画面幅がタブレット・SP 向けか否かによって Colorbox の幅を切り替える
+            // TODO: 画面幅が変わったら切り替える
+            let maxSize
+            if (window.matchMedia('(max-width: 960px)').matches) {
+                maxSize = '100%';
+            } else {
+                maxSize = '90%';
+            }
+
             // アイテムのリンクへ Colorbox を設定
             $container.find('a').not('#home-more a').colorbox({
-                maxWidth: '90%',
-                maxHeight: '90%',
+                maxWidth: maxSize,
+                maxHeight: maxSize,
                 opacity: '0.8',     // 背景の透明度
                 returnFocus: false, // モーダルを閉じたときにそのモーダルのトリガーとなったリンクにフォーカスを戻さない  True の場合 iOS Safari だと青い選択が表示されるため
                 reposition: false,  // ウインドウがリサイズされたときにモーダルの位置を変更しない True だと iOS で拡大時にクラッシュするため
