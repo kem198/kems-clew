@@ -1,4 +1,4 @@
 {
-    "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd HH:mm",
+    "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd",
     "frontMatter.content.autoUpdateDate": true
 }
