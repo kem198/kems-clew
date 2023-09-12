@@ -916,9 +916,12 @@ body#note {
     color: rgba(0,0,0,.6);
 }
 
-#note blockquote p:first-child,
+#note blockquote p:first-child {
+    margin-top: 0;
+}
+
 #note blockquote p:last-child {
-    margin: 0;
+    margin-bottom: 0;
 }
 
 /* コードブロック・コードスパン */
