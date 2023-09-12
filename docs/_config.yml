@@ -1,2 +1,6 @@
 name: KeM's Clew | けんころの毛糸玉
 title: KeM's Clew
+
+# タイムゾーン指定。未指定の場合 UTC となる
+# 未指定の場合 JST 00:00 - 09:00 にプッシュしても記事が公開されない。UTC では翌日となり予約扱いになるため
+timezone: Asia/Tokyo
