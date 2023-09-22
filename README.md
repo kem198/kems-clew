@@ -6,7 +6,7 @@ URL はこちら。
 
 - [https://kems-clew.net](https://kems-clew.net)
 
-以下の URL でもアクセスできる。  
+下記の URL でもアクセスできる。  
 すべて [https://kems-clew.net](https://kems-clew.net) へリダイレクトされる。
 
 - [https://www.kems-clew.net](https://www.kems-clew.net)
@@ -25,23 +25,63 @@ URL はこちら。
     - [2.2. 使用ライブラリ](#22-使用ライブラリ)
 - [3. 作業方法メモ](#3-作業方法メモ)
     - [3.1. 環境構築](#31-環境構築)
-    - [3.2. ビルド・Web サーバーの立ち上げ・表示](#32-ビルドweb-サーバーの立ち上げ表示)
-    - [3.3. メモ](#33-メモ)
-        - [3.3.1. `_site` ディレクトリをルートとして Web サーバーを立てる](#331-_site-ディレクトリをルートとして-web-サーバーを立てる)
-- [4. 参考文献](#4-参考文献)
-    - [4.1. ドメインの取得～公開](#41-ドメインの取得公開)
-    - [4.2. GitHub Pages / Jekyll](#42-github-pages--jekyll)
-    - [4.3. HTML / CSS / JS](#43-html--css--js)
+    - [3.2. ビルド・Web サーバの立ち上げ・表示](#32-ビルドweb-サーバの立ち上げ表示)
+- [4. その他メモ](#4-その他メモ)
+    - [4.1. `_site` ディレクトリをルートとして Web サーバを立てる](#41-_site-ディレクトリをルートとして-web-サーバを立てる)
+- [5. 権利表記](#5-権利表記)
+- [6. 参考文献](#6-参考文献)
+    - [6.1. ドメインの取得～公開](#61-ドメインの取得公開)
+    - [6.2. GitHub Pages / Jekyll](#62-github-pages--jekyll)
+    - [6.3. HTML / CSS / JS](#63-html--css--js)
 
 ## 1. 公開まわりの設定
 
 ### 1.1. 独自ドメインと DNS 設定
 
-独自ドメイン `kems-clew.net` は 2022-11-11 に [Xserver Domain](https://www.xdomain.ne.jp/) で取得。
+独自ドメイン `kems-clew.net` は2022年11月11日に [Xserver Domain](https://www.xdomain.ne.jp/) で取得したもの。
 
-GitHub Pages の `A` レコード 及び `AAAA` レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに来た通信を GitHub Pages の IP アドレスへ向けている。
+GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに来た通信を GitHub Pages の IP アドレスへ転送している。
 
-`www` サブドメインは `kenkenpa198.github.io` の `CNAME` レコードを DNS レコード設定へ追加して利用できるようにしている。
+- [GitHub Pages サイトのカスタムドメインを管理する - GitHub Docs > Apexドメインを設定する](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+
+> - A レコードを作成するには、apex ドメインが GitHub Pages の IP アドレスを指すようにします。
+>
+> ```text
+> 185.199.108.153
+> 185.199.109.153
+> 185.199.110.153
+> 185.199.111.153
+> ```
+>
+> - AAAA レコードを作成するには、apex ドメインが GitHub Pages の IP アドレスを指すようにします。
+>
+> ```text
+> 2606:50c0:8000::153
+> 2606:50c0:8001::153
+> 2606:50c0:8002::153
+> 2606:50c0:8003::153
+> ```
+
+`www` サブドメインは `kenkenpa198.github.io` の CNAME レコードを DNS レコード設定へ追加して利用できるようにしている。
+
+- [GitHub Pages サイトのカスタムドメインを管理する - GitHub Docs > apex ドメインと www サブドメイン バリアントの構成](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
+
+> ご利用の DNS プロバイダーに移動し、サブドメインがサイトの既定のドメインを指す CNAMECNAME レコードを作成します。 たとえば、ユーザー サイトのサブドメイン www.example.com を使用する場合は、www.example.com が <user>.github.io を指す CNAME レコードを作成します。 組織サイトのサブドメイン another.example.com を使用する場合は、another.example.com が <organization>.github.io を指す CNAME レコードを作成します。 CNAME レコードは常に、<user>.github.io または <organization>.github.io (リポジトリ名を除く) を指す必要があります。 正しいレコードの作成方法に関する詳しい情報については、DNSプロバイダのドキュメンテーションを参照してください。 サイトの既定のドメインの詳細については、「GitHub Pages について」を参照してください。
+
+これらをまとめると下表の対応となる。  
+実際の XServer Domain > `DNSレコード設定` 画面上でもこの内容で設定している。
+
+| ホスト名          | 種別  | 内容                  |
+| ----------------- | ----- | --------------------- |
+| kems-clew.net     | A     | 185.199.108.153       |
+| kems-clew.net     | A     | 185.199.109.153       |
+| kems-clew.net     | A     | 185.199.110.153       |
+| kems-clew.net     | A     | 185.199.111.153       |
+| kems-clew.net     | AAAA  | 2606:50c0:8000::153   |
+| kems-clew.net     | AAAA  | 2606:50c0:8001::153   |
+| kems-clew.net     | AAAA  | 2606:50c0:8002::153   |
+| kems-clew.net     | AAAA  | 2606:50c0:8003::153   |
+| www.kems-clew.net | CNAME | kenkenpa198.github.io |
 
 ### 1.2. GitHub Pages でのホスティング
 
@@ -155,6 +195,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 [Home](https://kems-clew.net/) や [Works](https://kems-clew.net/works.html) ページの画像レイアウト・ライトボックス処理は以下の JavaScript ライブラリを使用している。
 
 - [jQuery](https://jquery.com/)
+- [imagesLoaded](https://imagesloaded.desandro.com/)
 - [Masonry](https://masonry.desandro.com/)
 - [Colorbox](http://www.jacklmoore.com/colorbox/)
 
@@ -177,7 +218,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 [kenkenpa198/tutorial-jekyll](https://github.com/kenkenpa198/tutorial-jekyll) > `2. 環境構築メモ` を参照。
 
-### 3.2. ビルド・Web サーバーの立ち上げ・表示
+### 3.2. ビルド・Web サーバの立ち上げ・表示
 
 1. `/docs` ディレクトリへ移動する。
 
@@ -250,29 +291,55 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 6. `/docs/_site` に配置された `index.html` が表示される。
 7. `/docs` 配下のソースファイルを上書き保存すると、自動で再ビルドされる。
 
-### 3.3. メモ
+## 4. その他メモ
 
-#### 3.3.1. `_site` ディレクトリをルートとして Web サーバーを立てる
+### 4.1. `_site` ディレクトリをルートとして Web サーバを立てる
 
-`_site` ディレクトリをルートとして別の Web サーバーを立てることもできる。  
+`_site` ディレクトリをルートとして別の Web サーバを立てることもできる。  
 この場合、Jekyll を使用せずに作成した通常のウェブサイトのように扱うことができる。
 
-例えば VSCode の拡張機能「Live Server」の場合、以下の手順になる。
+例えば VS Code の拡張機能「Live Server」の場合、下記の手順になる。
 
-1. [3.2. ビルド・Web サーバーの立ち上げ・表示](#32-ビルドweb-サーバーの立ち上げ表示) の工程 2 まで進め、`_site` ディレクトリと配下のファイルをビルドする。
-2. 別ウィンドウの VSCode もしくは `フォルダをワークスペースに追加...` で `_site` ディレクトリを開く。
+1. [3.2. ビルド・Web サーバの立ち上げ・表示](#32-ビルドweb-サーバの立ち上げ表示) の工程 2 まで進め、`_site` ディレクトリと配下のファイルをビルドする。
+2. 別ウィンドウの VS Code もしくは `フォルダをワークスペースに追加...` で `_site` ディレクトリを開く。
 3. `_site` ディレクトリをルートとして Live Server を実行する。
-4. 初期設定だとポート `5500` でサーバーが構築されるので、`http://127.0.0.1:5500` へアクセスする。
+4. 初期設定だとポート `5500` でサーバが構築されるので、`http://127.0.0.1:5500` へアクセスする。
 
-[3.2. ビルド・Web サーバーの立ち上げ・表示](#32-ビルドweb-サーバーの立ち上げ表示) で立てた Web サーバーだと iPhone など同ネットワーク内の別端末からアクセスができない（？）ため、別端末で表示確認をする際はこちらの方法を使っている。
+[3.2. ビルド・Web サーバの立ち上げ・表示](#32-ビルドweb-サーバの立ち上げ表示) を WSL 環境で行った場合、同ネットワーク内の別端末から IP アドレス指定によるアクセスができない。WSL のネットワーク仕様の都合によるものと思われる。
 
-## 4. 参考文献
+スマートフォンなどで表示確認をする際に困るので、この場合の代替手段となる。
 
-### 4.1. ドメインの取得～公開
+## 5. 権利表記
+
+- [Font Awesome](https://fontawesome.com/)  
+License: [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)  
+About: [Free License | Font Awesome](https://fontawesome.com/license/free)  
+
+- [Noto Sans Japanese (Google Fonts)](https://fonts.google.com/noto/specimen/Noto+Sans+JP)  
+License: [SIL Open Font License (OFL)](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)  
+About: [Noto Sans Japanese - Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+JP/about)
+
+- [jQuery](https://jquery.com/)  
+License: [MIT License](https://www.tldrlegal.com/license/mit-license)  
+About: [Download jQuery | jQuery](https://jquery.com/download/)
+
+- [imagesLoaded](https://imagesloaded.desandro.com/)  
+License: [MIT License](https://desandro.mit-license.org/)  
+About: [MIT License | imagesLoaded](https://imagesloaded.desandro.com/#mit-license)
+
+- [Masonry](https://masonry.desandro.com/)  
+License: [MIT License](https://desandro.mit-license.org/)
+
+- [Colorbox](https://www.jacklmoore.com/colorbox/)  
+License: [MIT License](https://opensource.org/license/mit/)
+
+## 6. 参考文献
+
+### 6.1. ドメインの取得～公開
 
 - [Xserver Domain で取得したドメインを使って GitHub Pages で HTTPS に対応したサイトを公開する方法 – ktzwのエンジニアブログ](https://y-ktzw.com/posts/custom-domain/)
 
-### 4.2. GitHub Pages / Jekyll
+### 6.2. GitHub Pages / Jekyll
 
 - [About custom domains and GitHub Pages - GitHub Docs](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
 - [Jekyll • シンプルで、ブログのような、静的サイト | プレーンテキストを静的サイトやブログに変えましょう](http://jekyllrb-ja.github.io/)
@@ -282,7 +349,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 - [Jekyllには投稿予約機能がある＆Jekyllにタイムゾーンを設定 | 為せばnull](https://blog.yotiosoft.com/2022/03/05/Jekyll%E3%81%AB%E3%81%AF%E6%8A%95%E7%A8%BF%E4%BA%88%E7%B4%84%E6%A9%9F%E8%83%BD%E3%81%8C%E3%81%82%E3%82%8B-Jekyll%E3%81%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%92%E8%A8%AD%E5%AE%9A.html)
 - [Neos21/neos21.net: Repository of Neo's World](https://github.com/Neos21/neos21.net)
 
-### 4.3. HTML / CSS / JS
+### 6.3. HTML / CSS / JS
 
 - [jQuery最高の教科書｜株式会社シフトブレイン 著](http://jquery.shiftbrain.co.jp/)
 - [CSS 最近のWebページやアプリのレイアウトに適した、ラッパーの実装テクニックを徹底解説 | コリス](https://coliss.com/articles/build-websites/operation/css/styling-layout-wrappers-in-css.html)
