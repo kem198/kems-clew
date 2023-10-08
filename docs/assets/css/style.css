@@ -868,9 +868,14 @@ body#note {
 
 #note h2 {
     display: block;
+    margin-top: 48px;
     width: auto;
     border-bottom: 1px solid #aaa;
     font-weight: var(--font-weight-bold);
+}
+
+#note h3 {
+    margin-top: 48px;
 }
 
 /* 画像の埋め込み */
