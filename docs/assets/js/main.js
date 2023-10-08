@@ -9,7 +9,7 @@ $(function () {
         var $container = $(this),
             $loadMoreButton = $('#load-more'), // 追加ボタン
             $filter = $('#works-filter'),     // フィルタリングのフォーム
-            addItemCount = 12,                // 一度に表示するアイテム数
+            addItemCount = 20,                // 一度に表示するアイテム数
             added = 0,                        // 表示済みのアイテム数
             allData = [],                     // すべての JSON データ
             tags = [],                        // JSON から取得したタグの配列
