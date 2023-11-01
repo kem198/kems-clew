@@ -3,6 +3,7 @@
  * ================================================== */
 :root {
     /* wrapper */
+    --wrapper-width: 1120px;
     --wrapper-padding: 16px;
 
     /* 色 */
@@ -29,19 +30,6 @@
     --font-weight-black: 900;
 }
 
-/* wrapper の幅をメディアクエリで定義 */
-/* PC 向け（大）のレイアウト */
-@media (min-width: 1120px) {
-    :root {
-        --wrapper-width: 1120px;
-    }
-}
-/* PC 向け（小）のレイアウト */
-@media (min-width: 960.1px) and (max-width: 1119.9px) {
-    :root {
-        --wrapper-width: 960px;
-    }
-}
 /* タブレット・SP 向けのレイアウト */
 @media (max-width: 960px) {
     :root {
@@ -301,7 +289,9 @@ nav#breadcrumb a:hover {
 }
 
 .main-container > nav#side {
-    width: 320px; /* PC 向け（大）のレイアウトの時に Masonry レイアウト側が 幅ピッタリになるように逆算して設定 */
+    /* position: sticky; */
+    /* top: 32px; */
+    width: 320px;
 }
 
 .main-container > main {
@@ -479,36 +469,17 @@ main p {
  * .works      : Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
  * .works-item : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
 
-/* .works-wrap を固定幅で設定する。
- * この設定が無いと4列の状態から3列の幅へ可変させたときに3列に戻らない。 */
-/* PC 向け（大）のレイアウト */
-@media (min-width: 1120px) {
-    /* 3列・中央寄せで表示する */
-    #content .works-wrap {
-        width: 680px;
-        margin: 0;
-    }
-    /* Home では4列まで・中央寄せを解除して背景を見せる */
-    #home .works-wrap {
-        width: 55vw;
-        margin: 0;
-    }
-}
-
-/* PC 向け（小）のレイアウト */
-@media (min-width: 960.1px) and (max-width: 1119.9px) {
-    /* 2列・左寄せで表示する */
-    .works-wrap {
-        width: 448px;
-    }
+/* Home では .works-wrap をビューポート指定・中央寄せを解除して背景を見せる */
+#home .works-wrap {
+    width: 55vw;
+    margin: 0;
 }
 
 /* タブレット・SP 向けのレイアウト */
 @media (max-width: 960px) {
-    /* 最大3列・中央寄せで表示する */
-    .works-wrap {
-        max-width: 680px;
-        margin: 0 auto;
+    /* ビューポート指定を解除して中央揃えにする */
+    #home .works-wrap {
+        width: 100%;
     }
 }
 
@@ -523,17 +494,16 @@ main p {
     display: block;
 }
 
-/* .works の Masonry レイアウト中央寄せ指定
- * 左右の margin を auto で指定 & jQuery 側の fitWidth: 'true' 指定で中央ぞろえになる */
+/* 子要素がずれるので設定する */
 .works {
-    margin: 0 auto;
     padding: 0;
 }
 
-/* Home ページかつ PC（小・大）の場合、左右の margin auto を解除し左揃えにする */
-@media (min-width: 960.1px) {
+/* タブレット・SP 向けのレイアウト */
+/* 左右の margin を auto で指定 & jQuery 側の fitWidth: 'true' 指定で中央ぞろえになる */
+@media (max-width: 960px) {
     .works {
-        margin: 0;
+        margin: 0 auto;
     }
 }
 
@@ -831,7 +801,7 @@ body#note {
 /* SP 向けのレイアウト */
 @media (max-width: 414px) {
 
-    /* SP サイズではノート表示をオフにする */
+    /* SP サイズでは背景のあしらいを切って表示領域を拡大する */
     body#note {
         background: none;
     }
