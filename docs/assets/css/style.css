@@ -21,8 +21,8 @@
     /* フォント */
     --font-family-default: 'Noto Sans JP', sans-serif, "Font Awesome 6 Free","Font Awesome 6 Brands";
     --font-family-mono: 'Noto Sans Mono', monospace;
-    --font-size-default: 17px;
     --font-size-small: 0.85rem;
+    --font-size-default: 1rem;
     --font-size-large: 1.2rem;
     --font-weight-light: 300;
     --font-weight-default: 400;
@@ -39,6 +39,7 @@
 
 html {
     height: 100%; /* タブレット以下向けのレイアウト時に body#home { background-position } を綺麗に表示するために必要 */
+    font-size: 17px; /* ベースのフォントサイズ */
     scroll-behavior: smooth;
 }
 
@@ -196,7 +197,7 @@ header hr {
 }
 
 #home .post-date {
-    margin-left: 0.25rem;
+    margin-left: 6px;
 }
 
 /* ==================================================
@@ -337,7 +338,7 @@ nav#side .filter-form label:hover {
 @media (max-width: 960px) {
     /* ボーダーを左から上下側へ切り替える */
     nav#side {
-        margin-bottom: 1rem;
+        margin-bottom: 20px;
         padding: 28px 0 20px;
         border-left: none;
         border-top: 1px solid var(--color-hr-thin);
