@@ -925,7 +925,7 @@ body#note {
 
 /* 水平線 */
 #note hr:not(header hr) {
-    margin: 4rem;
+    margin: 3rem 1rem;
     border: 0;
     border-top: 1px solid var(--color-hr-thin);
 }
