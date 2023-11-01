@@ -574,6 +574,7 @@ main p {
 #home .works-item,
 #home .works-item img {
     height: 216px;
+    object-position:top; /* 縦長の画像用に上揃えで表示する */
 }
 
 /* Home の4枚目に配置する Works ページへの遷移用ボタン  */
