@@ -1005,3 +1005,27 @@ footer a:link {
 footer a:visited {
     color: var(--color-text-white);
 }
+
+/* ==================================================
+ * modane-live2d-widget
+ * ================================================== */
+
+#home #iframe-modane {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    width: 440px;
+    height: 700px;
+    z-index: 1;
+    /* border: 1px solid red; */
+}
+
+/* タブレット・SP 向けのレイアウト */
+@media (max-width: 960px) {
+    #home #iframe-modane {
+        position: relative;
+        margin: 72px auto 0;
+        right: 0;
+        width: 100%;
+    }
+}
