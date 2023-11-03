@@ -1029,7 +1029,6 @@ footer a:visited {
     height: 600px;           /* ★ 最終的に表示する大きさ */
     overflow: hidden;        /* ★ 子要素の元サイズが 1200px なのでクリッピングする */
     z-index: 1;
-    pointer-events: none;
     /* border: 1px solid red; */
 }
 
@@ -1046,7 +1045,6 @@ footer a:visited {
     height: 1200px;        /* ★ 2 倍のサイズで書き出す */
     transform: scale(0.5); /* ★ width, height を 2 倍のサイズで書き出した後に 1/2 サイズへ縮小する */
     /* border: 1px solid green; */
-    pointer-events: auto;
 
 }
 
