@@ -12,6 +12,27 @@ date: 2023-11-25
 lastmod: 2023-11-25
 ---
 
+<!-- omit in toc -->
+## 要約
+
+- Markdown はテーブルを記述するのがめんどうくさい。
+- VS Code の拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) をインストールすると解決するぞ。
+- ショートカットキーの設定もすると便利だよ。
+
+<!-- omit in toc -->
+## 目次
+
+- [はじめに](#はじめに)
+- [検証環境](#検証環境)
+- [環境構築・実行](#環境構築実行)
+    - [1. 拡張機能「Markdown Table」をインストールする](#1-拡張機能markdown-tableをインストールする)
+    - [2. テーブルを整形する](#2-テーブルを整形する)
+    - [3. 行・列を入れ替える](#3-行列を入れ替える)
+- [ショートカットキーまとめ](#ショートカットキーまとめ)
+- [おわりに](#おわりに)
+
+## はじめに
+
 Markdown 記法に慣れるとドキュメントやメモをさくさく書けてとっても楽しい (当社比) 。
 
 ……のですが、ひとつサクサクと書けないものが存在します。テーブル (表) です。
@@ -50,18 +71,7 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 
 ![all](/assets/images/notes/2023-11-03-make-markdown-table/all.gif)
 
-<!-- omit in toc -->
-## 目次
-
-- [1. 検証環境](#1-検証環境)
-- [2. 環境構築・実行](#2-環境構築実行)
-    - [2.1. 拡張機能「Markdown Table」をインストールする](#21-拡張機能markdown-tableをインストールする)
-    - [2.2. テーブルを整形する](#22-テーブルを整形する)
-    - [2.3. 行・列を入れ替える](#23-行列を入れ替える)
-- [3. ショートカットキーまとめ](#3-ショートカットキーまとめ)
-- [4. おわりに](#4-おわりに)
-
-## 1. 検証環境
+## 検証環境
 
 当記事は下記の環境のもと作成しています。よしなに読み替えてください。
 
@@ -72,9 +82,9 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
     - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)
     - [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) ※当記事でインストールします。
 
-## 2. 環境構築・実行
+## 環境構築・実行
 
-### 2.1. 拡張機能「Markdown Table」をインストールする
+### 1. 拡張機能「Markdown Table」をインストールする
 
 まずは VS Code へ拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) をインストールします。ライセンスなどは適宜ご確認ください。
 
@@ -89,9 +99,9 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 
 ![policyf](/assets/images/notes/2023-11-03-make-markdown-table/policy.png)
 
-他にも同様の拡張機能が存在するのですが、この拡張機能は上記のとおり日本語を含むマルチバイト文字列に対応しています。
+他にも同様の拡張機能が存在しますが、この拡張機能は上記のとおり日本語を含むマルチバイト文字列に対応しています。
 
-### 2.2. テーブルを整形する
+### 2. テーブルを整形する
 
 インストールが終わったら試しに書いてみましょう。
 
@@ -115,7 +125,7 @@ Tab キーを押下すると……
 > - パイプ記号 `|` とハイフン記号 `-` を組み合わせて記述する必要がある。
 > - 半角スペースで整形しておくとソースコードが読みやすいものの、記述の調整が大変。
 
-### 2.3. 行・列を入れ替える
+### 3. 行・列を入れ替える
 
 残りの課題である
 
@@ -153,7 +163,7 @@ Tab キーを押下すると……
 
 ↑キーボードだけですべての操作が完結できました！
 
-## 3. ショートカットキーまとめ
+## ショートカットキーまとめ
 
 当ページで紹介・設定したショートカットキーをまとめると下表のとおりとなります。
 
@@ -166,7 +176,7 @@ Tab キーを押下すると……
 | `Alt` + `LeftArrow (←)`  | 列を左へ移動                              | Markdown Table |
 | `Alt` + `RightArrow (→)` | 列を右へ移動                              | Markdown Table |
 
-## 4. おわりに
+## おわりに
 
 ということで「VS Code で Markdown のテーブルを楽々記述するぞ」が実現できました！
 
