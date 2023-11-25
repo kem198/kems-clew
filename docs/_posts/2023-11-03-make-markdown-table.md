@@ -25,7 +25,7 @@ lastmod: 2023-11-25
 - [はじめに](#はじめに)
 - [検証環境](#検証環境)
 - [環境構築・実行](#環境構築実行)
-    - [1. 拡張機能「Markdown Table」をインストールする](#1-拡張機能markdown-tableをインストールする)
+    - [1. 拡張機能をインストールする](#1-拡張機能をインストールする)
     - [2. テーブルを整形する](#2-テーブルを整形する)
     - [3. 行・列を入れ替える](#3-行列を入れ替える)
 - [ショートカットキーまとめ](#ショートカットキーまとめ)
@@ -68,7 +68,7 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 - 半角スペースで整形しておくとソースコードが読みやすいものの、記述の調整が大変。
 - 行・列を入れ替える時はほぼほぼ書き直しになる。
 
-今回はそんな Markdown 記法のテーブルを、Visual Studio Code の拡張機能やショートカットを使用して楽々記述するぞ！という趣旨の記事になっております～。
+今回はそんな Markdown 記法のテーブルを、VS Code の拡張機能やショートカットを使用して楽々記述するぞ！という趣旨の記事になっております～。
 
 ![all](/assets/images/notes/2023-11-03-make-markdown-table/all.gif)
 
@@ -77,7 +77,7 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 当記事は下記の環境のもと作成しています。よしなに読み替えてください。
 
 - OS: Windows 11
-- エディタ: Visual Studio Code (以降「VS Code」と表記)
+- エディタ: [Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code) (以降「VS Code」と表記)
 - フォント: 等幅フォント ([白源](https://qiita.com/tawara_/items/374f3ca0a386fab8b305))
 - 拡張機能:
     - [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)
@@ -85,7 +85,7 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 
 ## 環境構築・実行
 
-### 1. 拡張機能「Markdown Table」をインストールする
+### 1. 拡張機能をインストールする
 
 まずは VS Code へ拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) をインストールします。ライセンスなどは適宜ご確認ください。
 
@@ -177,7 +177,7 @@ Tab キーを押下すると……
 拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) には、他にも各種機能が存在するようです。  
 詳細は同拡張機能の概要ページ > `2. Demo` `3. Extension Configurations` を参照しましょう。特に `Convert from TSV` がエクセルを併用している場合に便利です。
 
-ドキュメントは未来の自分への手紙！よきドキュメントを残していきましょう～～。
+ドキュメントは未来の自分への手紙！！よきドキュメントを残していきましょう～～。
 
 ## オマケ: Obsidian でも同様の操作を実現する
 
