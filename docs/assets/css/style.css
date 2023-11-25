@@ -19,8 +19,8 @@
     --color-border-thin: #eee;
 
     /* フォント */
-    --font-family-default: 'Noto Sans JP', sans-serif, "Font Awesome 6 Free","Font Awesome 6 Brands";
-    --font-family-mono: 'Noto Sans Mono', monospace;
+    --font-family-default: 'Noto Sans JP', "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif;
+    --font-family-mono: monospace;
     --font-size-small: 0.85rem;
     --font-size-default: 1rem;
     --font-size-large: 1.2rem;
