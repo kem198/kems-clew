@@ -185,6 +185,7 @@ nav#breadcrumb {
     margin: 16px 0;
     color: var(--color-text-thin);
     font-size: var(--font-size-small);
+    line-height: 1.2rem;
 }
 
 nav#breadcrumb a {
