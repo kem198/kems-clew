@@ -7,9 +7,7 @@ page-category: content
 <div id="notes">
     <!-- パンくずリスト -->
     <nav id="breadcrumb">
-        <ul>
-            <li><a href="/">Home</a></li>
-        </ul>
+        {% include breadcrumbs.html omit_date=true %}
     </nav>
 
     <!-- メインエリア -->
@@ -17,9 +15,9 @@ page-category: content
         <h1>Notes</h1>
         <nav id="notes-show-change">
             <ul>
-                <li class="current"><a href="/notes.html">新着順</a></li>
-                <li><a href="/notes-categories.html">カテゴリ</a></li>
-                <li><a href="/notes-tags.html">タグ</a></li>
+                <li class="current"><a href="index.html">新着順</a></li>
+                <li><a href="notes-categories.html">カテゴリ</a></li>
+                <li><a href="notes-tags.html">タグ</a></li>
             </ul>
         </nav>
         <ul class="myposts">

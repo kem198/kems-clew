@@ -184,23 +184,7 @@ header hr {
 nav#breadcrumb {
     margin: 16px 0;
     color: var(--color-text-thin);
-}
-
-nav#breadcrumb > ul {
-    padding-left: 0; /* デフォルトの padding を削除 */
-    font-size: 0; /* inline-block の余白を削除 */
-}
-
-nav#breadcrumb > ul > li {
-    display: inline-block;
-    margin-bottom: 0;
     font-size: var(--font-size-small);
-  }
-
-nav#breadcrumb > ul > li:after {
-    content: "/";
-    margin-right: 0.25rem;
-    margin-left: 0.25rem;
 }
 
 nav#breadcrumb a {

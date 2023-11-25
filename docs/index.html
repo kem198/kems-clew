@@ -8,7 +8,7 @@ page-category: home
 
     <!-- Notes ページのプレビュー -->
     <section>
-        <h2><a href="./notes.html">Notes</a></h2>
+        <h2><a href="./notes/index.html">Notes</a></h2>
         <div class="about-description">雑記いろいろ</div>
         <ul class="notes">
         {% for post in site.posts limit:3 %}
@@ -19,7 +19,7 @@ page-category: home
                 <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
             </li>
         {% endfor %}
-            <li><a href="./notes.html">more <i class="fa-solid fa-caret-right"></i></a></li>
+            <li><a href="./notes/index.html">more <i class="fa-solid fa-caret-right"></i></a></li>
         </ul>
     </section>
 
