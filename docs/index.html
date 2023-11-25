@@ -5,25 +5,11 @@ page-category: home
 ---
 
 <main>
-    <!-- Works ページのプレビュー -->
-    <section>
-        <h2 id="scroll-target"><a href="./works.html">Works</a></h2>
-        <div class="works-wrap">
-            <noscript>
-                <p>
-                    JavaScript が無効のため、コンテンツを正常に表示できませんでした。<br>
-                    お手数ですがブラウザの設定をお確かめの上、ページの再読み込みを行ってください。
-                </p>
-            </noscript>
-            <ul class="works" id="works">
-                <!-- masonry でグリッドレイアウトを生成 -->
-            </ul>
-        </div>
-    </section>
 
     <!-- Notes ページのプレビュー -->
     <section>
         <h2><a href="./notes.html">Notes</a></h2>
+        <div class="about-description">雑記いろいろ</div>
         <ul class="notes">
         {% for post in site.posts limit:3 %}
             <li>
@@ -37,12 +23,16 @@ page-category: home
         </ul>
     </section>
 
+    <!-- Works -->
+    <section>
+        <h2><a href="./works.html">Works</a></h2>
+        <div class="about-description">制作物のページ</div></li>
+    </section>
+
     <!-- About -->
     <section>
         <h2><a href="{% post_url 2022-11-22-about %}">About</a></h2>
-        <ul class="about">
-            <li><a href="{% post_url 2022-11-22-about %}">このサイトについて</a><div class="about-description">免責事項などを掲載しています。</div></li>
-        </ul>
+        <div class="about-description">当サイトについて</div></li>
     </section>
 
     <!-- modane-live2d-widget -->

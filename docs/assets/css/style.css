@@ -52,24 +52,6 @@ body {
     overflow-y: scroll; /* スクロールバー出現によるガタ付きを防ぐためあらかじめ表示させておく */
 }
 
-body#home {
-    background-position: right;
-    background-attachment: fixed;
-    background-size: contain;
-    background-image: linear-gradient(to left, transparent 0%, transparent 20%, #fff 100%), url(../images/bg.jpg);
-    background-repeat: no-repeat;
-}
-
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    /* Home の背景位置を調整してキービジュアルとして用いる */
-    body#home {
-        background-position: 70%;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-}
-
 .wrapper {
     max-width: var(--wrapper-width);
     margin-left: auto;
@@ -168,22 +150,17 @@ header hr {
     display: none;
 }
 
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    /* Home へ1画面分の margin を設定しファーストビュー表示領域を作成する */
-    #home header {
-        margin-bottom: 100vh;
-        margin-bottom: 100svh;
-    }
-}
-
 /* ==================================================
- * Home / リンク周りの調整
+ * Home / あしらいの調整
  * ================================================== */
 
-/* Notes, About のリンクのあしらい */
 #home main a {
     color: var(--color-text-black);
+}
+
+#home h2 {
+    margin-top: 40px;
+    margin-bottom: 8px;
 }
 
 #home .notes a,
@@ -199,48 +176,6 @@ header hr {
 
 #home .post-date {
     margin-left: 6px;
-}
-
-/* ==================================================
- * Home / スクロールボタン
- * ================================================== */
-
-/* Home 以外ではスクロールボタンを非表示 */
-#scroll {
-    display: none;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 2vh;
-    width: 100px;
-    text-align: center;
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-light);
-}
-
-/* タップできる範囲を親要素へ広げる */
-#scroll a {
-    display: block;
-    color: var(--color-text-black);
-}
-
-#scroll a:hover {
-    opacity: 1;
-}
-
-#scroll p {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 20px; /* スクロールボタンが押しやすいように padding などを設定 */
-}
-
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    /* Home へ スクロールボタンを表示する */
-    #home #scroll {
-        display: inline-block;
-    }
 }
 
 /* ==================================================
@@ -471,20 +406,6 @@ main p {
  * .works      : Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
  * .works-item : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
 
-/* Home では .works-wrap をビューポート指定・中央寄せを解除して背景を見せる */
-#home .works-wrap {
-    width: 55vw;
-    margin: 0;
-}
-
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    /* ビューポート指定を解除して中央揃えにする */
-    #home .works-wrap {
-        width: 100%;
-    }
-}
-
 /* 見出し 初期状態では非表示*/
 #works-h2 {
     display: none;
@@ -539,34 +460,6 @@ main p {
 
 .works-item img:hover {
     opacity: 0.75;
-}
-
-/* Home のサムネイルは正方形で表示する */
-/* 画像サイズを保っていると home-more ボタンが右下に固定できないため */
-#home .works-item,
-#home .works-item img {
-    height: 216px;
-    object-position:top; /* 縦長の画像用に上揃えで表示する */
-}
-
-/* Home の4枚目に配置する Works ページへの遷移用ボタン  */
-#home-more p {
-    margin: 0;
-    width:100%;
-    height: 100%;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.7);
-    background: #e9e9e9;
-    text-align: center;
-    color: var(--color-text-black);
-    font-weight: var(--font-weight-light);
-    line-height: 216px;
-    transition: 0.3s;
-    transition-timing-function: ease-out;
-}
-
-#home-more p:hover {
-    background: #ccc;
 }
 
 .works-item .caption {
