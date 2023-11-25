@@ -214,10 +214,10 @@ $(function () {
         }
 
         // JSON を取得し appendTags 関数を実行
-        $.getJSON('/assets/data/content.json', appendTags);
+        $.getJSON('/assets/works/content.json', appendTags);
 
         // JSON を取得し initWorks 関数を実行
-        $.getJSON('/assets/data/content.json', initWorks);
+        $.getJSON('/assets/works/content.json', initWorks);
     });
 
 });

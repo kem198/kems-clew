@@ -22,15 +22,15 @@
     {% if page.preview %}
         <meta property="og:image" content="{{ page.preview }}">
     {% else %}
-        <meta property="og:image" content="https://kems-clew.net/assets/images/card.png">
+        <meta property="og:image" content="https://kems-clew.net/images/card.png">
     {% endif %}
     <!-- OGP で表示するプレビュー画像設定 ここまで -->
 
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
 </head>
 <body id="{{ page.page-category }}">
     <header id="top">
@@ -60,16 +60,16 @@
     </footer>
 
     <!-- 表示処理の後に読み込み -->
-    <link rel="stylesheet" href="{{ "/assets/css/colorbox.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/colorbox.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/338ea6a4d5.js" crossorigin="anonymous"></script>
-    <script src="{{ "/assets/js/vender/jquery-3.6.1.min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/vender/imagesloaded.pkgd.min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/vender/masonry.pkgd.min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/vender/jquery.colorbox-min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+    <script src="{{ "/lib/jquery-3.6.1.min.js" | relative_url }}"></script>
+    <script src="{{ "/lib/imagesloaded.pkgd.min.js" | relative_url }}"></script>
+    <script src="{{ "/lib/masonry.pkgd.min.js" | relative_url }}"></script>
+    <script src="{{ "/lib/jquery.colorbox-min.js" | relative_url }}"></script>
+    <script src="{{ "/js/main.js" | relative_url }}"></script>
 </body>
 </html>

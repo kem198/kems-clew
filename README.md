@@ -167,7 +167,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
     - [フィルタ](http://jekyllrb-ja.github.io/docs/step-by-step/02-liquid/#:~:text=%E7%A2%BA%E8%AA%8D%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82-,%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF,Permalink,-%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AFLiquid)
 
         ```html
-        <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+        <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
         ```
 
     - [YAML Front Matter](http://jekyllrb-ja.github.io/docs/front-matter/) （ファイルの先頭に記述）
