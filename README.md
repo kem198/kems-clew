@@ -267,8 +267,6 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
     │   ├── assets
     │   ├── 404.html
     │   ├── CNAME
-    │   ├── apple-touch-icon.png
-    │   ├── favicon.ico
     │   ├── index.html
     │   ├── notes.html
     │   └── works.html
@@ -280,8 +278,6 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
     ├── 404.html
     ├── CNAME
     ├── _config.yml
-    ├── apple-touch-icon.png
-    ├── favicon.ico
     ├── index.html
     ├── notes.html
     └── works.html
