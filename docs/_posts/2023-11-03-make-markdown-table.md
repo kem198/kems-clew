@@ -76,7 +76,9 @@ Markdown 記法に慣れるとドキュメントやメモをさくさく書け�
 
 ### 2.1. 拡張機能「Markdown Table」をインストールする
 
-まずは VS Code へ拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) をインストールします。似た名前のものがあるので注意しましょう。
+まずは VS Code へ拡張機能 [Markdown Table](https://marketplace.visualstudio.com/items?itemName=TakumiI.markdowntable) をインストールします。ライセンスなどは適宜ご確認ください。
+
+なお拡張機能を検索する際、似た名前のものがあるので注意しましょう。
 
 概要ページのセクション 6 に……
 
