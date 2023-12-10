@@ -354,6 +354,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
     - [パーマリンク | Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/docs/permalinks/)
 - [Jekyllには投稿予約機能がある＆Jekyllにタイムゾーンを設定 | 為せばnull](https://blog.yotiosoft.com/2022/03/05/Jekyll%E3%81%AB%E3%81%AF%E6%8A%95%E7%A8%BF%E4%BA%88%E7%B4%84%E6%A9%9F%E8%83%BD%E3%81%8C%E3%81%82%E3%82%8B-Jekyll%E3%81%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%92%E8%A8%AD%E5%AE%9A.html)
 - [Neos21/neos21.net: Repository of Neo's World](https://github.com/Neos21/neos21.net)
+- [JekyllのCategories一覧をアルファベット順にする](https://haltaro.github.io/2018/04/15/sort-categories)
 
 ### 6.3. HTML / CSS / JS
 
