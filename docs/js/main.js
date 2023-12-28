@@ -6,7 +6,7 @@ $(function () {
     $('#works').each(function () {
 
         // 変数・配列の宣言
-        var $container = $(this),
+        let $container = $(this),
             $loadMoreButton = $('#load-more'), // 追加ボタン
             $filter = $('#works-filter'),     // フィルタリングのフォーム
             addItemCount = 20,                // 一度に表示するアイテム数
@@ -17,7 +17,7 @@ $(function () {
 
         // Home の場合は3つのみを表示するため addItemCount へ 3 を再代入する
         if ($('#home').length) {
-            var addItemCount = 3;
+            let addItemCount = 3;
         }
 
         // オプションを設定して Masonry を準備
@@ -31,13 +31,13 @@ $(function () {
 
         // アイテムを生成しドキュメントに挿入する関数
         function addItems (filter) {
-            var elements = [],
+            let elements = [],
                 // 追加するデータの配列
                 slicedData = filteredData.slice(added, added + addItemCount);
 
             // slicedData の要素ごとに DOM 要素を生成
             $.each(slicedData, function (i, item) {
-                var itemHTML =
+                let itemHTML =
                     '<li class="works-item is-loading">' +
                         '<a href="' + item.images.large + '">' +
                             '<img src="' + item.images.thumb + '" alt="' + item.title + '">' +
@@ -56,7 +56,7 @@ $(function () {
 
             // Home の場合は配列の最後に more ボタン を挿入する
             if ($('#home').length) {
-                var itemMore =
+                let itemMore =
                     '<div id="home-more" class="works-item">' +
                         '<a href="./works.html">' +
                             '<p>more <i class="fa-solid fa-caret-right"></i></p>' +
@@ -120,15 +120,15 @@ $(function () {
         function appendTags (data) {
 
             // 取得した JSON 内のタグ情報を二次元配列として格納
-            var multiTags = [];
-            for (var i in data) {
+            let multiTags = [];
+            for (let i in data) {
                 if (data[i].tags) {
                     multiTags.push(data[i].tags);
                 }
             }
 
             // 一次元に変換したタグ配列から重複を排除した Set オブジェクトを作成
-            var setTags = new Set(multiTags.flat());
+            let setTags = new Set(multiTags.flat());
             // console.log(setTags);
 
             // Set オブジェクトを昇順の配列として代入
@@ -137,7 +137,7 @@ $(function () {
 
             // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
             $.each(tags, function (i, item) {
-                var tagHTML =
+                let tagHTML =
                     '<li class="tag">' +
                             '<input type="radio" name="filter" id="' + item + '" value="' + item + '">' +
                             '<label for=' + item + '>#' + item + '</label>';
@@ -149,7 +149,7 @@ $(function () {
 
         // アイテムをフィルタリングする関数
         function filterItems () {
-            var key = $(this).val(), // チェックされたラジオボタンの value
+            let key = $(this).val(), // チェックされたラジオボタンの value
 
                 // 追加済みの Masonry アイテム
                 masonryItems = $container.masonry('getItemElements');
