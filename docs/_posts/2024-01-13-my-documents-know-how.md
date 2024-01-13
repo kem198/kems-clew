@@ -4,8 +4,10 @@ page-category: note
 title: ドキュメント作成時のノウハウをまとめてみる
 description: ""
 preview: ""
-category: 日記
-tags: "document"
+category: 情報技術
+tags:
+    - tips
+    - markdown
 date: 2024-01-13
 lastmod: 2024-01-13
 ---
