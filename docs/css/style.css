@@ -70,7 +70,7 @@ p, li {
 }
 
 li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
 }
 
 a:link {
@@ -595,7 +595,7 @@ nav#notes-show-change a:hover {
 
 #notes .post-tags li {
     display: inline-block;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 20px;

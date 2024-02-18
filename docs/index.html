@@ -19,19 +19,20 @@ page-category: home
                 <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
             </li>
         {% endfor %}
+            <li><a href="./notes/">All Notes <i class="fa-solid fa-caret-right"></i></a></li>
         </ul>
     </section>
 
     <!-- Works -->
     <section>
         <h2><a href="./works.html">Works <i class="fa-solid fa-caret-right"></i></a></h2>
-        <div class="about-description">制作物のページ</div></li>
+        <div class="about-description">制作物のページ</div>
     </section>
 
     <!-- About -->
     <section>
         <h2><a href="{% post_url 2022-11-22-about %}">About <i class="fa-solid fa-caret-right"></i></a></h2>
-        <div class="about-description">当サイトについて</div></li>
+        <div class="about-description">当サイトについて</div>
     </section>
 
     <!-- modane-live2d-widget -->
