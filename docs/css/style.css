@@ -181,19 +181,19 @@ header hr {
 /* ==================================================
  * パンくずリスト
  * ================================================== */
-nav#breadcrumb {
+#breadcrumbs {
     margin: 16px 0;
     color: var(--color-text-thin);
     font-size: var(--font-size-small);
     line-height: 1.2rem;
 }
 
-nav#breadcrumb a {
+#breadcrumbs a {
     color: var(--color-text-gray);
     text-decoration: none;
 }
 
-nav#breadcrumb a:hover {
+#breadcrumbs a:hover {
     color: var(--color-text-gray);
     text-decoration: underline;
     opacity: 1;

@@ -3,21 +3,19 @@ layout: default
 ---
 
 <main>
-    <!-- パンくずリスト -->
-    <nav id="breadcrumb">
-        {% include breadcrumbs.html %}
-    </nav>
+  <!-- パンくずリスト -->
+  {% include breadcrumbs.html %}
 
-    <!-- メインコンテンツ -->
-    <div class="note-bg">
-        <!-- 作成日・更新日 -->
-        <ul class="timestamp">
-            <li>作成日: {{ page.date | date: "%Y-%m-%d" }}</li>
-            <li>更新日: {{ page.lastmod | date: "%Y-%m-%d" }}</li>
-        </ul>
+  <!-- メインコンテンツ -->
+  <div class="note-bg">
+    <!-- 作成日・更新日 -->
+    <ul class="timestamp">
+      <li>作成日: {{ page.date | date: "%Y-%m-%d" }}</li>
+      <li>更新日: {{ page.lastmod | date: "%Y-%m-%d" }}</li>
+    </ul>
 
-        <!-- コンテンツ -->
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-    </div>
+    <!-- コンテンツ -->
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </div>
 </main>
