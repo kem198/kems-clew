@@ -845,7 +845,7 @@ footer ul {
 footer ul > li {
     display: inline-block;
     margin: 0 8px 10px;
-    font-size: var(--font-size-small);
+    font-size: 1.4rem;
 }
 
 footer #copy {
