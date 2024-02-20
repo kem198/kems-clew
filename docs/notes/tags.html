@@ -23,7 +23,7 @@ page-category: content
     <h2 class="h2-filter h2-tags">{{ tag[0] }}</h2>
     <ul class="posts posts-filter">
       {% for post in tag[1] %}
-      {%- include note-card.html -%}
+      {%- include post-card.html -%}
       {% endfor %}
     </ul>
     {% endfor %}

@@ -574,9 +574,10 @@ nav#notes-show-change a:hover {
 }
 
 /* ==================================================
- * Notes / note-card
+ * Notes / post-card
  * ================================================== */
-li.note-card {
+li.post-card {
+    position: relative;
     margin-bottom: 2rem;
     padding: 32px;
     border-radius: 8px;
@@ -586,56 +587,62 @@ li.note-card {
 /* SP 向けのレイアウト */
 @media (max-width: 414px) {
     /* SP サイズでは背景のあしらいを切って表示領域を拡大する */
-    li.note-card {
+    li.post-card {
         padding: 16px;
     }
 
 }
 
-li.note-card > a {
-    display: block;
+li.post-card > a {
+    position: absolute;
+    inset: 0px;
 }
 
-li.note-card .post-description {
+li.post-card > a:hover {
+    background: rgba(0,0,0,.02);
+}
+
+li.post-card .post-description {
     display: flex;
     margin-bottom: 0.5rem;
     gap: 0.5em;
 }
 
-li.note-card .post-description,
-li.note-card .post-excerpt,
-li.note-card .post-tags {
+li.post-card .post-description,
+li.post-card .post-excerpt,
+li.post-card .post-tags {
     font-size: var(--font-size-small);
     color: var(--color-text-gray);
 }
 
-li.note-card .post-category {
+li.post-card .post-category {
     color: var(--color-text-black);
 }
 
-li.note-card .post-title {
+li.post-card .post-title {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
+    z-index: 2;
 }
 
-li.note-card .post-title a {
+li.post-card .post-title a {
     color: var(--color-text-black);
 }
 
-li.note-card .post-title a:hover {
+li.post-card .post-title a:hover {
     text-decoration: underline;
 }
 
-li.note-card .post-excerpt > p:after {
+li.post-card .post-excerpt > p:after {
     content: "...";
 }
 
-li.note-card .post-tags {
+li.post-card .post-tags {
     margin-top: 1em;
     padding-left: 0;
 }
 
-li.note-card .post-tags li {
+li.post-card .post-tags li {
     display: inline-block;
     padding-left: 8px;
     padding-right: 8px;
@@ -643,7 +650,7 @@ li.note-card .post-tags li {
     background: var(--color-tag-unselected);
 }
 
-li.note-card .post-tags li::before {
+li.post-card .post-tags li::before {
     content: "#";
 }
 
