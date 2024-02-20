@@ -154,7 +154,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
     - [タグ](http://jekyllrb-ja.github.io/docs/step-by-step/02-liquid/#:~:text=%E5%87%BA%E5%8A%9B%E3%81%97%E3%81%BE%E3%81%99%E3%80%82-,%E3%82%BF%E3%82%B0,-Permalink)
 
         ```html
-        <ul class="myposts">
+        <ul class="posts">
         {% for post in site.posts %}
             <li>
                 <span class="postDate">{{ post.date | date: "%Y-%m-%d" }}</span>

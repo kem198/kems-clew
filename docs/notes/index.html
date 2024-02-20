@@ -4,24 +4,22 @@ layout: default
 page-category: content
 ---
 
-<div id="notes">
+<main id="notes-list">
   <!-- パンくずリスト -->
   {% include breadcrumbs.html omit_date=true %}
 
   <!-- メインエリア -->
-  <main>
-    <h1>Notes</h1>
-    <nav id="notes-show-change">
-      <ul>
-        <li class="current"><a href="index.html">新着順</a></li>
-        <li><a href="notes-categories.html">カテゴリ</a></li>
-        <li><a href="notes-tags.html">タグ</a></li>
-      </ul>
-    </nav>
-    <ul class="myposts">
-      {% for post in site.posts %}
-      {%- include note-preview.html -%}
-      {% endfor %}
+  <h1>Notes</h1>
+  <nav id="notes-show-change">
+    <ul>
+      <li class="current"><a href="index.html">新着順</a></li>
+      <li><a href="categories.html">カテゴリ</a></li>
+      <li><a href="tags.html">タグ</a></li>
     </ul>
-  </main>
-</div>
+  </nav>
+  <ul class="posts">
+    {% for post in site.posts %}
+    {%- include note-card.html -%}
+    {% endfor %}
+  </ul>
+</main>

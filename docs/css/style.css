@@ -67,6 +67,43 @@ body {
     /* height: 500px; */
 }
 
+main {
+    width: 100%;
+}
+
+h1 {
+    margin: 16px 0 64px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-black);
+}
+
+main h2 {
+    /* display: inline-block; */
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding-right: 1.5rem;
+    padding-bottom: 0.3rem;
+    width: fit-content;
+    border-bottom: 1px solid var(--color-text-black);
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-black);
+}
+
+main h2 > a:link {
+    color: var(--color-text-black);
+    text-decoration: none;
+}
+
+main h2 > a:visited {
+    color: var(--color-text-black);
+}
+
+main p {
+    text-align: justify;
+    word-break: break-all; /* 長い英単語を改行させて直前の和文を伸びなくする */
+}
+
 p, li {
     line-height: 1.4rem;
 }
@@ -143,12 +180,20 @@ header hr {
     margin: 5px 0;
 }
 
-#content header #title, #note header #title {
+/* ==================================================
+ * content / 共通レイアウト
+ * ================================================== */
+
+body#content {
+    background: var(--color-bg-gray);
+}
+
+body#content header #title, #note header #title {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-default);
 }
 
-#content header #catch, #note header #catch {
+body#content header #catch, #note header #catch {
     display: none;
 }
 
@@ -156,27 +201,27 @@ header hr {
  * Home / あしらいの調整
  * ================================================== */
 
-#home main a {
+body#home main a {
     color: var(--color-text-black);
 }
 
-#home h2 {
+body#home h2 {
     margin-top: 40px;
     margin-bottom: 8px;
 }
 
-#home .notes a,
-#home .about a {
+body#home .notes a,
+body#home .about a {
     text-decoration: underline;
 }
 
-#home .post-date,
-#home .about-description {
+body#home .post-date,
+body#home .about-description {
     color: var(--color-text-gray);
     font-size: var(--font-size-small);
 }
 
-#home .post-date {
+body#home .post-date {
     margin-left: 6px;
 }
 
@@ -204,7 +249,7 @@ header hr {
 /* ==================================================
  * Works / Flexbox レイアウト
  * ================================================== */
-.main-container {
+main#works .main-container {
     display: flex;
     align-items: flex-start;
     flex-direction: row-reverse;
@@ -212,26 +257,26 @@ header hr {
     gap: 32px;
 }
 
-.main-container > nav#side {
+main#works .main-container > nav#side {
     /* position: sticky; */
     /* top: 32px; */
     width: 320px;
 }
 
-.main-container > main {
+main#works .main-container section#works-view {
     flex: 1;
 }
 
 /* タブレット・SP 向けのレイアウト */
 @media (max-width: 960px) {
     /* Flexbox を解除しサイドメニューとメインコンテンツを1カラムで表示する */
-    .main-container {
+    main#works .main-container {
         flex-direction: column;
         justify-content: center;
     }
 
     /* フィルターメニューの width を解除して横いっぱいに表示 */
-    .main-container > nav#side {
+    main#works .main-container > nav#side {
         width: auto;
     }
 
@@ -240,27 +285,26 @@ header hr {
 /* ==================================================
  * Works / サイドメニュー
  * ================================================== */
-nav#side {
+ main#works nav#side {
     margin-top: 0;
     padding: 0 0 20px 20px;
     border-left: 1px solid var(--color-hr-thin);
-    background-color: var(--color-text-white);
 }
 
-nav#side .filter-form input,
-nav#side .filter-form label {
+main#works nav#side .filter-form input,
+main#works nav#side .filter-form label {
     cursor: pointer;
     user-select: none;
 }
 
-nav#side .filter-form label:hover {
+main#works nav#side .filter-form label:hover {
     opacity: 0.7;
 }
 
 /* タブレット・SP 向けのレイアウト */
 @media (max-width: 960px) {
     /* ボーダーを左から上下側へ切り替える */
-    nav#side {
+    main#works nav#side {
         margin-bottom: 20px;
         padding: 28px 0 20px;
         border-left: none;
@@ -270,44 +314,44 @@ nav#side .filter-form label:hover {
 
     /* タブレット・SP ではホバー時の透明化を解除する */
     /* ホバーで色が薄くなった状態が持続してしまうため */
-    nav#side .filter-form label:hover {
+    main#works nav#side .filter-form label:hover {
         opacity: 1;
     }
 }
 
-nav#side h2 {
+main#works nav#side h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.2rem;
     font-weight: var(--font-weight-black);
 }
 
-nav#side section {
+main#works nav#side section {
     margin-top: 30px;
 }
 
-nav#side section:first-child{
+main#works nav#side section:first-child{
     margin-top: 0;
 }
 
-ul#category {
+main#works ul#category {
     padding-left: 16px;
 }
 
-ul#category li {
+main#works ul#category li {
     list-style: none;
 }
 
-ul#category li label {
+main#works ul#category li label {
     margin-left: 0.3rem;
 }
 
-ul#category li .desc {
+main#works ul#category li .desc {
     color: var(--color-text-gray);
     font-size: var(--font-size-small);
 }
 
-ul#category li .desc:before {
+main#works ul#category li .desc:before {
     content: "/";
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -315,17 +359,17 @@ ul#category li .desc:before {
     font-size: var(--font-size-small);
 }
 
-ul#tags {
+main#works ul#tags {
     padding-left: 16px;
     font-size: 0; /* inline-block の余白を削除 */
 }
 
-ul#tags input {
+main#works ul#tags input {
     display: none;
 }
 
 
-ul#tags label {
+main#works ul#tags label {
     padding: 4px 10px 4px;
     border-radius: 20px;
     background: var(--color-tag-unselected);
@@ -333,57 +377,16 @@ ul#tags label {
 }
 
 /* タグがクリックされたら色を変更 */
-ul#tags input:checked + label {
+main#works ul#tags input:checked + label {
     background: var(--color-tag-selected);
 }
 
-li.tag {
+main#works li.tag {
     display: inline-block;
     margin-right: 8px;
     margin-bottom: 16px;
     font-size: var(--font-size-small);
     user-select: none;
-}
-
-/* ==================================================
- * Works / ページ メインエリア
- * ================================================== */
-
-main {
-    width: 100%;
-}
-
-h1 {
-    margin: 16px 0 64px;
-    text-align: center;
-    font-size: 3.5rem;
-    font-weight: var(--font-weight-black);
-}
-
-main h2 {
-    /* display: inline-block; */
-    margin-top: 32px;
-    margin-bottom: 24px;
-    padding-right: 1.5rem;
-    padding-bottom: 0.3rem;
-    width: fit-content;
-    border-bottom: 1px solid var(--color-text-black);
-    font-size: 1.6rem;
-    font-weight: var(--font-weight-black);
-}
-
-main h2 > a:link {
-    color: var(--color-text-black);
-    text-decoration: none;
-}
-
-main h2 > a:visited {
-    color: var(--color-text-black);
-}
-
-main p {
-    text-align: justify;
-    word-break: break-all; /* 長い英単語を改行させて直前の和文を伸びなくする */
 }
 
 /* ==================================================
@@ -394,19 +397,24 @@ main p {
  * .works-item : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
 
 /* 見出し 初期状態では非表示*/
-#works-h2 {
+main#works #works-h2 {
     display: none;
     margin-top: 0;
 }
 
 /* フィルターが付与されたら表示 */
-#works-h2.filter-selected {
+main#works #works-h2.filter-selected {
     display: block;
 }
 
-/* 子要素がずれるので設定する */
-.works {
-    padding: 0;
+main#works .works {
+    margin-top: 0 auto;
+    padding: 0; /* 子要素がずれるので設定する */
+}
+
+/* works の中央ぞろえで必要 */
+main#works .works-view-wrap {
+    width: 100%;
 }
 
 /* タブレット・SP 向けのレイアウト */
@@ -415,9 +423,10 @@ main p {
     .works {
         margin: 0 auto;
     }
+
 }
 
-.works-item {
+main#works .works-item {
     margin-top: 0;
     margin-bottom: 16px;
     width: 216px;
@@ -430,12 +439,12 @@ main p {
 
 /* 画像の読み込み中は非表示にする */
 /* 画像の読込完了後、JS 処理で .is-loading が削除され表示される */
-.works-item.is-loading {
+main#works .works-item.is-loading {
     opacity: 0;
 }
 
 /* アイテムの画像は角丸のカードのような見た目で表示 */
-.works-item img {
+main#works .works-item img {
     width: 100%;
     border: 1px solid var(--color-border-thin);
     border-radius: 8px;
@@ -445,16 +454,16 @@ main p {
     transition-timing-function: ease-out;
 }
 
-.works-item img:hover {
+main#works .works-item img:hover {
     opacity: 0.75;
 }
 
-.works-item .caption {
+main#works .works-item .caption {
     display: none;
 }
 
 /* 追加読み込みボタン */
-.load-more {
+main#works .load-more {
     display: block;
     margin-top: 16px;
     margin-left: auto;
@@ -471,20 +480,20 @@ main p {
     transition-timing-function: ease-out;
 }
 
-.load-more.is-loading {
+main#works .load-more.is-loading {
     opacity: 0;
 }
 
-.load-more:hover {
+main#works .load-more:hover {
     background: #ccc;
 }
 
-.works-wrap a {
+main#works .works-wrap a {
     text-decoration: none;
     opacity: 1;
 }
 
-.works-wrap a:link {
+main#works .works-wrap a:link {
     color: var(--color-text-black);
     text-decoration: none;
 }
@@ -538,119 +547,104 @@ nav#notes-show-change a:hover {
 }
 
 /* ==================================================
- * Notes / 一覧ページ / 共通・新着順
+ * Notes / 一覧ページ
  * ================================================== */
+/* 背景・全体のあしらい */
+#notes-list {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 824px;
+}
 
-#notes .myposts {
+#notes-list h2 {
+    margin-top: 2em;
+}
+
+#notes-list h2:first-child {
+    margin-top: 0;
+}
+
+#notes-list h2.h2-tags:before {
+    content: "#";
+}
+
+#notes-list .posts {
     padding-left: 0;
     list-style: none;
 }
 
-#notes .myposts > li {
+/* ==================================================
+ * Notes / note-card
+ * ================================================== */
+li.note-card {
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--color-hr-thin);
+    padding: 32px;
+    border-radius: 8px;
+    background: var(--color-bg-white);
 }
 
-#notes .myposts > li:first-child {
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-hr-thin);
+/* SP 向けのレイアウト */
+@media (max-width: 414px) {
+    /* SP サイズでは背景のあしらいを切って表示領域を拡大する */
+    li.note-card {
+        padding: 16px;
+    }
+
 }
 
-#notes .post-description {
+li.note-card > a {
+    display: block;
+}
+
+li.note-card .post-description {
     display: flex;
     margin-bottom: 0.5rem;
     gap: 0.5em;
 }
 
-#notes .post-description,
-#notes .post-excerpt,
-#notes .post-tags {
+li.note-card .post-description,
+li.note-card .post-excerpt,
+li.note-card .post-tags {
     font-size: var(--font-size-small);
     color: var(--color-text-gray);
 }
 
-#notes .post-category {
+li.note-card .post-category {
     color: var(--color-text-black);
 }
 
-#notes .post-title {
+li.note-card .post-title {
+    font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
 }
 
-#notes .post-title a {
+li.note-card .post-title a {
     color: var(--color-text-black);
 }
 
-#notes .post-title a:hover {
+li.note-card .post-title a:hover {
     text-decoration: underline;
 }
 
-#notes .post-excerpt > p:after {
+li.note-card .post-excerpt > p:after {
     content: "...";
 }
 
-#notes .post-tags {
+li.note-card .post-tags {
     margin-top: 1em;
     padding-left: 0;
 }
 
-#notes .post-tags li {
+li.note-card .post-tags li {
     display: inline-block;
-    /* margin-bottom: 0; */
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 20px;
     background: var(--color-tag-unselected);
 }
 
-#notes .post-tags li:before {
+li.note-card .post-tags li::before {
     content: "#";
-}
-
-/* ==================================================
- * Notes / 一覧ページ / カテゴリー・タグ
- * ================================================== */
-
-#notes .myposts-filter {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    gap: 2rem;
-    list-style: none;
-}
-
-#notes h2.h2-filter {
-    margin-top: 64px;
-    width: auto;
-    border-bottom: 1px solid #aaa;
-}
-
-#notes h2.h2-filter:first-child {
-    margin-top: 0;
-}
-
-#notes h2.h2-tags:before {
-    content: "#";
-}
-
-#notes .myposts-filter > li {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    width: calc(50% - 1rem);
-    border-bottom: 0;
-}
-
-/* タブレット・SP 向けのレイアウト */
-@media (max-width: 960px) {
-    #notes .myposts-filter > li {
-        width: 100%;
-    }
-}
-
-#notes .myposts-filter > li:first-child {
-    padding-top: 0;
-    border-top: 0;
 }
 
 /* ==================================================
@@ -658,12 +652,6 @@ nav#notes-show-change a:hover {
  * ================================================== */
 
 /* 背景・全体のあしらい */
-#notes {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 824px;
-}
-
 body#note {
     background: var(--color-bg-gray);
 }

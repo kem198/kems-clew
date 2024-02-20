@@ -3,7 +3,7 @@ $(function () {
     /* ==================================================
      * Works Masonry レイアウト
      * ================================================== */
-    $('#works').each(function () {
+    $('#works-canvas').each(function () {
 
         // 変数・配列の宣言
         let $container = $(this),

@@ -1,0 +1,31 @@
+---
+title: Tags
+layout: default
+page-category: content
+---
+
+<main id="notes-list">
+  <!-- パンくずリスト -->
+  {% include breadcrumbs.html omit_date=true %}
+
+  <!-- メインエリア -->
+  <h1>Notes</h1>
+  <nav id="notes-show-change">
+    <ul>
+      <li><a href="./index.html">新着順</a></li>
+      <li><a href="./categories.html">カテゴリ</a></li>
+      <li class="current"><a href="./tags.html">タグ</a></li>
+    </ul>
+  </nav>
+  <div class="filter-wrap">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+    <h2 class="h2-filter h2-tags">{{ tag[0] }}</h2>
+    <ul class="posts posts-filter">
+      {% for post in tag[1] %}
+      {%- include note-card.html -%}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</main>
