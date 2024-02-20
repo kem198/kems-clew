@@ -407,8 +407,8 @@ main#works #works-h2.filter-selected {
     display: block;
 }
 
-main#works .works {
-    margin-top: 0 auto;
+main#works #works-canvas {
+    margin-top: 0;
     padding: 0; /* 子要素がずれるので設定する */
 }
 
