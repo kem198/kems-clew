@@ -447,6 +447,10 @@
   background: $base-bg-color-main;
   border-radius: 8px;
 
+  h3 a {
+    color: $color-black
+  }
+
   @include media-query($on-laptop) {
     position: relative;
     padding: $spacing-unit / 2;
