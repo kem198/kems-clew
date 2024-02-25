@@ -503,7 +503,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 - [width,heighとpaddingの同時指定によるレイアウト崩れをbox-sizingdで防ぐ - Qiita](https://qiita.com/NeGI1009/items/a738cd96a345a7799e4b)
 - [【CSS】display:flexでmax-widthが効かない時の対処法。calcやflex-basisの活用 \#CSS - Qiita](https://qiita.com/shizen-shin/items/dc8d096300cde63dc8a8)
 - [Flexbox からコンテンツはみ出る問題を完全に解決する \#CSS - Qiita](https://qiita.com/mpyw/items/dfc63c1fed5dfc5eda26)
-[【簡単】CSSでスクロールバーのデザイン変更【カスタマイズ可能】 | ジトサイト](https://jito-site.com/scrollbar-design-customize/)
+- [【簡単】CSSでスクロールバーのデザイン変更【カスタマイズ可能】 | ジトサイト](https://jito-site.com/scrollbar-design-customize/)
 
 ### 6.5. jQuery
 
