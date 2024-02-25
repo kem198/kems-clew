@@ -483,6 +483,12 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 
 ### 6.3. Jekyll
 
+- [Jekyll • シンプルで、ブログのような、静的サイト | プレーンテキストを静的サイトやブログに変えましょう](http://jekyllrb-ja.github.io/)
+    - [Posts（ポスト） | Jekyll • シンプルで、ブログのような、静的サイト](http://jekyllrb-ja.github.io/docs/posts/)
+    - [タグフィルタ | Jekyll • シンプルで、ブログのような、静的サイト](http://jekyllrb-ja.github.io/docs/liquid/tags/#linking-to-posts)
+    - [オプション設定 | Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/docs/configuration/options/)
+    - [パーマリンク | Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/docs/permalinks/)
+    - [Front Matterのデフォルト | Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/docs/configuration/front-matter-defaults/)
 - [Jekyllには投稿予約機能がある＆Jekyllにタイムゾーンを設定 | 為せばnull](https://blog.yotiosoft.com/2022/03/05/Jekyll%E3%81%AB%E3%81%AF%E6%8A%95%E7%A8%BF%E4%BA%88%E7%B4%84%E6%A9%9F%E8%83%BD%E3%81%8C%E3%81%82%E3%82%8B-Jekyll%E3%81%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%92%E8%A8%AD%E5%AE%9A.html)
 - [Neos21/neos21.net: Repository of Neo's World](https://github.com/Neos21/neos21.net)
 - [JekyllのCategories一覧をアルファベット順にする](https://haltaro.github.io/2018/04/15/sort-categories)
@@ -497,6 +503,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 - [width,heighとpaddingの同時指定によるレイアウト崩れをbox-sizingdで防ぐ - Qiita](https://qiita.com/NeGI1009/items/a738cd96a345a7799e4b)
 - [【CSS】display:flexでmax-widthが効かない時の対処法。calcやflex-basisの活用 \#CSS - Qiita](https://qiita.com/shizen-shin/items/dc8d096300cde63dc8a8)
 - [Flexbox からコンテンツはみ出る問題を完全に解決する \#CSS - Qiita](https://qiita.com/mpyw/items/dfc63c1fed5dfc5eda26)
+[【簡単】CSSでスクロールバーのデザイン変更【カスタマイズ可能】 | ジトサイト](https://jito-site.com/scrollbar-design-customize/)
 
 ### 6.5. jQuery
 
