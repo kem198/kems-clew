@@ -61,7 +61,6 @@ main {
   gap: $spacing-unit;
 
   @include media-query($on-laptop) {
-    flex-direction: column;
     padding: $spacing-unit / 2;
     gap: $spacing-unit / 2;
   }
@@ -109,6 +108,84 @@ main {
     &::-webkit-scrollbar-thumb {
       background-color: $color-grey-light;
       border-radius: 10px;
+    }
+  }
+}
+
+
+/**
+ * Hamburger menu
+ */
+#menu-btn-check {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@include media-query($on-laptop) {
+
+  .right-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -120%;
+    width: 100%;
+    height: 60vh;
+    z-index: 80;
+    border-top: 1px solid $color-grey;
+    background-color: $base-bg-color-main;
+    transition: all 0.3s;
+    opacity: 0.95;
+  }
+
+  .right-nav {
+    height: 60vh;
+    border-radius: 0;
+  }
+
+  // メニューボタン
+  .menu-btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+    border-top: 1px solid $color-grey;
+    color: $color-white;
+    font-size: $font-size-big;
+    background-color: $base-brand-color;
+    opacity: 0.9;
+    cursor: pointer;
+
+    // 最初は × を非表示
+    .fa-xmark {
+      display: none;
+    }
+  }
+
+  // チェックされたらスタイルを適用
+  #menu-btn-check:checked ~ {
+
+    // メニューを画面内へ
+    .right-wrapper {
+      bottom: 104px;
+    }
+
+    // 三 を非表示
+    .menu-btn .fa-bars {
+      display: none;
+    }
+
+    // × を表示
+    .menu-btn .fa-xmark {
+      display: block;
     }
   }
 }
