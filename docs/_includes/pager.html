@@ -1,0 +1,19 @@
+<div class="pager">
+
+  {% if page.next %}
+    <div class="pager-next">
+      <p class="pager-arrow-title"><i class="fa-solid fa-caret-left"></i> Previous</p>
+      <p class="pager-title">{{ page.next.title }}</p>
+      <a href="{{ page.next.url | relative_url }}"></a>
+    </div>
+    {% endif %}
+
+    {% if page.previous %}
+    <div class="pager-prev">
+      <p class="pager-arrow-title">Next <i class="fa-solid fa-caret-right"></i></p>
+      <p class="pager-title">{{ page.previous.title }}</p>
+      <a href="{{ page.previous.url | relative_url }}"></a>
+    </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "ja" }}">
+{%- include head.html -%}
+
+<body id="home">
+  {%- include header.html -%}
+
+  <div class="page">
+    <main class="page-content" aria-label="Content">
+
+      <!-- Notes ページのプレビュー -->
+      <section>
+        <h2><a href="./notes/">Notes <i class="fa-solid fa-caret-right"></i></a></h2>
+        <div class="home-desc">雑記いろいろ</div>
+        <ul class="home-notes">
+          {% for post in site.posts limit:3 %}
+          <li>
+            <!-- タイトル -->
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <!-- 日付・カテゴリー -->
+            <span class="home-desc">{{ post.date | date: "%Y-%m-%d" }}</span>
+          </li>
+          {% endfor %}
+          <li><a href="./notes/">All Notes <i class="fa-solid fa-caret-right"></i></a></li>
+        </ul>
+      </section>
+
+      <!-- Works -->
+      <section>
+        <h2><a href="./works/">Works <i class="fa-solid fa-caret-right"></i></a></h2>
+        <div class="home-desc">制作物のページ</div>
+      </section>
+
+      <!-- About -->
+      <section>
+        <h2><a href="./about/">About <i class="fa-solid fa-caret-right"></i></a></h2>
+        <div class="home-desc">当サイトについて</div>
+      </section>
+
+      <!-- modane-live2d-widget -->
+      <div class="modane-wrapper">
+        <div class="modane-container">
+          <iframe class="modane-iframe" loading="lazy"
+            src="https://kenkenpa198.github.io/modane-live2d-widget/CubismSdkForWeb-4-r.7/Samples/TypeScript/Demo/index.html"
+            frameborder="0"></iframe>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  {%- include footer.html -%}
+  {%- include fonts.html -%}
+</body>
+
+</html>

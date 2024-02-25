@@ -1,0 +1,33 @@
+
+/* ==================================================
+ * modane-live2d-widget
+ * ================================================== */
+
+/* 単純に iframe 要素のみを表示すると、スマートフォンなどデバイスピクセル比が 2 の端末でぼけて表示されてしまう。
+ * このため ★ の処理で対策している。
+ *
+ * 1. 子要素 iframe を 2 倍のサイズで書き出した後に 1/2 サイズへ縮小して表示する。
+ * 2. このままだと領域が 2 倍のままなので親要素 wrapper の overflow: hidden でクリッピングする。
+ */
+
+// 親要素 wrapper
+// 配置関連の設定なので _layout.scss で設定する
+
+// 中間要素 container
+/* wrapper と iframe のみでは iframe の transform が wrapper のサイズを元に縮小してしまう。
+ * 結果、ビューポートが狭い時に腕が見切れてしまう場合があるので中間の親要素を設定している。 */
+.modane-container {
+  // border: 1px solid blue;
+}
+
+// 子要素 iframe
+.modane-iframe {
+  width: 1200px;         // ★ 2 倍のサイズで書き出す
+  height: 1200px;        // ★ 2 倍のサイズで書き出す
+  transform: scale(0.5); // ★ width, height を 2 倍のサイズで書き出した後に 1/2 サイズへ縮小する
+  // border: 1px solid green;
+
+  @media (scripting: none) {
+      display: none;
+  }
+}
