@@ -8,13 +8,21 @@
 
     <main class="page-content" aria-label="Content">
 
+      {% if page.left-nav %}
+      <div class="left-wrapper">
+        <nav class="side-nav left-nav">
+          {% include {{ page.left-nav }} %}
+        </nav>
+      </div>
+    {% endif %}
+
       <div class="wrapper">
         {{ content }}
       </div>
 
         {% if page.right-nav %}
           <div class="right-wrapper">
-            <nav class="right-nav">
+            <nav class="side-nav right-nav">
               {% include {{ page.right-nav }} %}
             </nav>
           </div>

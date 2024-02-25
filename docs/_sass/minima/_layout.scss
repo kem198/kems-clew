@@ -425,11 +425,17 @@
 /**
  * right-nav
  */
-.right-nav {
+.side-nav {
   position: sticky;
   top: $spacing-unit;
+  padding: $spacing-unit;
   background: $base-bg-color-main;
   border-radius: 8px;
+
+  @include media-query($on-laptop) {
+    position: relative;
+    padding: $spacing-unit / 2;
+  }
 }
 
 

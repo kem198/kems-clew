@@ -89,8 +89,9 @@ main {
   @extend %clearfix;
 }
 
+.left-wrapper,
 .right-wrapper {
-  flex-basis: 350px;
+  flex-basis: 320px;
 
   @include media-query($on-laptop) {
     flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));

@@ -69,3 +69,12 @@ timezone: Asia/Tokyo
 # Permalink
 # Jekyll で生成したページはすべて Notes/ 配下のページとして扱う
 permalink: notes/:year-:month-:day-:title:output_ext
+
+# defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      right-nav: notes-toc.html

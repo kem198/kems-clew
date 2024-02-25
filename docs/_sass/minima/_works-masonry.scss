@@ -40,7 +40,7 @@
 .works-container {
   display: flex;
   margin: 0 auto;
-  min-height: 1080px; // 遷移時にフッターが一瞬ちらつくため最小高さを設定して見えなくする
+  min-height: 720px; // 遷移時にフッターが一瞬ちらつくため最小高さを設定して見えなくする
 }
 
 // 見出し 初期状態では非表示
@@ -122,11 +122,6 @@
 /* ==================================================
 * Works / サイドメニュー
 * ================================================== */
-.works-right-nav {
-  margin-top: 0;
-  padding: 30px;
-}
-
 #works-form {
   label, input {
     cursor: pointer;
@@ -138,7 +133,7 @@
   }
 }
 
-.works-right-h {
+.works-filter-h {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.2rem;
@@ -154,7 +149,6 @@
 
 #works-categories {
   margin-left: 0;
-  padding-left: 16px;
 
   li {
     list-style: none;
@@ -182,7 +176,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding-left: 16px;
   font-size: 0; /* inline-block の余白を削除 */
 
   input {
