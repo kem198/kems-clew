@@ -423,11 +423,12 @@
 
 
 /**
- * right-nav
+ * side-nav
  */
 .side-nav {
   position: sticky;
   top: $spacing-unit;
+  bottom: $spacing-unit;
   padding: $spacing-unit;
   background: $base-bg-color-main;
   border-radius: 8px;
