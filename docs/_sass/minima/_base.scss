@@ -99,7 +99,7 @@ main {
   }
 
   .side-nav {
-    max-height: 70vh;
+    max-height: calc(100vh - 210px);
     overflow: auto;
 
     &::-webkit-scrollbar {
