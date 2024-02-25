@@ -351,6 +351,57 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 これにより、ドメインに来た通信が GitHub Pages の IP アドレスへ転送される。
 
+設定後 `nslookup` コマンドで確認。
+
+```shell
+$ nslookup kems-clew.net
+Server:         192.168.3.1
+Address:        192.168.3.1#53
+
+Non-authoritative answer:
+Name:   kems-clew.net
+Address: 185.199.109.153
+Name:   kems-clew.net
+Address: 185.199.108.153
+Name:   kems-clew.net
+Address: 185.199.110.153
+Name:   kems-clew.net
+Address: 185.199.111.153
+Name:   kems-clew.net
+Address: 2606:50c0:8002::153
+Name:   kems-clew.net
+Address: 2606:50c0:8001::153
+Name:   kems-clew.net
+Address: 2606:50c0:8003::153
+Name:   kems-clew.net
+Address: 2606:50c0:8000::153
+```
+
+```shell
+$ nslookup www.kems-clew.net
+Server:         192.168.3.1
+Address:        192.168.3.1#53
+
+Non-authoritative answer:
+www.kems-clew.net       canonical name = kenkenpa198.github.io.
+Name:   kenkenpa198.github.io
+Address: 185.199.108.153
+Name:   kenkenpa198.github.io
+Address: 185.199.109.153
+Name:   kenkenpa198.github.io
+Address: 185.199.110.153
+Name:   kenkenpa198.github.io
+Address: 185.199.111.153
+Name:   kenkenpa198.github.io
+Address: 2606:50c0:8000::153
+Name:   kenkenpa198.github.io
+Address: 2606:50c0:8001::153
+Name:   kenkenpa198.github.io
+Address: 2606:50c0:8003::153
+Name:   kenkenpa198.github.io
+Address: 2606:50c0:8002::153
+```
+
 ### 4.2. `_site` ディレクトリをルートとして Web サーバを立てる
 
 `_site` ディレクトリをルートとして別の Web サーバを立てることもできる。  
@@ -451,54 +502,3 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 
 - [jQuery最高の教科書｜株式会社シフトブレイン 著](http://jquery.shiftbrain.co.jp/)
 - [簡単にモーダルウィンドウを実装できるjQueryプラグイン「Colorbox」｜I'll be NET](https://illbenet.jp/view/js-colorbox)
-
-[^1]: 公開情報のため `nslookup` コマンドで確認できる。
-
-    ```shell
-    $ nslookup kems-clew.net
-    Server:         192.168.3.1
-    Address:        192.168.3.1#53
-
-    Non-authoritative answer:
-    Name:   kems-clew.net
-    Address: 185.199.109.153
-    Name:   kems-clew.net
-    Address: 185.199.108.153
-    Name:   kems-clew.net
-    Address: 185.199.110.153
-    Name:   kems-clew.net
-    Address: 185.199.111.153
-    Name:   kems-clew.net
-    Address: 2606:50c0:8002::153
-    Name:   kems-clew.net
-    Address: 2606:50c0:8001::153
-    Name:   kems-clew.net
-    Address: 2606:50c0:8003::153
-    Name:   kems-clew.net
-    Address: 2606:50c0:8000::153
-    ```
-
-    ```shell
-    $ nslookup www.kems-clew.net
-    Server:         192.168.3.1
-    Address:        192.168.3.1#53
-
-    Non-authoritative answer:
-    www.kems-clew.net       canonical name = kenkenpa198.github.io.
-    Name:   kenkenpa198.github.io
-    Address: 185.199.108.153
-    Name:   kenkenpa198.github.io
-    Address: 185.199.109.153
-    Name:   kenkenpa198.github.io
-    Address: 185.199.110.153
-    Name:   kenkenpa198.github.io
-    Address: 185.199.111.153
-    Name:   kenkenpa198.github.io
-    Address: 2606:50c0:8000::153
-    Name:   kenkenpa198.github.io
-    Address: 2606:50c0:8001::153
-    Name:   kenkenpa198.github.io
-    Address: 2606:50c0:8003::153
-    Name:   kenkenpa198.github.io
-    Address: 2606:50c0:8002::153
-    ```
