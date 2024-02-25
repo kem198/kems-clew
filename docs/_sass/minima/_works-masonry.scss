@@ -81,7 +81,7 @@
     transition-timing-function: ease-out;
 
     &:hover {
-      opacity: 0.75;
+      opacity: $opacity-hover;
     }
   }
 
@@ -137,7 +137,7 @@
   }
 
   label:hover {
-    opacity: 0.7;
+    opacity: $opacity-hover;
   }
 }
 
