@@ -233,6 +233,16 @@ pre {
 }
 
 
+/**
+ * hr
+ */
+hr {
+  border: none;
+  border-bottom: 1px solid $color-grey-light;
+  margin: 4rem 1rem;
+}
+
+
 
 /**
  * Clearfix
