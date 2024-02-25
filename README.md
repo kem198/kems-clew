@@ -351,7 +351,7 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 これにより、ドメインに来た通信が GitHub Pages の IP アドレスへ転送される。
 
-設定後 `nslookup` コマンドで確認。
+なお公開情報のため `nslookup` コマンドで確認できる。
 
 ```shell
 $ nslookup kems-clew.net
