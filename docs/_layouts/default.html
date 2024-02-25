@@ -9,29 +9,29 @@
     <main class="page-content" aria-label="Content">
 
       {% if page.left-nav %}
-      <div class="left-wrapper">
-        <nav class="side-nav left-nav">
-          {% include {{ page.left-nav }} %}
-        </nav>
-      </div>
-    {% endif %}
+        <div class="left-wrapper">
+          <nav class="side-nav left-nav">
+            {% include {{ page.left-nav }} %}
+          </nav>
+        </div>
+      {% endif %}
 
       <div class="wrapper">
         {{ content }}
       </div>
 
-        {% if page.right-nav %}
-          <input type="checkbox" id="menu-btn-check">
-          <label for="menu-btn-check" class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
-          </label>
-          <div class="right-wrapper">
-            <nav class="side-nav right-nav">
-              {% include {{ page.right-nav }} %}
-            </nav>
-          </div>
-        {% endif %}
+      {% if page.right-nav %}
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+        <div class="right-wrapper">
+          <nav class="side-nav right-nav">
+            {% include {{ page.right-nav }} %}
+          </nav>
+        </div>
+      {% endif %}
 
     </main>
 

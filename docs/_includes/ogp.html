@@ -4,14 +4,14 @@
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}">
 {% if page.description %}
-<meta property="og:description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
 {% else %}
-<meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}">
+  <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}">
 {% endif %}
 
 <!-- OGP で表示するプレビュー画像設定 -->
 {% if page.preview %}
-<meta property="og:image" content="{{ page.preview }}">
+  <meta property="og:image" content="{{ page.preview }}">
 {% else %}
-<meta property="og:image" content="https://kems-clew.net/assets/card.png">
+  <meta property="og:image" content="https://kems-clew.net/assets/card.png">
 {% endif %}
