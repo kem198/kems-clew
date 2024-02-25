@@ -480,14 +480,15 @@
     }
   }
 
+  a:hover {
+    text-decoration: none;
+    opacity: 0.65;
+  }
+
   h2 {
     font-weight: $font-weight-black;
     margin-bottom: 0.25rem;
 
-    a:hover {
-      text-decoration: none;
-      opacity: 0.75;
-    }
   }
 
   .home-desc {
@@ -502,8 +503,8 @@
       color: $color-black;
     }
 
-    .home-desc::before {
-      content: "/";
+    .home-desc::after {
+      content: "|";
       margin-left: 0.25em;
       margin-right: 0.25em;
     }

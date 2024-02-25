@@ -15,10 +15,8 @@
         <ul class="home-notes">
           {% for post in site.posts limit:3 %}
           <li>
-            <!-- タイトル -->
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <!-- 日付・カテゴリー -->
-            <span class="home-desc">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <!-- 日付 | タイトル -->
+            <a href="{{ post.url }}"><span class="home-desc">{{ post.date | date: "%Y-%m-%d" }}</span>{{ post.title }}</a>
           </li>
           {% endfor %}
           <li><a href="./notes/">All Notes <i class="fa-solid fa-caret-right"></i></a></li>
