@@ -123,14 +123,6 @@
 * Works / サイドメニュー
 * ================================================== */
 #works-form {
-  > section {
-    margin-top: 2.5em;
-  }
-
-  > section:first-child {
-    margin-top: 0;
-  }
-
   label, input {
     cursor: pointer;
     user-select: none;

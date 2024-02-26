@@ -1,0 +1,34 @@
+<nav class="works-filter">
+  <!-- <section>
+    <h3 class="filter-h">
+      <i class="fa-regular fa-folder"></i>
+      Categories
+    </h3>
+    <ul class="post-categories">
+      {%- if site.posts.size > 0 -%}
+      {% assign sorted_categories = site.categories | sort %}
+      {% for category in sorted_categories %}
+          <li>
+            <a href="{{ "./notes/categories.html#" | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1] | size }})</a>
+          </li>
+        {% endfor %}
+      {%- endif -%}
+    </ul>
+  </section> -->
+  <section>
+    <h3 class="filter-h">
+      <i class="fa-solid fa-hashtag"></i>
+      Tags
+    </h3>
+    <ul class="post-tags">
+      {%- if site.posts.size > 0 -%}
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+          <li>
+            <a href="{{ "./notes/tags.html#" | append: tag[0] | relative_url }}">#{{ tag[0] }} ({{ tag[1] | size }})</a>
+          </li>
+        {% endfor %}
+      {%- endif -%}
+    </ul>
+  </section>
+</nav>

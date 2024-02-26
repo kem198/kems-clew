@@ -58,6 +58,13 @@ plugins:
 minima:
   date_format: "%Y-%m-%d"
 
+# Customize navigation links
+# https://github.com/jekyll/minima/tree/2.5-stable?tab=readme-ov-file#customize-navigation-links
+header_pages:
+  - about.md
+  - notes.md
+  - works.html
+
 # Language
 lang: ja
 

@@ -262,6 +262,10 @@
 
   > li {
     margin-bottom: $spacing-unit;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -303,30 +307,27 @@
       }
     }
   }
+}
 
-  .post-tags {
+
+
+/**
+ * Tags
+ */
+.post-tags {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     margin-left: 0;
-    gap: 0.5em;
+    gap: 0.75em;
     margin-bottom: 0;
 
     li {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      border-radius: 1em;
+      margin: 0;
       font-size: $font-size-small;
-      color: $color-grey;
-      background: $color-unselected;
-
-      &::before {
-        content: "#";
-      }
     }
   }
-}
 
 
 
@@ -446,6 +447,14 @@
   padding: $spacing-unit;
   background: $base-bg-color-main;
   border-radius: 8px;
+
+  section {
+    margin-top: 2.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   h3 a {
     color: $color-black

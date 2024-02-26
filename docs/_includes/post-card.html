@@ -23,7 +23,7 @@
   <!-- タグ -->
   <ul class="post-tags">
     {% for tag in post.tags %}
-      <li>{{ tag }}</li>
+      <li><a href="{{ "./notes/tags.html#" | append: tag | relative_url }}">#{{ tag }}</a></li>
     {% endfor %}
   </ul>
 </li>
