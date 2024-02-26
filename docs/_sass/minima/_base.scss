@@ -291,7 +291,7 @@ pre,
 code {
   @include relative-font-size(0.92);
   border-radius: 8px;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: $font-family-mono;
   font-weight: 400;
   font-style: normal;
 }

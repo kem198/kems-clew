@@ -100,8 +100,9 @@
   width: 80%;
   border: none;
   border-radius: 8px;
+  font-family: $font-family-ubuntu;
   font-weight: $font-weight-light;
-  font-size: $base-font-size;
+  font-size: $font-size-small;
   background: $base-btn-color;
   cursor: pointer;
   transition: 0.3s;
@@ -113,7 +114,7 @@
   }
 
   &:hover {
-    background: #ccc;
+    opacity: $opacity-hover;
   }
 }
 
@@ -151,6 +152,8 @@
 
   li {
     list-style: none;
+    font-family: $font-family-ubuntu;
+    font-size: $font-size-small;
   }
 
   label {
@@ -159,14 +162,14 @@
 
   .desc {
     color: $color-grey;
-    font-size: $font-size-small;
+    font-size: $font-size-small * 0.9;
 
     &::before {
       content: "/";
       margin-left: 0.25rem;
       margin-right: 0.25rem;
       color: $color-grey;
-      font-size: $font-size-small;
+      font-size: $font-size-small * 0.9;
     }
   }
 }
@@ -175,7 +178,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  font-size: 0; /* inline-block の余白を削除 */
+  font-family: $font-family-ubuntu;
 
   input {
     display: none;
