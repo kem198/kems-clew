@@ -63,7 +63,7 @@ minima:
 header_pages:
   - about.md
   - notes.md
-  - works.html
+  - works.md
 
 # Language
 lang: ja
