@@ -90,7 +90,7 @@ main {
 
 .left-wrapper,
 .right-wrapper {
-  flex-basis: 320px;
+  flex-basis: 340px;
 
   @include media-query($on-laptop) {
     flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
@@ -143,6 +143,7 @@ main {
   .right-nav {
     height: 60vh;
     border-radius: 0;
+    overscroll-behavior: contain;
   }
 
   // メニューボタン

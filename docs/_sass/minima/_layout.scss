@@ -460,6 +460,18 @@
 
 
 /**
+ * notes-toc
+ */
+.notes-toc {
+  // 雑なタップでも反応できるようにする
+  a {
+    display: block;
+  }
+}
+
+
+
+/**
  * Home
  */
 
