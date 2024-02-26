@@ -289,21 +289,31 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
-  border: 1px solid $color-grey-thin;
-  border-radius: 3px;
-  background-color: #eef;
+  @include relative-font-size(0.92);
+  border-radius: 8px;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 code {
   padding: 1px 5px;
+
+  &.language-plaintext {
+    background: rgba(0,0,0,.08);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    overflow-wrap: break-word;
+  }
 }
+
 
 pre {
   padding: 8px 12px;
   overflow-x: auto;
 
   > code {
+    color: $color-white;
     border: 0;
     padding-right: 0;
     padding-left: 0;
