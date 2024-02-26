@@ -166,7 +166,7 @@ main {
     cursor: pointer;
 
     // 最初は × を非表示
-    .menu-btn-icon-after {
+    .fa-xmark {
       display: none;
     }
   }
@@ -180,12 +180,12 @@ main {
     }
 
     // 三 を非表示
-    .menu-btn .menu-btn-icon-before {
+    .menu-btn .fa-bars {
       display: none;
     }
 
     // × を表示
-    .menu-btn .menu-btn-icon-after {
+    .menu-btn .fa-xmark {
       display: block;
     }
   }

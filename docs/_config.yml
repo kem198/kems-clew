@@ -85,4 +85,3 @@ defaults:
       type: "posts"
     values:
       right-nav: notes-toc.html
-      menu-btn-icon: icon-fa-bars-staggered.html
