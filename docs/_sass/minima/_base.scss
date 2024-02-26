@@ -134,7 +134,7 @@ main {
     width: 100%;
     height: 60vh;
     z-index: 80;
-    border-top: 1px solid $color-grey;
+    border-top: 1px solid $color-grey-light;
     background-color: $base-bg-color-main;
     transition: all 0.3s;
     opacity: 0.95;
@@ -158,7 +158,7 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 800;
-    border-top: 1px solid $color-grey;
+    border-top: 1px solid $color-grey-light;
     color: $color-white;
     font-size: $font-size-big;
     background-color: $base-brand-color;
