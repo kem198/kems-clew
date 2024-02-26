@@ -23,8 +23,16 @@
       {% if page.right-nav %}
         <input type="checkbox" id="menu-btn-check">
         <label for="menu-btn-check" class="menu-btn">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark"></i>
+          <div class="menu-btn-icon-before">
+            {% if page.menu-btn-icon %}
+              {% include {{ page.menu-btn-icon }} %}
+            {% else %}
+              {% include icon-fa-bars.html %}
+            {% endif %}
+          </div>
+          <div class="menu-btn-icon-after">
+            {% include icon-fa-xmark.html %}
+          </div>
         </label>
         <div class="right-wrapper">
           <nav class="side-nav right-nav">
