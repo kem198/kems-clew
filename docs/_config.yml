@@ -84,4 +84,4 @@ defaults:
       path: ""
       type: "posts"
     values:
-      right-nav: notes-toc.html
+      right-nav: nav-toc.html

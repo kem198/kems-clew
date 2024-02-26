@@ -1,6 +1,6 @@
 ---
-layout: posts
+layout: post-list
 title: Notes
 permalink: /notes/
-right-nav: notes-filter.html
+right-nav: nav-filter.html
 ---
