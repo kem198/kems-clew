@@ -6,8 +6,8 @@
     </h3>
     <ul class="post-categories">
       {%- if site.posts.size > 0 -%}
-      {% assign sorted_categories = site.categories | sort %}
-      {% for category in sorted_categories %}
+        {% assign sorted_categories = site.categories | sort %}
+        {% for category in sorted_categories %}
           <li>
             <a href="{{ "./notes/categories.html#" | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1] | size }})</a>
           </li>
@@ -17,8 +17,7 @@
   </section> -->
   <section>
     <h3 class="filter-h">
-      <i class="fa-solid fa-hashtag"></i>
-      Tags
+      <a href="{{ "./notes/tags.html" | relative_url }}"><i class="fa-solid fa-hashtag"></i> Tags</a>
     </h3>
     <ul class="post-tags">
       {%- if site.posts.size > 0 -%}
