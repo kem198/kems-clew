@@ -496,6 +496,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 - [Neos21/neos21.net: Repository of Neo's World](https://github.com/Neos21/neos21.net)
 - [JekyllのCategories一覧をアルファベット順にする](https://haltaro.github.io/2018/04/15/sort-categories)
 - [Jekyllのテーマを自作する 基本編 - 第4回 - Sass（CSS）でスタイルを作成する | e-joint.jp](https://e-joint.jp/blog/359#su-toc-item-0)
+- [Code Block Highlighter Copy/Paste (Jekyll)](https://www.blandersoft.com/short/code-block-copy-paste/)
 
 ### 6.4. CSS
 
