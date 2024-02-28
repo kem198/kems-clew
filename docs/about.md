@@ -30,6 +30,41 @@ permalink: /about/
 - [【著作権】グレーなファンアート｜ぽやけん｜note](https://note.com/free_yaken/n/nf593628cb8c4)
 - [二次的著作物とは？弁護士がわかりやすく解説します - 広島で企業法務に強い顧問弁護士なら山下江法律事務所](https://hiroshima-kigyo.com/column/8178)
 
+## 使用している技術・素材
+
+### 言語
+
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [Markdown](https://daringfireball.net/projects/markdown/)
+- [CSS](https://www.w3.org/Style/CSS/)
+- [Sass](https://sass-lang.com/)
+- [JavaScript](https://developer.mozilla.org/ja/docs/Web/JavaScript)
+- [Liquid](https://shopify.github.io/liquid/)
+
+### サイトジェネレータ
+
+- [Jekyll](https://jekyllrb-ja.github.io/)
+
+### テーマテンプレート
+
+- [Minima](https://github.com/jekyll/minima)
+
+### ドメイン取得
+
+- [Xserverドメイン](https://www.xdomain.ne.jp/)
+
+### ホスティング
+
+- [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)
+
+### フォント / アイコン
+
+- [Google Fonts](https://fonts.google.com/)
+    - [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP?query=noto+sans)
+    - [Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ubuntu&noto.query=ubuntu)
+    - [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono?query=ubuntu&noto.query=ubuntu)
+- [Font Awesome](https://fontawesome.com/)
+
 ## 権利表記
 
 [kenkenpa198/kems-clew.net > 5.権利表記](https://github.com/kenkenpa198/kems-clew.net#5-%E6%A8%A9%E5%88%A9%E8%A1%A8%E8%A8%98) へ掲載しています。
