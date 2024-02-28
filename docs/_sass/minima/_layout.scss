@@ -378,15 +378,10 @@
  */
 .page {
   h2 {
-    display: inline-block;
     padding-bottom: 0.1em;
     padding-right: 1em;
     width: fit-content;
     border-bottom: 1px solid $base-text-color;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 }
 
