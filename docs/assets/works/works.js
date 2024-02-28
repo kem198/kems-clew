@@ -3,17 +3,17 @@ $(function () {
     /* ==================================================
      * Works Masonry レイアウト
      * ================================================== */
-    $('#works-canvas').each(function () {
+    $('.works-container').each(function () {
 
         // 変数・配列の宣言
         let $container = $(this),
             $loadMoreButton = $('#load-more'), // 追加ボタン
-            $filter = $('#works-filter'),     // フィルタリングのフォーム
-            addItemCount = 20,                // 一度に表示するアイテム数
-            added = 0,                        // 表示済みのアイテム数
-            allData = [],                     // すべての JSON データ
-            tags = [],                        // JSON から取得したタグの配列
-            filteredData = [];                // フィルタリングされた JSON データ
+            $filter = $('#works-form'),        // フィルタリングのフォーム
+            addItemCount = 20,                 // 一度に表示するアイテム数
+            added = 0,                         // 表示済みのアイテム数
+            allData = [],                      // すべての JSON データ
+            tags = [],                         // JSON から取得したタグの配列
+            filteredData = [];                 // フィルタリングされた JSON データ
 
         // Home の場合は3つのみを表示するため addItemCount へ 3 を再代入する
         if ($('#home').length) {
@@ -54,17 +54,6 @@ $(function () {
                 elements.push($(itemHTML).get(0));
             });
 
-            // Home の場合は配列の最後に more ボタン を挿入する
-            if ($('#home').length) {
-                let itemMore =
-                    '<div id="home-more" class="works-item">' +
-                        '<a href="./works.html">' +
-                            '<p>more <i class="fa-solid fa-caret-right"></i></p>' +
-                        '</a>' +
-                    '</div>';
-                elements.push($(itemMore).get(0));
-            }
-
             // DOM 要素の配列をコンテナに挿入し Masonry レイアウトを実行
             $container
                 .append(elements)
@@ -79,20 +68,11 @@ $(function () {
                     }
                 });
 
-            // 画面幅がタブレット・SP 向けか否かによって Colorbox の幅を切り替える
-            // TODO: 画面幅が変わったら切り替える
-            let maxSize
-            if (window.matchMedia('(max-width: 960px)').matches) {
-                maxSize = '100%';
-            } else {
-                maxSize = '90%';
-            }
-
             // アイテムのリンクへ Colorbox を設定
             $container.find('a').not('#home-more a').colorbox({
-                maxWidth: maxSize,
-                maxHeight: maxSize,
-                opacity: '0.8',     // 背景の透明度
+                maxWidth: '100%',
+                maxHeight: '100%',
+                opacity: '0.75',     // 背景の透明度
                 returnFocus: false, // モーダルを閉じたときにそのモーダルのトリガーとなったリンクにフォーカスを戻さない  True の場合 iOS Safari だと青い選択が表示されるため
                 reposition: false,  // ウインドウがリサイズされたときにモーダルの位置を変更しない True だと iOS で拡大時にクラッシュするため
                 title: function () {
@@ -143,12 +123,15 @@ $(function () {
                             '<label for=' + item + '>#' + item + '</label>';
                     '</li>' +
                 // console.log(tagHTML);
-                $('#tags').append(tagHTML);
+                $('#works-tags').append(tagHTML);
             });
         }
 
         // アイテムをフィルタリングする関数
         function filterItems () {
+            // まずトップへ戻る
+            window.scroll({ top: 0, behavior: "instant" });
+
             let key = $(this).val(), // チェックされたラジオボタンの value
 
                 // 追加済みの Masonry アイテム
@@ -166,7 +149,7 @@ $(function () {
                 filteredData = allData;
 
                 // works-h2 を非表示
-                $('#works-h2').removeClass('filter-selected');
+                $('.works-h2').removeClass('filter-selected');
 
             } else if (["Developments", "Illustrations", "Others"].includes(key)) {
                 // All 以外のカテゴリの場合、キーと一致するデータを抽出
@@ -175,7 +158,7 @@ $(function () {
                 });
 
                 // works-h2 を表示
-                $('#works-h2').text(key).addClass('filter-selected');
+                $('.works-h2').text(key).addClass('filter-selected');
 
             } else {
                 // All, カテゴリ以外の場合、キーを item.tags に含むデータを抽出
@@ -184,7 +167,7 @@ $(function () {
                 });
 
                 // works-h2 を表示
-                $('#works-h2').text('#' + key).addClass('filter-selected');
+                $('.works-h2').text('#' + key).addClass('filter-selected');
             }
 
             // アイテムを追加

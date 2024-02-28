@@ -1,0 +1,396 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+html {
+  // scroll-behavior: smooth;
+}
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $base-text-color;
+  background-color: $base-bg-color-sub;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-y: scroll; /* スクロールバー出現によるガタ付きを防ぐためあらかじめ表示させておく */
+
+  @include media-query($on-palm) {
+    background: $base-bg-color-main;
+  }
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * `main` element
+ */
+main {
+  // display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: flex;
+  justify-content: center;
+  padding: $spacing-unit;
+  gap: $spacing-unit;
+
+  @include media-query($on-laptop) {
+    padding: $spacing-unit / 2;
+    gap: $spacing-unit / 2;
+  }
+
+  @include media-query($on-palm) {
+    padding: 0;
+  }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  // minima の max-width から flex-basis へ変更
+  // https://qiita.com/shizen-shin/items/dc8d096300cde63dc8a8
+  flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+  flex-basis:         calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+
+  // Flexbox からコンテンツはみ出る問題を完全に解決する
+  // https://qiita.com/mpyw/items/dfc63c1fed5dfc5eda26
+  min-width: 0;
+
+  @extend %clearfix;
+}
+
+.left-wrapper,
+.right-wrapper {
+  flex-basis: 340px;
+
+  @include media-query($on-laptop) {
+    flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+    flex-basis:         calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+  }
+
+  .side-nav {
+    max-height: calc(100vh - 210px);
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-grey-thin;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+/**
+ * Hamburger menu
+ */
+#menu-btn-check {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@include media-query($on-laptop) {
+
+  .right-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -120%;
+    width: 100%;
+    height: 60vh;
+    z-index: 80;
+    border-top: 1px solid $color-grey-light;
+    background-color: $base-bg-color-main;
+    transition: all 0.3s;
+    opacity: 0.95;
+  }
+
+  .right-nav {
+    height: 60vh;
+    border-radius: 0;
+    overscroll-behavior: contain;
+  }
+
+  // メニューボタン
+  .menu-btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+    border-top: 1px solid $color-grey-light;
+    color: $color-white;
+    font-size: $font-size-big;
+    background-color: $base-brand-color;
+    opacity: 0.9;
+    cursor: pointer;
+
+    // 最初は × を非表示
+    .fa-xmark {
+      display: none;
+    }
+  }
+
+  // チェックされたらスタイルを適用
+  #menu-btn-check:checked ~ {
+
+    // メニューを画面内へ
+    .right-wrapper {
+      bottom: 104px;
+    }
+
+    // 三 を非表示
+    .menu-btn .fa-bars {
+      display: none;
+    }
+
+    // × を表示
+    .menu-btn .fa-xmark {
+      display: block;
+    }
+  }
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $font-size-small;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit * 0.75;
+}
+
+li {
+  > ul,
+  > ol {
+    // margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+  color: $base-link-color;
+  text-decoration: none;
+
+  .username {
+    color: $color-white;
+  }
+
+  &.post-link {
+    color: $base-text-color;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+  }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $color-grey;
+  border-left: 4px solid $color-grey-thin;
+  padding-left: $spacing-unit / 2;
+  @include relative-font-size(1.125);
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  @include relative-font-size(0.92);
+  border-radius: 8px;
+  font-family: $font-family-mono;
+  font-weight: 400;
+  font-style: normal;
+}
+
+code {
+  padding: 1px 5px;
+
+  &.language-plaintext {
+    background: rgba(0,0,0,.08);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    overflow-wrap: break-word;
+  }
+}
+
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    color: $color-white;
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
+ * hr
+ */
+hr {
+  border: none;
+  border-bottom: 1px solid $color-grey-light;
+  margin: 4rem 1rem;
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: #{$color-grey};
+    padding-right: 5px;
+    vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
+
+
+/**
+ * Tables
+ */
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: lighten($base-text-color, 18%);
+  border-collapse: collapse;
+  border: 1px solid $color-grey-thin;
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-all;
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($color-grey-thin, 6%);
+    }
+  }
+  th, td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+  th {
+    background-color: lighten($color-grey-thin, 3%);
+    border: 1px solid darken($color-grey-thin, 4%);
+    border-bottom-color: darken($color-grey-thin, 12%);
+  }
+  td {
+    border: 1px solid $color-grey-thin;
+  }
+}

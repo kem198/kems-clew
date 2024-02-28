@@ -1,0 +1,205 @@
+/* ==================================================
+ * Works / Flexbox レイアウト
+ * ================================================== */
+// /* タブレット・SP 向けのレイアウト */
+// @media (max-width: 960px) {
+//   /* Flexbox を解除しサイドメニューとメインコンテンツを1カラムで表示する */
+//   .works-container {
+//       flex-direction: column;
+//       justify-content: center;
+//   }
+
+//   /* フィルターメニューの width を解除して横いっぱいに表示 */
+//   .works-container > nav#side {
+//       width: auto;
+//   }
+
+// }
+
+/* ==================================================
+* Works / Masonry レイアウト
+* ==================================================
+* .works-wrap     : Masonry レイアウトを囲んでいる要素。列数の調整などに用いる。
+* .works-container: Masonry レイアウトの親要素。横幅が子要素の列数によって動的に変化する。
+* .works-item     : Masonry レイアウトの子要素。レイアウト対象の作品サムネイルそのもの。 */
+
+.works-wrap {
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    opacity: 1;
+
+    &:link {
+      color: $base-text-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.works-container {
+  display: flex;
+  margin: 0 auto;
+  min-height: 720px; // 遷移時にフッターが一瞬ちらつくため最小高さを設定して見えなくする
+}
+
+// 見出し 初期状態では非表示
+.works-h2 {
+  display: none!important;
+  margin-top: 0;
+
+  // フィルターが付与されたら表示
+  &.filter-selected {
+    display: block!important;
+  }
+}
+
+.works-item {
+  margin-top: 0;
+  margin-bottom: 16px;
+  width: 216px;
+  list-style: none;
+  border-radius: 8px;
+  background: $base-bg-color-main;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+
+  // 読み込み中は非表示にする
+  // 画像の読込完了後、JS 処理で .is-loading が削除され表示される
+  &.is-loading {
+    opacity: 0;
+  }
+
+  // アイテムの画像は角丸のカードのような見た目で表示
+  img {
+    width: 100%;
+    border: 1px solid $base-btn-color;
+    border-radius: 8px;
+    vertical-align: top; /* a タグでできる隙間を消す */
+    object-fit: cover;
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+
+    &:hover {
+      opacity: $opacity-hover;
+    }
+  }
+
+  .caption {
+    display: none;
+  }
+}
+
+// 追加読み込みボタン
+.load-more {
+  display: block;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75em 0;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  font-family: $font-family-ubuntu;
+  font-weight: $font-weight-light;
+  font-size: $font-size-small;
+  background: $base-btn-color;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+
+  // 読み込み中は非表示にする
+  &.is-loading {
+    opacity: 0;
+  }
+
+  &:hover {
+    opacity: $opacity-hover;
+  }
+}
+
+
+
+/* ==================================================
+* Works / サイドメニュー
+* ================================================== */
+#works-form {
+  label, input {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  label:hover {
+    opacity: $opacity-hover;
+  }
+}
+
+.works-filter-h {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.works-right-nav section {
+  margin-top: 30px;
+}
+
+.works-right-nav section:first-child{
+  margin-top: 0;
+}
+
+#works-categories {
+  margin-left: 0;
+
+  li {
+    list-style: none;
+    font-family: $font-family-ubuntu;
+    font-size: $font-size-small;
+  }
+
+  label {
+    margin-left: 0.3rem;
+  }
+
+  .desc {
+    color: $color-grey;
+    font-size: $font-size-small * 0.9;
+
+    &::before {
+      content: "/";
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+      color: $color-grey;
+      font-size: $font-size-small * 0.9;
+    }
+  }
+}
+
+#works-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  font-family: $font-family-ubuntu;
+
+  input {
+    display: none;
+  }
+
+  label {
+    padding: 4px 10px 4px;
+    border-radius: 20px;
+    background: $color-unselected;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* タブレット・SP 端末でタップ時のグレー表示をしない */
+  }
+
+  input:checked + label {
+    background: $color-selected;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    font-size: $font-size-small;
+    user-select: none;
+  }
+}

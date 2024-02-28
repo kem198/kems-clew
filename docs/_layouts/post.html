@@ -2,22 +2,67 @@
 layout: default
 ---
 
-<main id="post">
+<article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting">
+
   <!-- パンくずリスト -->
-  {% include breadcrumbs.html %}
+  <nav id="breadcrumb">
+    {% include breadcrumbs.html omit_date=true %}
+  </nav>
 
-  <!-- メインコンテンツ -->
-  <div class="note-bg">
+  <header class="post-header">
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        作成日: {{ page.date | date: date_format }}
+      </time><br>
+      <time
+        class="dt-published"
+        datetime="{{ page.lastmod}}"
+        itemprop="dateModified">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        更新日: {{ page.lastmod | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        •
+        <span
+          itemprop="author"
+          itemscope
+          itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+        </span>
+      {%- endif -%}
+    </p>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <ul class="post-tags">
+        {% assign sorted_tags = page.tags | sort %}
+        {% for tag in sorted_tags %}
+          <li>
+            <a href="{{ "./notes/tags.html#" | append: tag | relative_url }}">#{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </p>
+  </header>
 
-    <!-- 作成日・更新日 -->
-    <ul class="timestamp">
-      <li>作成日: {{ page.date | date: "%Y-%m-%d" }}</li>
-      <li>更新日: {{ page.lastmod | date: "%Y-%m-%d" }}</li>
-    </ul>
-
-    <!-- コンテンツ -->
-    <h1>{{ page.title }}</h1>
+  <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
-
   </div>
-</main>
+
+  {%- include nav-pager.html -%}
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a
+    class="u-url"
+    href="{{ page.url | relative_url }}"
+    hidden></a>
+</article>

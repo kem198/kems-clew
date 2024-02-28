@@ -1,31 +1,16 @@
 ---
-title: このサイトについて
-layout: post
-page-category: note
-category: 未分類
-tags:
-  - kems-clew
-date: 2022-11-22
-lastmod: 2023-12-06
+layout: page
+title: About
+permalink: /about/
 ---
 
-当ウェブサイト「KeM's Clew」について免責事項などをまとめたページです。
-
-<!-- omit in toc -->
-## 目次
-
-- [1. このサイトは何？](#1-このサイトは何)
-- [2. 免責事項](#2-免責事項)
-- [3. 著作権について](#3-著作権について)
-- [4. 権利表記](#4-権利表記)
-
-## 1. このサイトは何？
+## このサイトは何？
 
 [KeM's Clew](https://kems-clew.net/) (以下「当サイト」) は、管理人である kenkenpa198 (または KeM198) が趣味で制作したコンテンツを公開しているウェブサイトです。  
 
 当サイトの構築内容及びソースコードは [kenkenpa198/kems-clew.net](https://github.com/kenkenpa198/kems-clew.net) にて公開しています。
 
-## 2. 免責事項
+## 免責事項
 
 当サイトのコンテンツやリンク先の情報、サービス等について一切の責任を負いません。
 
@@ -33,7 +18,7 @@ lastmod: 2023-12-06
 
 掲載内容をお試しになる際は、必ずお手元で検証の上ご活用ください。
 
-## 3. 著作権について
+## 著作権について
 
 当サイトで掲載している画像や文章を含むコンテンツは無断転載することを禁止します。  
 
@@ -45,6 +30,6 @@ lastmod: 2023-12-06
 - [【著作権】グレーなファンアート｜ぽやけん｜note](https://note.com/free_yaken/n/nf593628cb8c4)
 - [二次的著作物とは？弁護士がわかりやすく解説します - 広島で企業法務に強い顧問弁護士なら山下江法律事務所](https://hiroshima-kigyo.com/column/8178)
 
-## 4. 権利表記
+## 権利表記
 
 [kenkenpa198/kems-clew.net > 5.権利表記](https://github.com/kenkenpa198/kems-clew.net#5-%E6%A8%A9%E5%88%A9%E8%A1%A8%E8%A8%98) へ掲載しています。

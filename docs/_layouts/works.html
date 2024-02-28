@@ -1,0 +1,24 @@
+---
+layout: page
+---
+<h2 class="works-h2"></h2>
+<noscript>
+  <p>
+    JavaScript が無効のため、コンテンツを正常に表示できませんでした。<br>
+    お手数ですがブラウザの設定をお確かめの上、ページの再読み込みを行ってください。
+  </p>
+</noscript>
+<div class="works-wrap">
+  <ul class="works-container">
+    <!-- Masonry でグリッドレイアウトを生成 -->
+  </ul>
+  <button class="load-more is-loading" id="load-more">more<br><i class="fa-solid fa-caret-down"></i>
+  </button>
+</div>
+
+<!-- 表示処理の後に読み込み -->
+<script src="{{ "/lib/jquery-3.6.1.min.js" | relative_url }}"></script>
+<script src="{{ "/lib/imagesloaded.pkgd.min.js" | relative_url }}"></script>
+<script src="{{ "/lib/masonry.pkgd.min.js" | relative_url }}"></script>
+<script src="{{ "/lib/jquery.colorbox-min.js" | relative_url }}"></script>
+<script src="{{ "/assets/works/works.js" | relative_url }}"></script>

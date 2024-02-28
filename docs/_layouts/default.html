@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#"> <!-- prefix 属性で OGP のサポートを宣言 -->
+<html lang="{{ page.lang | default: site.lang | default: "ja" }}">
 
   {%- include head.html -%}
 
-  <body id="{{ page.page-category }}">
-
+  <body>
     {%- include header.html -%}
 
-    <div class="wrapper">
-        {{ content }}
-    </div>
+    <main class="page-content" aria-label="Content">
 
-    {%- include fonts.html -%}
+      {% if page.left-nav %}
+        <div class="left-wrapper">
+          <nav class="side-nav left-nav">
+            {% include {{ page.left-nav }} %}
+          </nav>
+        </div>
+      {% endif %}
+
+      <div class="wrapper">
+        {{ content }}
+      </div>
+
+      {% if page.right-nav %}
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+        <div class="right-wrapper">
+          <nav class="side-nav right-nav">
+            {% include {{ page.right-nav }} %}
+          </nav>
+        </div>
+      {% endif %}
+
+    </main>
 
     {%- include footer.html -%}
+    {%- include fonts.html -%}
+
+    <script src="{{ "/lib/code-block-copy-paste.js" | relative_url }}"></script>
 
   </body>
 </html>

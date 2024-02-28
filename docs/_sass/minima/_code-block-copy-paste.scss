@@ -1,0 +1,27 @@
+/**
+ * Referenced by https://www.blandersoft.com/short/code-block-copy-paste/
+ */
+div.highlighter-rouge {
+  position: relative;
+
+  button {
+    display: none;
+  }
+
+  &:hover {
+    button {
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 3px;
+      padding-left: 12px;
+      padding-bottom: 12px;
+      background: none;
+      border: none;
+      border-color: red;
+      color: $color-grey-light;
+      font-size: $font-size-small * 0.9;
+      cursor: pointer;
+    }
+  }
+}

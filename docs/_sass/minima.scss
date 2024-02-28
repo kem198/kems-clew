@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+// base CSS
+$base-font-family:   "Noto Sans JP", "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !default;
+$base-font-size:     17px !default;
+$base-font-weight:   400  !default;
+$base-line-height:   1.5  !default;
+$base-brand-color:   #313539 !default;
+$base-text-color:    #333    !default;
+$base-link-color:    #0091bd !default;
+$base-bg-color-main: #fdfdfd !default;
+$base-bg-color-sub:  #f5f6f6 !default;
+$base-btn-color:     #e9e9e9 !default;
+
+// font-family
+$font-family-ubuntu: "Ubuntu", "Noto Sans JP", "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !default;
+$font-family-mono:   "Ubuntu Mono", monospace !default;
+
+// font-size
+$font-size-small: $base-font-size * 0.9 !default;
+$font-size-large: $base-font-size * 1.2 !default;
+$font-size-big:   $base-font-size * 1.5 !default;
+
+// font-weight
+$font-weight-light: 300 !default;
+$font-weight-bold:  700 !default;
+$font-weight-black: 900 !default;
+
+// color
+$color-white:      #fff !default;
+$color-black:      #000 !default;
+
+$color-grey:       #777 !default;
+$color-grey-thin:  lighten($color-grey, 40%) !default;
+$color-grey-light: lighten($color-grey, 30%) !default;
+$color-grey-dark:  darken($color-grey, 25%)  !default;
+
+$color-selected  : #82dda9 !default;
+$color-unselected: #ddd    !default;
+
+// opacity
+$opacity-hover: 0.75 !default;
+
+// table
+$table-text-align: left !default;
+
+// layout
+$content-width: 800px !default;
+$spacing-unit:   30px !default;
+
+// layout for media queries
+$on-palm:       576px !default;
+$on-laptop:     992px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting",
+  "minima/breadcrumbs",
+  "minima/code-block-copy-paste",
+  "minima/modane",
+  "minima/works-masonry",
+  "minima/colorbox"
+;
