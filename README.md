@@ -177,18 +177,18 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 ### 2.3. (v2.0.0 ～) minima テーマへ切り替え
 
-v2.0.0 (2024-02-25 リリース) より minima テーマをベースにした構造へ刷新。
+[v2.0.0](https://github.com/kenkenpa198/kems-clew.net/releases/tag/v2.0.0) (2024-02-28 リリース) より [Minima](https://github.com/jekyll/minima) テーマをベースにした構造へ刷新。
 
-このテーマは GitHub Pages 公式の手順で作成されたテンプレートを使用している。このため内部構造がガラッと変わった。
+このテーマは [GitHub Pages 公式の手順](https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) で作成されたテンプレートを使用している。このため内部構造が大きく変更された。
 
-- `Gemfile` , `Gemfile.lock` など Ruby 関連ファイルの追加。
+- `Gemfile` , `Gemfile.lock` など Ruby 関連ファイルの追加
     - `Gemfile` の中で GitHub Pages がサポートしている Jekyll プラグインを使用するようにしている。
 
         ```ruby
         gem "github-pages", "~> 231", group: :jekyll_plugins
         ```
 
-- 反映するスタイルシートを `.css` から `.scss` へ刷新。
+- 反映するスタイルシートを `.css` から `.scss` へ刷新
     - `docs/assets/` へ `main.scss` が配置されている。HTML の `<link>` タグで読み込まれるのはこちら。
     - `docs/minima` へ `minima.scss` を配置する。
         - この中に配置された `minima.scss` がさらに `./minima/_***.scss` の各ファイルをインポートしている。
