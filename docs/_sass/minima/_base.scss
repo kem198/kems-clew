@@ -109,6 +109,11 @@ main {
       background-color: $color-grey-thin;
       border-radius: 10px;
     }
+
+    // 雑なタップでも押せるようにする
+    a {
+      display: block;
+    }
   }
 }
 
