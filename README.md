@@ -36,7 +36,7 @@ URL はこちら。
     - [6.2. GitHub Pages](#62-github-pages)
     - [6.3. Jekyll](#63-jekyll)
     - [6.4. CSS](#64-css)
-    - [6.5. jQuery](#65-jquery)
+    - [6.5. JavaScript](#65-javascript)
 
 ## 1. 公開まわりの設定
 
@@ -509,7 +509,8 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 - [Flexbox からコンテンツはみ出る問題を完全に解決する \#CSS - Qiita](https://qiita.com/mpyw/items/dfc63c1fed5dfc5eda26)
 - [【簡単】CSSでスクロールバーのデザイン変更【カスタマイズ可能】 | ジトサイト](https://jito-site.com/scrollbar-design-customize/)
 
-### 6.5. jQuery
+### 6.5. JavaScript
 
 - [jQuery最高の教科書｜株式会社シフトブレイン 著](http://jquery.shiftbrain.co.jp/)
 - [簡単にモーダルウィンドウを実装できるjQueryプラグイン「Colorbox」｜I'll be NET](https://illbenet.jp/view/js-colorbox)
+- [Code Block Highlighter Copy/Paste (Jekyll)](https://www.blandersoft.com/short/code-block-copy-paste/)
