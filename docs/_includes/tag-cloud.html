@@ -1,0 +1,32 @@
+{% comment %}
+  <!-- タグクラウド
+
+  タグの配列が tags へ渡されていればその配列をループ表示する。
+  渡されていなければサイト全体のタグをループ表示する。
+
+  ex: {% include tag-cloud.html tags=page.tags %}
+  -->
+{% endcomment %}
+
+<ul class="tag-cloud">
+  {%- if site.posts.size > 0 -%}
+
+    {%- if include.tags -%}
+      {% assign sorted_tags = include.tags | sort %}
+      {% for tag in sorted_tags %}
+        <li>
+          <a href="{{ "./notes/tags.html#" | append: tag | relative_url }}">#{{ tag }}</a>
+        </li>
+      {% endfor %}
+
+    {% else %}
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <li>
+          <a href="{{ "./notes/tags.html#" | append: tag[0] | relative_url }}">#{{ tag[0] }} ({{ tag[1] | size }})</a>
+        </li>
+      {% endfor %}
+    {%- endif -%}
+
+  {%- endif -%}
+</ul>

@@ -20,10 +20,8 @@
     {{ post.excerpt }}
   </div>
 
-  <!-- タグ -->
-  <ul class="post-tags">
-    {% for tag in post.tags %}
-      <li><a href="{{ "./notes/tags.html#" | append: tag | relative_url }}">#{{ tag }}</a></li>
-    {% endfor %}
+  <!-- タグクラウド -->
+  <ul class="tag-cloud">
+    {% include tag-cloud.html tags=post.tags %}
   </ul>
 </li>

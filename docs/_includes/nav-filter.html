@@ -1,17 +1,10 @@
 <nav class="works-filter">
   <section>
     <h3 class="filter-h">
-      <a href="{{ "./notes/tags.html" | relative_url }}"><i class="fa-solid fa-hashtag"></i> Tags</a>
+      <a href="{{ "./notes/tags.html" | relative_url }}">
+        <i class="fa-solid fa-hashtag"></i>
+        Tags</a>
     </h3>
-    <ul class="post-tags">
-      {%- if site.posts.size > 0 -%}
-        {% assign sorted_tags = site.tags | sort %}
-        {% for tag in sorted_tags %}
-          <li>
-            <a href="{{ "./notes/tags.html#" | append: tag[0] | relative_url }}">#{{ tag[0] }} ({{ tag[1] | size }})</a>
-          </li>
-        {% endfor %}
-      {%- endif -%}
-    </ul>
+    {% include tag-cloud.html %}
   </section>
 </nav>
