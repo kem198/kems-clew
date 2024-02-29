@@ -352,6 +352,10 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
+  p {
+    line-height: $line-height-content;
+  }
+
   h2 {
     @include relative-font-size(1.7);
     margin-top: 3.5rem;
