@@ -669,5 +669,65 @@
             "large": "/assets/works/large/20231025_keppare.jpg"
         },
         "date": "2023-10-25"
+    },
+    {
+        "title": "modane-live2d-widget",
+        "category": "Illustrations",
+        "tags": ["2023", "もだねちゃん", "live2d"],
+        "images" : {
+            "thumb": "/assets/works/large/20231027_modane_live2d_widget.png",
+            "large": "/assets/works/large/20231027_modane_live2d_widget.png"
+        },
+        "date": "2023-10-27"
+    },
+    {
+        "title": "Today's Target",
+        "category": "Illustrations",
+        "tags": ["2023", "提供"],
+        "images" : {
+            "thumb": "/assets/works/thumb/20231216_todays_target.jpg",
+            "large": "/assets/works/large/20231216_todays_target.jpg"
+        },
+        "date": "2023-12-16"
+    },
+    {
+        "title": "今年は実家に帰ります",
+        "category": "Illustrations",
+        "tags": ["2023", "うごくメモ帳", "もだねちゃん"],
+        "images" : {
+            "thumb": "/assets/works/gif/20231230_homecoming.gif",
+            "large": "/assets/works/gif/20231230_homecoming.gif"
+        },
+        "date": "2023-12-30"
+    },
+    {
+        "title": "今向かってます",
+        "category": "Illustrations",
+        "tags": ["2024", "うごくメモ帳", "もだねちゃん"],
+        "images" : {
+            "thumb": "/assets/works/gif/20240106_homecoming_colored.gif",
+            "large": "/assets/works/gif/20240106_homecoming_colored.gif"
+        },
+        "date": "2024-01-06"
+    },
+    {
+        "title": "タルマエチャン",
+        "category": "Illustrations",
+        "tags": ["2024", "ウマ娘"],
+        "images" : {
+            "thumb": "/assets/works/thumb/20240127_tarumaechan.jpg",
+            "large": "/assets/works/large/20240127_tarumaechan.jpg"
+        },
+        "date": "2024-01-27"
+    },
+    {
+        "title": "TODAY'S TARGET",
+        "category": "Illustrations",
+        "tags": ["2024", "提供"],
+        "images" : {
+            "thumb": "/assets/works/thumb/20240209_todays_target.jpg",
+            "large": "/assets/works/large/20240209_todays_target.jpg"
+        },
+        "date": "2024-02-09"
     }
 ]
