@@ -167,7 +167,7 @@ $(function () {
                 });
 
                 // works-h2 を表示
-                $('.works-h2').text('#' + key).addClass('filter-selected');
+                $('.works-h2').html('<i class="fa-solid fa-hashtag"></i>' + key).addClass('filter-selected');
             }
 
             // アイテムを追加
