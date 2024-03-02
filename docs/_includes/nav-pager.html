@@ -1,3 +1,12 @@
+{% comment %}
+  <!-- ページャ
+  ポスト下部に表示する「Previous (前の記事へ)」「Next (次の記事へ) 」ボタン。
+
+  Jekyll のサイト変数 `page.next` `page.previous` は想定と逆の順番でポストの情報が格納されているので
+  「Previous」へ `page.next` を、「Next」へ `page.previous` の情報を表示する。
+  -->
+{% endcomment %}
+
 <div class="pager">
 
   {% if page.next %}
