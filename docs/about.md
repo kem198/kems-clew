@@ -8,7 +8,10 @@ permalink: /about/
 
 [KeM's Clew](https://kems-clew.net/) (以下「当サイト」) は、管理人である kenkenpa198 (または KeM198) が趣味で制作・公開しているウェブサイトです。
 
-当サイトの構築内容及びソースコードは [kenkenpa198/kems-clew.net](https://github.com/kenkenpa198/kems-clew.net) にて公開しています。
+当サイトの構築情報は下記にて公開しています。
+
+- [kenkenpa198/kems-clew.net](https://github.com/kenkenpa198/kems-clew.net): 当サイトのソースコード
+- [kenkenpa198/modane-live2d-widget](https://github.com/kenkenpa198/modane-live2d-widget): トップページ下部の Live2D ウィジェット
 
 ## 免責事項
 
