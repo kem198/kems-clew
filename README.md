@@ -58,7 +58,6 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 ![GitHub Pages の設定](images/githubpages_branch.jpg)
 
-
 ### 1.3. HTTPS 化
 
 SSL 証明書は [Xserver SSL](https://ssl.xdomain.ne.jp/) にて発行。ブランドは `Let's Encrypt` 。
