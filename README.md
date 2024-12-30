@@ -44,7 +44,7 @@ URL はこちら。
 
 独自ドメイン `kems-clew.net` は 2022-11-11 に [Xserver Domain](https://www.xdomain.ne.jp/) で取得したもの。
 
-GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに来た通信を GitHub Pages の IP アドレスへ転送している。
+GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに問合せが来たら GitHub Pages の IP アドレスを返答するよう設定している。
 
 設定の詳細は [4.1. 独自ドメインと DNS 設定 (詳細)](#41-独自ドメインと-dns-設定-詳細) を参照。
 
