@@ -1,17 +1,15 @@
 <!-- omit in toc -->
 # KeM's Clew
 
-個人サイト [KeM's Clew](https://clew.kem198.net) の実体となるファイル群を管理しているリポジトリ。  
+個人サイト [KeM's Clew](https://clew.kem198.net) の実体ファイル群を管理しているリポジトリ。
+
 URL はこちら。
 
 - [https://clew.kem198.net](https://clew.kem198.net)
 
-下記の URL でもアクセスできる。  
-すべて [https://clew.kem198.net](https://clew.kem198.net) へリダイレクトされる。
+下記の URL でもアクセスできる。HTTPS 通信を GitHub Pages の設定で強制しているため、[https://clew.kem198.net](https://clew.kem198.net) へリダイレクトされる。
 
-- [https://www.kems-clew.net](https://www.kems-clew.net)
 - [http://clew.kem198.net](http://clew.kem198.net)
-- [http://www.kems-clew.net](http://www.kems-clew.net)
 
 <!-- omit in toc -->
 ## 目次
@@ -42,7 +40,9 @@ URL はこちら。
 
 ### 1.1. 独自ドメインと DNS 設定
 
-独自ドメイン `kems-clew.net` は 2022-11-11 に [Xserver Domain](https://www.xdomain.ne.jp/) で取得したもの。
+~~独自ドメイン `kems-clew.net` は 2022-11-11 に [Xserver Domain](https://www.xdomain.ne.jp/) で取得したもの。~~
+
+⇒ (2025-02-01 追記) ドメインを `kem198.net` で新規取得。当サイトはサブドメイン `clew.kem198.net` 配下に対応させることとした。
 
 GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに問合せが来たら GitHub Pages の IP アドレスを返答するよう設定している。
 
@@ -331,22 +331,22 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 - [GitHub Pages サイトのカスタムドメインを管理する - GitHub Docs > apex ドメインと www サブドメイン バリアントの構成](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
 
-> ご利用の DNS プロバイダーに移動し、サブドメインがサイトの既定のドメインを指す CNAMECNAME レコードを作成します。 たとえば、ユーザー サイトのサブドメイン www.example.com を使用する場合は、www.example.com が <user>.github.io を指す CNAME レコードを作成します。 組織サイトのサブドメイン another.example.com を使用する場合は、another.example.com が <organization>.github.io を指す CNAME レコードを作成します。 CNAME レコードは常に、<user>.github.io または <organization>.github.io (リポジトリ名を除く) を指す必要があります。 正しいレコードの作成方法に関する詳しい情報については、DNSプロバイダのドキュメンテーションを参照してください。 サイトの既定のドメインの詳細については、「GitHub Pages について」を参照してください。
+> ご利用の DNS プロバイダーに移動し、サブドメインがサイトの既定のドメインを指す CNAMECNAME レコードを作成します。 たとえば、ユーザー サイトのサブドメイン <www.example.com> を使用する場合は、www.example.com が <user>.github.io を指す CNAME レコードを作成します。 組織サイトのサブドメイン another.example.com を使用する場合は、another.example.com が <organization>.github.io を指す CNAME レコードを作成します。 CNAME レコードは常に、<user>.github.io または <organization>.github.io (リポジトリ名を除く) を指す必要があります。 正しいレコードの作成方法に関する詳しい情報については、DNSプロバイダのドキュメンテーションを参照してください。 サイトの既定のドメインの詳細については、「GitHub Pages について」を参照してください。
 
 これらをまとめると下表の対応となる。  
-実際の XServer Domain > `DNSレコード設定` 画面上でもこの内容で設定している [^1] 。
+実際の XServer Domain > `DNSレコード設定` 画面上でもこの内容で設定している。
 
-| ホスト名          | 種別  | 内容                  |
-| ----------------- | ----- | --------------------- |
-| kems-clew.net     | A     | 185.199.108.153       |
-| kems-clew.net     | A     | 185.199.109.153       |
-| kems-clew.net     | A     | 185.199.110.153       |
-| kems-clew.net     | A     | 185.199.111.153       |
-| kems-clew.net     | AAAA  | 2606:50c0:8000::153   |
-| kems-clew.net     | AAAA  | 2606:50c0:8001::153   |
-| kems-clew.net     | AAAA  | 2606:50c0:8002::153   |
-| kems-clew.net     | AAAA  | 2606:50c0:8003::153   |
-| www.kems-clew.net | CNAME | kenkenpa198.github.io |
+| ホスト名            | 種別    | 内容                    |
+| ------------------- | ------- | ----------------------- |
+| `kems-clew.net`     | `A`     | `185.199.108.153`       |
+| `kems-clew.net`     | `A`     | `185.199.109.153`       |
+| `kems-clew.net`     | `A`     | `185.199.110.153`       |
+| `kems-clew.net`     | `A`     | `185.199.111.153`       |
+| `kems-clew.net`     | `AAAA`  | `2606:50c0:8000::153`   |
+| `kems-clew.net`     | `AAAA`  | `2606:50c0:8001::153`   |
+| `kems-clew.net`     | `AAAA`  | `2606:50c0:8002::153`   |
+| `kems-clew.net`     | `AAAA`  | `2606:50c0:8003::153`   |
+| `www.kems-clew.net` | `CNAME` | `kenkenpa198.github.io` |
 
 これにより、ドメインに来た通信が GitHub Pages の IP アドレスへ転送される。
 
