@@ -454,6 +454,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 ### 6.1. ドメインの取得～公開
 
 - [Xserver Domain で取得したドメインを使って GitHub Pages で HTTPS に対応したサイトを公開する方法 – ktzwのエンジニアブログ](https://y-ktzw.com/posts/custom-domain/)
+- [GitHub Pagesにサブドメインを設定してSSL化するまで \#dns - Qiita](https://qiita.com/Sorakime/items/66f17271ff2deabff4a4)
 
 ### 6.2. GitHub Pages
 
