@@ -6,7 +6,7 @@ permalink: /about/
 
 ## このサイトは何？
 
-[KeM's Clew](https://kems-clew.net/) (以下「当サイト」) は、管理人である kenkenpa198 (または KeM198) が趣味で制作・公開しているウェブサイトです。
+[KeM's Clew](https://clew.kem198.net/) (以下「当サイト」) は、管理人である kenkenpa198 (または KeM198) が趣味で制作・公開しているウェブサイトです。
 
 当サイトの構築情報は下記にて公開しています。
 

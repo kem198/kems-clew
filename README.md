@@ -1,16 +1,16 @@
 <!-- omit in toc -->
 # KeM's Clew
 
-個人サイト [KeM's Clew](https://kems-clew.net) の実体となるファイル群を管理しているリポジトリ。  
+個人サイト [KeM's Clew](https://clew.kem198.net) の実体となるファイル群を管理しているリポジトリ。  
 URL はこちら。
 
-- [https://kems-clew.net](https://kems-clew.net)
+- [https://clew.kem198.net](https://clew.kem198.net)
 
 下記の URL でもアクセスできる。  
-すべて [https://kems-clew.net](https://kems-clew.net) へリダイレクトされる。
+すべて [https://clew.kem198.net](https://clew.kem198.net) へリダイレクトされる。
 
 - [https://www.kems-clew.net](https://www.kems-clew.net)
-- [http://kems-clew.net](http://kems-clew.net)
+- [http://clew.kem198.net](http://clew.kem198.net)
 - [http://www.kems-clew.net](http://www.kems-clew.net)
 
 <!-- omit in toc -->
@@ -68,7 +68,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 ### 2.1. Jekyll によるビルド
 
-当サイトは HTML ソースのテンプレート化や [マークダウン記法でのブログ機能](https://kems-clew.net/notes/) を実装している。
+当サイトは HTML ソースのテンプレート化や [マークダウン記法でのブログ機能](https://clew.kem198.net/notes/) を実装している。
 
 これらは GitHub Pages に組み込まれている静的サイトジェネレータ「[Jekyll](http://jekyllrb-ja.github.io/)」の機能を使用している。
 
@@ -78,7 +78,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
     - サイト全体で使用するテンプレートファイルを格納するディレクトリ。
     - 例えば `default.html` は `<head>` タグ及び `<body>` タグ内のヘッダーとフッター、後述のタグ `{{ content }}` などが記述された共通テンプレートファイル。
 - `/docs/_posts/`
-    - [Notes](https://kems-clew.net/notes.html) ページ配下にて公開されるブログの投稿ファイルを格納するディレクトリ。
+    - [Notes](https://clew.kem198.net/notes) ページ配下にて公開されるブログの投稿ファイルを格納するディレクトリ。
     - 投稿はマークダウン形式のファイルとして作成・配置する。
     - ファイル名は [命名規則が存在する](http://jekyllrb-ja.github.io/docs/posts/#%E3%83%9D%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B:~:text=%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82-,%E3%83%9D%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B,-Permalink) 。
 
@@ -154,7 +154,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 ### 2.2. 使用ライブラリ
 
-[Works](https://kems-clew.net/works/) ページの画像レイアウト・ライトボックス処理は以下の JavaScript ライブラリを使用している。
+[Works](https://clew.kem198.net/works/) ページの画像レイアウト・ライトボックス処理は以下の JavaScript ライブラリを使用している。
 
 - [jQuery](https://jquery.com/)
 - [imagesLoaded](https://imagesloaded.desandro.com/)
@@ -223,7 +223,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 1. `/docs` ディレクトリへ移動する。
 
     ```shell
-    $ cd docs
+    cd docs
     ```
 
 2. 下記いずれかの `jekyll` コマンドでカレントディレクトリをルートディレクトリとしてビルドする。
