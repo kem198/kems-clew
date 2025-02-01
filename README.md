@@ -52,7 +52,7 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 サイトの実体は GitHub Pages でホスティングされている。元の URL は下記。
 
-- [https://kenkenpa198.github.io/kems-clew.net/](https://kenkenpa198.github.io/kems-clew.net/)
+- [https://kem198.github.io/kems-clew/](https://kem198.github.io/kems-clew/)
 
 `main` ブランチに存在する`/docs` ディレクトリをビルド用ディレクトリとして設定している。
 
@@ -327,7 +327,7 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 > 2606:50c0:8003::153
 > ```
 
-`www` サブドメインは `kenkenpa198.github.io` の CNAME レコードを DNS レコード設定へ追加して利用できるようにしている。
+`www` サブドメインは `kem198.github.io` の CNAME レコードを DNS レコード設定へ追加して利用できるようにしている。
 
 - [GitHub Pages サイトのカスタムドメインを管理する - GitHub Docs > apex ドメインと www サブドメイン バリアントの構成](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
 
