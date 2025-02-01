@@ -102,7 +102,7 @@ __ボールド（アンダースコア2個）__
 
 ## 5. リンク
 
-[KeM's Clew](https://kems-clew.net/)
+[KeM's Clew](https://clew.kem198.net/)
 
 ## 6. 画像の埋め込み
 
