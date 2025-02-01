@@ -176,7 +176,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 ### 2.3. (v2.0.0 ～) Minima テーマへ切り替え
 
-[v2.0.0](https://github.com/kenkenpa198/kems-clew.net/releases/tag/v2.0.0) (2024-02-28 リリース) より [Minima](https://github.com/jekyll/minima) テーマをベースにした構造へ刷新。
+[v2.0.0](https://github.com/kem198/kems-clew.net/releases/tag/v2.0.0) (2024-02-28 リリース) より [Minima](https://github.com/jekyll/minima) テーマをベースにした構造へ刷新。
 
 このテーマは [GitHub Pages 公式の手順](https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) で作成されたテンプレートを使用している。このため内部構造が大きく変更された。
 
@@ -207,7 +207,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 より詳しい再現手順やビルド方法は次のリポジトリを参照すること。
 
-- [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kenkenpa198/helloworld-github-pages-with-jekyll)
+- [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
 
 ## 3. 作業方法メモ
 
@@ -215,8 +215,8 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用してい�
 
 下記を参考に環境構築を行う。
 
-- (~ v1.3.0) [kenkenpa198/tutorial-jekyll](https://github.com/kenkenpa198/tutorial-jekyll) > `2. 環境構築メモ`
-- (v2.0.0 ~) [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kenkenpa198/helloworld-github-pages-with-jekyll)
+- (~ v1.3.0) [kenkenpa198/tutorial-jekyll](https://github.com/kem198/tutorial-jekyll) > `2. 環境構築メモ`
+- (v2.0.0 ~) [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
 
 ### 3.2. ビルド・Web サーバの立ち上げ・表示
 
@@ -327,78 +327,60 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 > 2606:50c0:8003::153
 > ```
 
-`www` サブドメインは `kem198.github.io` の CNAME レコードを DNS レコード設定へ追加して利用できるようにしている。
+`clew` サブドメインは `kem198.github.io` の CNAME レコードを DNS レコード設定へ追加して利用できるようにしている。
 
 - [GitHub Pages サイトのカスタムドメインを管理する - GitHub Docs > apex ドメインと www サブドメイン バリアントの構成](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
 
-> ご利用の DNS プロバイダーに移動し、サブドメインがサイトの既定のドメインを指す CNAMECNAME レコードを作成します。 たとえば、ユーザー サイトのサブドメイン <www.example.com> を使用する場合は、www.example.com が <user>.github.io を指す CNAME レコードを作成します。 組織サイトのサブドメイン another.example.com を使用する場合は、another.example.com が <organization>.github.io を指す CNAME レコードを作成します。 CNAME レコードは常に、<user>.github.io または <organization>.github.io (リポジトリ名を除く) を指す必要があります。 正しいレコードの作成方法に関する詳しい情報については、DNSプロバイダのドキュメンテーションを参照してください。 サイトの既定のドメインの詳細については、「GitHub Pages について」を参照してください。
+> ご利用の DNS プロバイダーに移動し、サブドメインがサイトの既定のドメインを指す CNAME レコードを作成します。 たとえば、ユーザー サイトのサブドメイン <www.example.com> を使用する場合は、www.example.com が <user>.github.io を指す CNAME レコードを作成します。 組織サイトのサブドメイン another.example.com を使用する場合は、another.example.com が <organization>.github.io を指す CNAME レコードを作成します。 CNAME レコードは常に、<user>.github.io または <organization>.github.io (リポジトリ名を除く) を指す必要があります。 正しいレコードの作成方法に関する詳しい情報については、DNSプロバイダのドキュメンテーションを参照してください。 サイトの既定のドメインの詳細については、「GitHub Pages について」を参照してください。
 
-これらをまとめると下表の対応となる。  
-実際の XServer Domain > `DNSレコード設定` 画面上でもこの内容で設定している。
+これらをまとめると下表の対応となる。
 
-| ホスト名            | 種別    | 内容                    |
-| ------------------- | ------- | ----------------------- |
-| `kems-clew.net`     | `A`     | `185.199.108.153`       |
-| `kems-clew.net`     | `A`     | `185.199.109.153`       |
-| `kems-clew.net`     | `A`     | `185.199.110.153`       |
-| `kems-clew.net`     | `A`     | `185.199.111.153`       |
-| `kems-clew.net`     | `AAAA`  | `2606:50c0:8000::153`   |
-| `kems-clew.net`     | `AAAA`  | `2606:50c0:8001::153`   |
-| `kems-clew.net`     | `AAAA`  | `2606:50c0:8002::153`   |
-| `kems-clew.net`     | `AAAA`  | `2606:50c0:8003::153`   |
-| `www.kems-clew.net` | `CNAME` | `kenkenpa198.github.io` |
+| ホスト名          | 種別    | 内容                  |
+| ----------------- | ------- | --------------------- |
+| `kem198.net`      | `A`     | `185.199.108.153`     |
+| `kem198.net`      | `A`     | `185.199.109.153`     |
+| `kem198.net`      | `A`     | `185.199.110.153`     |
+| `kem198.net`      | `A`     | `185.199.111.153`     |
+| `kem198.net`      | `AAAA`  | `2606:50c0:8000::153` |
+| `kem198.net`      | `AAAA`  | `2606:50c0:8001::153` |
+| `kem198.net`      | `AAAA`  | `2606:50c0:8002::153` |
+| `kem198.net`      | `AAAA`  | `2606:50c0:8003::153` |
+| `clew.kem198.net` | `CNAME` | `kem198.github.io`    |
 
-これにより、ドメインに来た通信が GitHub Pages の IP アドレスへ転送される。
+実際の XServer Domain > `DNSレコード設定` 画面上でもこの内容で設定している。これにより、ドメインに来た通信が GitHub Pages の IP アドレスへ転送される。
 
-なお公開情報のため `nslookup` コマンドで確認できる。
+なお公開情報のため `dig` コマンドで確認できる。
 
 ```shell
-$ nslookup kems-clew.net
-Server:         192.168.3.1
-Address:        192.168.3.1#53
-
-Non-authoritative answer:
-Name:   kems-clew.net
-Address: 185.199.109.153
-Name:   kems-clew.net
-Address: 185.199.108.153
-Name:   kems-clew.net
-Address: 185.199.110.153
-Name:   kems-clew.net
-Address: 185.199.111.153
-Name:   kems-clew.net
-Address: 2606:50c0:8002::153
-Name:   kems-clew.net
-Address: 2606:50c0:8001::153
-Name:   kems-clew.net
-Address: 2606:50c0:8003::153
-Name:   kems-clew.net
-Address: 2606:50c0:8000::153
+$ dig kem198.net +nostats +nocomments +nocmd ANY
+;kem198.net.                    IN      ANY
+kem198.net.             3600    IN      SOA     ns1.xdomain.ne.jp. root.xdomain.ne.jp. 0 10800 3600 604800 3600
+kem198.net.             3600    IN      A       185.199.109.153
+kem198.net.             3600    IN      A       185.199.110.153
+kem198.net.             3600    IN      A       185.199.108.153
+kem198.net.             3600    IN      A       185.199.111.153
+kem198.net.             3600    IN      AAAA    2606:50c0:8002::153
+kem198.net.             3600    IN      AAAA    2606:50c0:8000::153
+kem198.net.             3600    IN      AAAA    2606:50c0:8003::153
+kem198.net.             3600    IN      AAAA    2606:50c0:8001::153
+kem198.net.             3600    IN      NS      ns3.xdomain.ne.jp.
+kem198.net.             3600    IN      NS      ns1.xdomain.ne.jp.
+kem198.net.             3600    IN      NS      ns2.xdomain.ne.jp.
+ns1.xdomain.ne.jp.      885     IN      A       157.112.147.232
+ns2.xdomain.ne.jp.      16491   IN      A       35.75.232.118
+ns3.xdomain.ne.jp.      35620   IN      A       162.43.113.246
 ```
 
 ```shell
-$ nslookup www.kems-clew.net
-Server:         192.168.3.1
-Address:        192.168.3.1#53
-
-Non-authoritative answer:
-www.kems-clew.net       canonical name = kenkenpa198.github.io.
-Name:   kenkenpa198.github.io
-Address: 185.199.108.153
-Name:   kenkenpa198.github.io
-Address: 185.199.109.153
-Name:   kenkenpa198.github.io
-Address: 185.199.110.153
-Name:   kenkenpa198.github.io
-Address: 185.199.111.153
-Name:   kenkenpa198.github.io
-Address: 2606:50c0:8000::153
-Name:   kenkenpa198.github.io
-Address: 2606:50c0:8001::153
-Name:   kenkenpa198.github.io
-Address: 2606:50c0:8003::153
-Name:   kenkenpa198.github.io
-Address: 2606:50c0:8002::153
+$ dig clew.kem198.net +nostats +nocomments +nocmd ANY
+;clew.kem198.net.               IN      ANY
+clew.kem198.net.        3600    IN      CNAME   kem198.github.io.
+kem198.net.             168538  IN      NS      ns2.xdomain.ne.jp.
+kem198.net.             168538  IN      NS      ns1.xdomain.ne.jp.
+kem198.net.             168538  IN      NS      ns3.xdomain.ne.jp.
+ns1.xdomain.ne.jp.      255     IN      A       157.112.147.232
+ns2.xdomain.ne.jp.      60392   IN      A       35.75.232.118
+ns3.xdomain.ne.jp.      35511   IN      A       162.43.113.246
 ```
 
 ### 4.2. `_site` ディレクトリをルートとして Web サーバを立てる
