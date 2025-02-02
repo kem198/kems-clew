@@ -56,6 +56,11 @@ permalink: /about/
 
 - [Xserverドメイン](https://www.xdomain.ne.jp/)
 
+### SSL 証明書取得
+
+- [Xserver SSL](https://ssl.xdomain.ne.jp/)
+    - ブランド: [Let's Encrypt](https://letsencrypt.org/ja/)
+
 ### ホスティング
 
 - [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)
