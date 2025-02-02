@@ -42,7 +42,7 @@ URL はこちら。
 
 ~~独自ドメイン `kems-clew.net` は 2022-11-11 に [Xserver Domain](https://www.xdomain.ne.jp/) で取得したもの。~~
 
-⇒ (2025-02-01 追記) ドメインを `kem198.net` で新規取得。当サイトはサブドメイン `clew.kem198.net` 配下に対応させることとした。
+⇒ (2025-02-01 追記) 新規ドメイン `kem198.net` を [Xserver Domain](https://www.xdomain.ne.jp/) で取得。当サイトはサブドメイン `clew.kem198.net` 配下に対応するよう変更した。
 
 GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の DNS レコード設定に追加し、ドメインに問合せが来たら GitHub Pages の IP アドレスを返答するよう設定している。
 
@@ -454,6 +454,7 @@ About: [About Jekyll Codex | Jekyll Codex](https://jekyllcodex.org/about/)
 ### 6.1. ドメインの取得～公開
 
 - [Xserver Domain で取得したドメインを使って GitHub Pages で HTTPS に対応したサイトを公開する方法 – ktzwのエンジニアブログ](https://y-ktzw.com/posts/custom-domain/)
+- [GitHub Pagesにサブドメインを設定してSSL化するまで \#dns - Qiita](https://qiita.com/Sorakime/items/66f17271ff2deabff4a4)
 
 ### 6.2. GitHub Pages
 
