@@ -7,7 +7,7 @@ URL はこちら。
 
 - [https://clew.kem198.net](https://clew.kem198.net)
 
-下記の URL でもアクセスできる。HTTPS 通信を GitHub Pages の設定で強制しているため、[https://clew.kem198.net](https://clew.kem198.net) へリダイレクトされる。
+下記の URL でもアクセスできる。GitHub Pages の `Enforce HTTPS` 設定を有効にしているため、[https://clew.kem198.net](https://clew.kem198.net) へリダイレクトされる。
 
 - [http://clew.kem198.net](http://clew.kem198.net)
 
@@ -62,7 +62,7 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 SSL 証明書は [Xserver SSL](https://ssl.xdomain.ne.jp/) にて取得。ブランドは [Let's Encrypt](https://letsencrypt.org/) 。
 
-HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用している。
+HTTPS での公開は GitHub Pages の `Enforce HTTPS` 設定を使用している。
 
 ## 2. 内部構成
 
