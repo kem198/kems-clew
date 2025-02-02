@@ -60,7 +60,7 @@ GitHub Pages の A レコード 及び AAAA レコードを Xserver Domain の D
 
 ### 1.3. HTTPS 化
 
-SSL 証明書は [Xserver SSL](https://ssl.xdomain.ne.jp/) にて発行。ブランドは `Let's Encrypt` 。
+SSL 証明書は [Xserver SSL](https://ssl.xdomain.ne.jp/) にて取得。ブランドは [Let's Encrypt](https://letsencrypt.org/) 。
 
 HTTPS での公開は GitHub Pages の `Enforce HTTPS` 機能を使用している。
 
