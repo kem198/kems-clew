@@ -15,7 +15,7 @@ tags:
   - windows
   - vscode
 date: 2024-01-13
-lastmod: 2024-08-19
+lastmod: 2025-10-13
 ---
 
 自分用便利スニペット集。
@@ -33,7 +33,7 @@ lastmod: 2024-08-19
   // コード
   ```
 
-  - 参考文献・出典
+    - 参考文献・出典
 
 ## 1. 記号
 
@@ -73,7 +73,7 @@ lastmod: 2024-08-19
   \n|\r\n|\r
   ```
 
-  - [正規表現：改行コードの表現方法。置換による削除 \| WWWクリエイターズ](https://www-creators.com/archives/2551)
+    - [正規表現：改行コードの表現方法。置換による削除 \| WWWクリエイターズ](https://www-creators.com/archives/2551)
 
 ### 2.3. URL
 
@@ -89,8 +89,8 @@ lastmod: 2024-08-19
   (http|https):\/\/[-\w\.]+(:\d+)?(\/[^\s]*)?
   ```
 
-  - [とほほの正規表現入門 - とほほのWWW入門](https://www.tohoho-web.com/ex/regexp.html)
-  - [正規表現 - とほほのWWW入門](https://www.tohoho-web.com/perl/regexp.htm)
+    - [とほほの正規表現入門 - とほほのWWW入門](https://www.tohoho-web.com/ex/regexp.html)
+    - [正規表現 - とほほのWWW入門](https://www.tohoho-web.com/perl/regexp.htm)
 
 ### 2.4. その他
 
@@ -111,8 +111,8 @@ lastmod: 2024-08-19
   ^^^^^
   ```
 
-  - [正規表現構文早見表 - JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%A2%E3%82%B5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3)
-  - [正規表現のマッチングをどこからでも―「境界アサーション」と「ルックアラウンドアサーション」：ECMAScriptで学ぶ正規表現（7） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2207/15/news002.html)
+    - [正規表現構文早見表 - JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%82%A2%E3%82%B5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3)
+    - [正規表現のマッチングをどこからでも―「境界アサーション」と「ルックアラウンドアサーション」：ECMAScriptで学ぶ正規表現（7） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2207/15/news002.html)
 
 - 金額をカンマ区切りへ変換
 
@@ -134,7 +134,7 @@ lastmod: 2024-08-19
   1,234,567,890,123
   ```
 
-  - [正規表現のマッチングをどこからでも―「境界アサーション」と「ルックアラウンドアサーション」：ECMAScriptで学ぶ正規表現（7） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2207/15/news002.html)
+    - [正規表現のマッチングをどこからでも―「境界アサーション」と「ルックアラウンドアサーション」：ECMAScriptで学ぶ正規表現（7） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2207/15/news002.html)
 
 ## 3. Linux
 
@@ -191,8 +191,8 @@ lastmod: 2024-08-19
   Codename:       jammy
   ```
 
-  - [lsb_release – ディストリビューションのバージョン情報の確認 \| Linuxコマンド.NET](https://linuxcommand.net/lsb_release/)
-  - [Windows11 + WSL で Ubuntu 環境を構築するずんだもん - YouTube](https://www.youtube.com/watch?v=odDJ3QvlF2g)
+    - [lsb_release – ディストリビューションのバージョン情報の確認 \| Linuxコマンド.NET](https://linuxcommand.net/lsb_release/)
+    - [Windows11 + WSL で Ubuntu 環境を構築するずんだもん - YouTube](https://www.youtube.com/watch?v=odDJ3QvlF2g)
 
 - `neofetch` コマンドで確認する
 
@@ -211,7 +211,7 @@ lastmod: 2024-08-19
 
 ### 3.2. alias
 
-- alias 一覧 ([kenkenpa198/dotfiles > alias.zsh](https://github.com/kenkenpa198/dotfiles/blob/main/zsh/rc/alias.zsh))
+- alias 一覧 ([kem198/dotfiles > alias.zsh](https://github.com/kem198/dotfiles/blob/main/zsh/rc/alias.zsh))
 
   ```shell
   alias
@@ -259,7 +259,7 @@ lastmod: 2024-08-19
   sudo apt-get autoclean -y
   ```
 
-  - [Ubuntu 20.04 LTS を 22.04 LTS にアップグレードする - Uzabase for Engineers](https://tech.uzabase.com/entry/2022/10/05/163458)
+    - [Ubuntu 20.04 LTS を 22.04 LTS にアップグレードする - Uzabase for Engineers](https://tech.uzabase.com/entry/2022/10/05/163458)
 
 ### 3.4. chown
 
@@ -269,9 +269,9 @@ lastmod: 2024-08-19
   sudo chown -R $USER:$USER .
   ```
 
-  - [man chown (1): ファイルの所有者とグループを変更する](https://ja.manpages.org/chown)
-  - [WSL2でDockerを使用する際の権限問題を解決するシンプルな方法（docker-compose.yml使用） #Docker - Qiita](https://qiita.com/twu_go/items/a449e3006bd74fc7d10d)
-  - [Linuxのユーザーとグループって何だろう？：“応用力”をつけるためのLinux再入門（10）（1/2 ページ） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1706/02/news014.html)
+    - [man chown (1): ファイルの所有者とグループを変更する](https://ja.manpages.org/chown)
+    - [WSL2でDockerを使用する際の権限問題を解決するシンプルな方法（docker-compose.yml使用） #Docker - Qiita](https://qiita.com/twu_go/items/a449e3006bd74fc7d10d)
+    - [Linuxのユーザーとグループって何だろう？：“応用力”をつけるためのLinux再入門（10）（1/2 ページ） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1706/02/news014.html)
 
 ### 3.5. curl
 
@@ -361,7 +361,7 @@ lastmod: 2024-08-19
   # ...
   ```
 
-  - [man grep (1): パターンにマッチする行を表示する](https://ja.manpages.org/grep#)
+    - [man grep (1): パターンにマッチする行を表示する](https://ja.manpages.org/grep#)
 
 ### 3.7. seq
 
@@ -379,7 +379,7 @@ lastmod: 2024-08-19
 
 ### 3.8. split
 
-  - CSV ファイルを 100 行単位で分割する
+- CSV ファイルを 100 行単位で分割する
 
     ```shell
     mkdir -p split && \
@@ -412,7 +412,7 @@ lastmod: 2024-08-19
   SystemDirectory : C:\WINDOWS\system32
   Organization    :
   BuildNumber     : 22631
-  RegisteredUser  : kenkenpa198
+  RegisteredUser  : kem198
   SerialNumber    : *****-*****-*****-*****
   Version         : 10.0.22631
   ```
@@ -470,7 +470,7 @@ lastmod: 2024-08-19
   OS バージョン:          10.0.22631 N/A ビルド 22631
   ```
 
-  - [PowerShellシステム要件、バージョン情報メモ \#Windows10 - Qiita](https://qiita.com/e4rfx/items/e370ba343a3c3841b646)
+    - [PowerShellシステム要件、バージョン情報メモ \#Windows10 - Qiita](https://qiita.com/e4rfx/items/e370ba343a3c3841b646)
 
 - cmd の ver コマンドを利用する
 
@@ -485,7 +485,7 @@ lastmod: 2024-08-19
   Microsoft Windows [Version 10.0.22631.3527]
   ```
 
-  - [Windows のバージョンを表示する \| Operations Lab.](https://operationslab.wordpress.com/2013/03/10/windows-のバージョンを表示する/)
+    - [Windows のバージョンを表示する \| Operations Lab.](https://operationslab.wordpress.com/2013/03/10/windows-のバージョンを表示する/)
 
 ### 4.3. WSL
 
@@ -526,20 +526,20 @@ lastmod: 2024-08-19
 ## 5. Git
 
 - ⚠️: 対象コミットの歴史を改変する操作。
-  - **リモートブランチへプッシュ済みの場合、無断で行わないこと** 。
+    - **リモートブランチへプッシュ済みの場合、無断で行わないこと** 。
 
 ### 5.1. remote
 
 - リモートリポジトリを登録する
 
   ```shell
-  git remote add origin https://github.com/kenkenpa198/dotfiles
+  git remote add origin https://github.com/kem198/dotfiles
   ```
 
 - リモートリポジトリの URL を変更する
 
   ```shell
-  git remote set-url origin git@github.com:kenkenpa198/dotfiles.git
+  git remote set-url origin git@github.com:kem198/dotfiles.git
   ```
 
 - リモートリポジトリの確認
@@ -551,8 +551,8 @@ lastmod: 2024-08-19
   ```shell
   # e.g.
   $ git remote -v
-  origin  git@github.com:kenkenpa198/dotfiles.git (fetch)
-  origin  git@github.com:kenkenpa198/dotfiles.git (push)
+  origin  git@github.com:kem198/dotfiles.git (fetch)
+  origin  git@github.com:kem198/dotfiles.git (push)
   ```
 
 ### 5.2. ⚠️Git の操作を取り消す
@@ -588,8 +588,8 @@ $ git reset --soft HEAD@{1}
 
 ```shell
 $ gll
-* dc80a8f 2024-01-13 11:33:09 (HEAD -> main) wip by"kenkenpa198"                   # (1)
-* 07e84cc 2024-01-13 11:27:11 [add]add note 2024-01-13-my-snippets by"kenkenpa198" # (2)
+* dc80a8f 2024-01-13 11:33:09 (HEAD -> main) wip by"kem198"                   # (1)
+* 07e84cc 2024-01-13 11:27:11 [add]add note 2024-01-13-my-snippets by"kem198" # (2)
 ```
 
 ```shell
@@ -620,7 +620,7 @@ Successfully rebased and updated refs/heads/main. # 返った結果
 
 # 4. コミットログとファイル内容を確認する
 $ gll
-* 8ed7b8a 2024-01-13 10:57:20 (HEAD -> main) [add]add note 2024-01-13-my-snippets by"kenkenpa198"
+* 8ed7b8a 2024-01-13 10:57:20 (HEAD -> main) [add]add note 2024-01-13-my-snippets by"kem198"
 ...
 ```
 
@@ -628,11 +628,11 @@ $ gll
 
 - [5. rebase -i でコミットをまとめる｜サル先生のGit入門【プロジェクト管理ツールBacklog】](https://backlog.com/ja/git-tutorial/stepup/32/)
 
-※ 実行しているコマンド `$ gll` は [git log のエイリアス](https://github.com/kenkenpa198/dotfiles/blob/fe695c145ec1c6b35849622cc3b26703d0ef5700/zsh/rc/alias.zsh#L100) 。
+※ 実行しているコマンド `$ gll` は [git log のエイリアス](https://github.com/kem198/dotfiles/blob/fe695c145ec1c6b35849622cc3b26703d0ef5700/zsh/rc/alias.zsh#L100) 。
 
 ### 5.4. キャッシュを削除する
 
-[kenkenpa198/dotfiles](https://github.com/kenkenpa198/dotfiles?tab=readme-ov-file#git-%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E5%89%8A%E9%99%A4%E6%89%8B%E9%A0%86) にも記載しているもの。
+[kem198/dotfiles](https://github.com/kem198/dotfiles?tab=readme-ov-file#git-%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E5%89%8A%E9%99%A4%E6%89%8B%E9%A0%86) にも記載しているもの。
 
 - グローバルな除外設定 (`.gitignore_global` など) を設定する前にコミットをしてしまった。
 - 過去に追跡対象としてコミットしたファイルを `.gitignore` の追跡対象外へ追加する。
@@ -661,8 +661,8 @@ git commit -m 'commit comments'
 
 - [.gitignoreに記載したのに反映されない件 #Git - Qiita](https://qiita.com/fuwamaki/items/3ed021163e50beab7154)
 - [Git - git-rm Documentation](https://git-scm.com/docs/git-rm)
-  - [-r](https://git-scm.com/docs/git-rm#Documentation/git-rm.txt--r)
-  - [--cached](https://git-scm.com/docs/git-rm#Documentation/git-rm.txt---cached)
+    - [-r](https://git-scm.com/docs/git-rm#Documentation/git-rm.txt--r)
+    - [--cached](https://git-scm.com/docs/git-rm#Documentation/git-rm.txt---cached)
 - [git-rm – Git コマンドリファレンス（日本語版）](https://tracpath.com/docs/git-rm/)
 
 ## 6. Docker
@@ -974,7 +974,7 @@ Docker version 25.0.2, build 29cf629
   docker image prune -f
   ```
 
-  - [docker imagesに表示される＜none＞を消す。dangling \| codechord](https://codechord.com/2019/08/docker-images-none-dangling/)
+    - [docker imagesに表示される＜none＞を消す。dangling \| codechord](https://codechord.com/2019/08/docker-images-none-dangling/)
 
 ### 6.4. Volume
 
@@ -1030,7 +1030,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
   composer install
   ```
 
-  - [Command-line interface / Commands - Composer](https://getcomposer.org/doc/03-cli.md#install-i)
+    - [Command-line interface / Commands - Composer](https://getcomposer.org/doc/03-cli.md#install-i)
 
 - オートローダーを更新する
 
@@ -1038,7 +1038,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
   composer dump-autoload
   ```
 
-  - [Command-line interface / Commands - Composer](https://getcomposer.org/doc/03-cli.md#dump-autoload-dumpautoload)
+    - [Command-line interface / Commands - Composer](https://getcomposer.org/doc/03-cli.md#dump-autoload-dumpautoload)
 
 ### 7.2. Artisan
 
@@ -1080,7 +1080,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
   php artisan key:generate
   ```
 
-  - [暗号化 10.x Laravel](https://readouble.com/laravel/10.x/ja/encryption.html)
+    - [暗号化 10.x Laravel](https://readouble.com/laravel/10.x/ja/encryption.html)
 
 #### 7.2.3. make
 
@@ -1205,7 +1205,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
 - テーブルをすべて削除してからマイグレーションを実行する
 
   ```shell
-  $ php artisan migrate:fresh
+  php artisan migrate:fresh
   ```
 
   ```shell
@@ -1327,7 +1327,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
 }
 ```
 
-これを `ワークスペース/.vscode/settings.json` へ記述すると、[ユーザー設定で行われている](https://github.com/kenkenpa198/dotfiles/blob/0defd6780a2505a590646184708781cf54fd9553/config/Code/User/settings.json#L22-L24) 下記の記述を無効化できる。
+これを `ワークスペース/.vscode/settings.json` へ記述すると、[ユーザー設定で行われている](https://github.com/kem198/dotfiles/blob/0defd6780a2505a590646184708781cf54fd9553/config/Code/User/settings.json#L22-L24) 下記の記述を無効化できる。
 
 - 保存時に新規行を挿入 (`files.insertFinalNewline`)
 - 保存時に不要行を除去 (`files.trimFinalNewlines`)
@@ -1361,7 +1361,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
   =IFERROR(MAX(INDIRECT(ADDRESS(ROW(),1)):INDIRECT(ADDRESS(ROW(),COLUMN()-1)))+1,1)
   ```
 
-  - [Excel ドキュメントを書く時の定石集 - Neo's World](https://neos21.net/tech/business-communication/excel-best-practices.html)
+    - [Excel ドキュメントを書く時の定石集 - Neo's World](https://neos21.net/tech/business-communication/excel-best-practices.html)
 
 - 🔄 縦に連番を振る (数値以外のセルでリセット)
 
@@ -1381,7 +1381,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
   =MID(CELL("filename",A1),FIND("]",CELL("filename",A1))+1,99)
   ```
 
-  - [Excelの表でシート名を利用するのに毎度手動でコピペする修行は不要！ 関数で取得する方法 - 残業を減らす！Officeテクニック - 窓の杜](https://forest.watch.impress.co.jp/docs/serial/offitech/1453353.html)
+    - [Excelの表でシート名を利用するのに毎度手動でコピペする修行は不要！ 関数で取得する方法 - 残業を減らす！Officeテクニック - 窓の杜](https://forest.watch.impress.co.jp/docs/serial/offitech/1453353.html)
 
 ## 11. その他
 
@@ -1401,8 +1401,8 @@ Composer version 2.6.6 2023-12-08 18:32:26
   username@example.com
   ```
 
-  - [example.com](https://example.com/)
-  - [example.com - Wikipedia](https://ja.wikipedia.org/wiki/Example.com)
+    - [example.com](https://example.com/)
+    - [example.com - Wikipedia](https://ja.wikipedia.org/wiki/Example.com)
 
 ### 11.2. Google 検索
 
@@ -1416,4 +1416,4 @@ Composer version 2.6.6 2023-12-08 18:32:26
   site:https://www.example.com/ramen つけ麺
   ```
 
-  - [検索演算子「site: 」の使い方 \| Google 検索セントラル  \|  ドキュメント  \|  Google for Developers](https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site?hl=ja)
+    - [検索演算子「site: 」の使い方 \| Google 検索セントラル  \|  ドキュメント  \|  Google for Developers](https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site?hl=ja)

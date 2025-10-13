@@ -14,7 +14,7 @@ lastmod: 2024-03-02
 
 表題のとおり、KeM's Clew をアップグレードしました。v2 系としています。
 
-- [Release v2.0.0 · kenkenpa198/kems-clew.net](https://github.com/kenkenpa198/kems-clew.net/releases/tag/v2.0.0)
+- [Release v2.0.0 · kem198/kems-clew.net](https://github.com/kem198/kems-clew.net/releases/tag/v2.0.0)
 
 経緯と更新内容について紹介します！
 
@@ -40,7 +40,7 @@ lastmod: 2024-03-02
 具体的な技術情報は次の内容をご参考ください。
 
 - [About > 使用している技術・素材](https://clew.kem198.net/about/#使用している技術素材)
-- [kenkenpa198/kems-clew.net > 2.3. (v2.0.0 ～) minima テーマへ切り替え](https://github.com/kenkenpa198/kems-clew.net?tab=readme-ov-file#23-v200--minima-%E3%83%86%E3%83%BC%E3%83%9E%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88)
+- [kem198/kems-clew.net > 2.3. (v2.0.0 ～) minima テーマへ切り替え](https://github.com/kem198/kems-clew.net?tab=readme-ov-file#23-v200--minima-%E3%83%86%E3%83%BC%E3%83%9E%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88)
 
 Jekyll の Liquid 構文や Sass など、改めて触れる機会になってよかった。
 
@@ -118,7 +118,7 @@ Jekyll の Liquid 構文や Sass など、改めて触れる機会になって�
 
 例えばよくあるブログサービスだと「次の記事へ」ボタンは【**過去の日付**】の記事へ遷移することが多いと思うけれど、`page.next` は【**未来の日付**】の記事情報が格納されている。このため「次の記事へ」に `page.next` を当ててしまうと、(イメージでの) 前のページへ遷移してしまう……。
 
-これに対して自分の実装上では [単純に逆にして当てはめています](https://github.com/kenkenpa198/kems-clew.net/blob/main/docs/_includes/nav-pager.html) 。「Next (次の記事へ)」と表示されているリンク先は、実は `page.previous` が設定されている、という感じ。
+これに対して自分の実装上では [単純に逆にして当てはめています](https://github.com/kem198/kems-clew.net/blob/main/docs/_includes/nav-pager.html) 。「Next (次の記事へ)」と表示されているリンク先は、実は `page.previous` が設定されている、という感じ。
 
 記事の順番をコード内で制御すればもっとわかりやすくできるはず……その内改善しておきたい。
 
