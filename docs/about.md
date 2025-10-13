@@ -6,12 +6,12 @@ permalink: /about/
 
 ## このサイトは何？
 
-[KeM's Clew](https://clew.kem198.net/) (以下「当サイト」) は、管理人である kenkenpa198 (または KeM198) が趣味で制作・公開しているウェブサイトです。
+[KeM's Clew](https://clew.kem198.net/) (以下「当サイト」) は、管理人である KeM198 が趣味で制作・公開しているウェブサイトです。
 
 当サイトの構築情報は下記にて公開しています。
 
-- [kenkenpa198/kems-clew.net](https://github.com/kenkenpa198/kems-clew.net): 当サイトのソースコード
-- [kenkenpa198/modane-live2d-widget](https://github.com/kenkenpa198/modane-live2d-widget): トップページ下部の Live2D ウィジェット
+- [kem198/kems-clew.net](https://github.com/kem198/kems-clew.net): 当サイトのソースコード
+- [kem198/modane-live2d-widget](https://github.com/kem198/modane-live2d-widget): トップページ下部の Live2D ウィジェット
 
 ## 免責事項
 
@@ -26,7 +26,7 @@ permalink: /about/
 当サイトで掲載している画像や文章を含むコンテンツは無断転載することを禁止します。
 
 なお当サイトではファンアート及び二次創作物を多く扱います。  
-これらの制作物の著作権に関しては作者である kenkenpa198 と版権元の企業両者に帰属します。
+これらの制作物の著作権に関しては作者である KeM198 と版権元の企業両者に帰属します。
 
 参考文献:
 
@@ -77,5 +77,5 @@ permalink: /about/
 
 下記へ掲載しています。
 
-- [kenkenpa198/kems-clew > 5.権利表記](https://github.com/kenkenpa198/kems-clew#5-%E6%A8%A9%E5%88%A9%E8%A1%A8%E8%A8%98)
-- [kenkenpa198/modane-live2d-widget > 1. Live2D Cubism SDK for Web について](https://github.com/kem198/modane-live2d-widget?tab=readme-ov-file#1-live2d-cubism-sdk-for-web-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- [kem198/kems-clew > 5.権利表記](https://github.com/kem198/kems-clew#5-%E6%A8%A9%E5%88%A9%E8%A1%A8%E8%A8%98)
+- [kem198/modane-live2d-widget > 1. Live2D Cubism SDK for Web について](https://github.com/kem198/modane-live2d-widget?tab=readme-ov-file#1-live2d-cubism-sdk-for-web-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)

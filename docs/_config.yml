@@ -26,7 +26,7 @@ title: KeM's Clew
 #   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: kenkenpa198
+github_username: kem198
 
 # Build settings
 theme: minima
@@ -79,8 +79,7 @@ permalink: notes/:year-:month-:day-:title:output_ext
 
 # defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
