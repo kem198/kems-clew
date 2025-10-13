@@ -12,7 +12,7 @@ lastmod: 2023-01-06 22:44:13
 SQL Server にて扱える標準 SQL を中心にまとめた自分用メモ。  
 他の RDBMS 向けの内容も一部混在しているため注意。
 
-[kenkenpa198/mssql-with-docker](https://github.com/kenkenpa198/mssql-with-docker) にて管理していたファイルを当サイト上へ引っ越したもの。
+[kem198/mssql-with-docker](https://github.com/kem198/mssql-with-docker) にて管理していたファイルを当サイト上へ引っ越したもの。
 
 <!-- omit in toc -->
 ## リンク

@@ -90,15 +90,11 @@ description: マークダウンのテスト用ページです。
 
 *イタリック（アスタリスク1個）*
 
-_イタリック（アンダースコア1個）_
-
 __ボールド（アンダースコア2個）__
-
-**ボールド（アスタリスク2個）**
 
 ~~取り消し線（チルダ2個）~~
 
-~~***組み合わせ***~~
+~~*__組み合わせ__*~~
 
 ## 5. リンク
 
@@ -292,7 +288,7 @@ abcdefABCDEF
 ```shell
 # shell
 $ cd
-$ git clone https://github.com/kenkenpa198/dotfiles.git
+$ git clone https://github.com/kem198/dotfiles.git
 $ source ~/dotfiles/.setup/Linux/setup.sh
 ```
 

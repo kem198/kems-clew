@@ -207,7 +207,7 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 設定を使用してい�
 
 より詳しい再現手順やビルド方法は次のリポジトリを参照すること。
 
-- [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
+- [kem198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
 
 ## 3. 作業方法メモ
 
@@ -215,8 +215,8 @@ HTTPS での公開は GitHub Pages の `Enforce HTTPS` 設定を使用してい�
 
 下記を参考に環境構築を行う。
 
-- (~ v1.3.0) [kenkenpa198/tutorial-jekyll](https://github.com/kem198/tutorial-jekyll) > `2. 環境構築メモ`
-- (v2.0.0 ~) [kenkenpa198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
+- (~ v1.3.0) [kem198/tutorial-jekyll](https://github.com/kem198/tutorial-jekyll) > `2. 環境構築メモ`
+- (v2.0.0 ~) [kem198/helloworld-github-pages-with-jekyll](https://github.com/kem198/helloworld-github-pages-with-jekyll)
 
 ### 3.2. ビルド・Web サーバの立ち上げ・表示
 

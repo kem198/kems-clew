@@ -11,7 +11,7 @@ lastmod: 2023-12-10
 
 自作の SQL や便利な構文をまとめているページ。SQL Server 向け。
 
-[標準 SQL 集]({% post_url 2022-11-24-sql-standard %}) と同じく [kenkenpa198/mssql-with-docker](https://github.com/kenkenpa198/mssql-with-docker) からの引っ越しページ。
+[標準 SQL 集]({% post_url 2022-11-24-sql-standard %}) と同じく [kem198/mssql-with-docker](https://github.com/kem198/mssql-with-docker) からの引っ越しページ。
 
 <!-- omit in toc -->
 ## リンク
