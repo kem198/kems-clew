@@ -1,6 +1,6 @@
 ---
 layout: post
-title: KeM's Clew をアップグレードしました
+title: "KeM's Clew (現: アリアドネの糸) をアップグレードしました"
 description: ""
 preview: ""
 category: 情報技術
@@ -9,10 +9,10 @@ tags:
   - jekyll
   - javascript
 date: 2024-03-02
-lastmod: 2024-03-02
+lastmod: 2025-10-22
 ---
 
-表題のとおり、KeM's Clew をアップグレードしました。v2 系としています。
+表題のとおり、KeM's Clew (現: アリアドネの糸) をアップグレードしました。v2 系としています。
 
 - [Release v2.0.0 · kem198/kems-clew.net](https://github.com/kem198/kems-clew.net/releases/tag/v2.0.0)
 
