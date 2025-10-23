@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # KeM's Clew / アリアドネの糸
 
-個人サイト [アリアドネの糸](https://clew.kem198.net) の実体ファイル群を管理しているリポジトリ。
+個人サイト [アリアドネの糸](https://clew.kem198.net) (旧: KeM's Clew) の実体ファイル群を管理しているリポジトリ。
 
 URL はこちら。
 
