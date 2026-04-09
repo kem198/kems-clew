@@ -728,5 +728,15 @@
       "large": "/assets/works/large/20240209_todays_target.jpg"
     },
     "date": "2024-02-09"
+  },
+  {
+    "title": "カニカニ.png",
+    "category": "Illustrations",
+    "tags": ["2026", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20260318_kanikani.png",
+      "large": "/assets/works/large/20260318_kanikani.png"
+    },
+    "date": "2026-03-18"
   }
 ]
