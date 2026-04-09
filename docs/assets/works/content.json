@@ -1,986 +1,732 @@
 [
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2013",
-            "うごくメモ帳",
-            "世界樹の迷宮"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20130724_ikaku.gif",
-            "large": "/assets/works/gif/20130724_ikaku.gif"
-        },
-        "date": "2013-07-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2013",
-            "うごくメモ帳",
-            "モンスターハンター"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20130724_lagia.gif",
-            "large": "/assets/works/gif/20130724_lagia.gif"
-        },
-        "date": "2013-07-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2013",
-            "うごくメモ帳",
-            "ポケモン"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20130724_mismagius.gif",
-            "large": "/assets/works/gif/20130724_mismagius.gif"
-        },
-        "date": "2013-07-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2013",
-            "うごくメモ帳"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20130724_ugo3d.gif",
-            "large": "/assets/works/gif/20130724_ugo3d.gif"
-        },
-        "date": "2013-07-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2017",
-            "ファンアート",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20170611_sqiq.jpg",
-            "large": "/assets/works/large/20170611_sqiq.jpg"
-        },
-        "date": "2017-06-11"
-    },
-    {
-        "title": "FINAL JUDGEMENT 断罪ちゃん",
-        "category": "Illustrations",
-        "tags": [
-            "2017",
-            "ファンアート"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20170616_fj.png",
-            "large": "/assets/works/large/20170616_fj.png"
-        },
-        "date": "2017-06-16"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2018",
-            "ポケモン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20180427_429.jpg",
-            "large": "/assets/works/large/20180427_429.jpg"
-        },
-        "date": "2018-04-27"
-    },
-    {
-        "title": "ながさきいでんこちゃんぽん",
-        "category": "Illustrations",
-        "tags": [
-            "2018",
-            "ファンアート",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20180103_nid.png",
-            "large": "/assets/works/large/20180103_nid.png"
-        },
-        "date": "2018-01-03"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2018",
-            "世界樹の迷宮"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20180714_swordman.PNG",
-            "large": "/assets/works/large/20180714_swordman.PNG"
-        },
-        "date": "2018-07-14"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "ゼルダの伝説",
-            "スマブラ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20190119_rkgk_zelda.JPG",
-            "large": "/assets/works/large/20190119_rkgk_zelda.JPG"
-        },
-        "date": "2019-01-19"
-    },
-    {
-        "title": "ワクワクハジけろ バブルランチャー！",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20190403_wakuwaku_bubble.png",
-            "large": "/assets/works/large/20190403_wakuwaku_bubble.png"
-        },
-        "date": "2019-04-03"
-    },
-    {
-        "title": "ミヌいてイヌいて バレルスピナー！",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20190403_minu_inu_spinner.jpg",
-            "large": "/assets/works/large/20190403_minu_inu_spinner.jpg"
-        },
-        "date": "2019-04-03"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20190403_coo.jpg",
-            "large": "/assets/works/large/20190403_coo.jpg"
-        },
-        "date": "2019-04-03"
-    },
-    {
-        "title": "レディ・ファッション・セレクション！",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "ファンアート",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20190625_lady_fashion_selection.jpg",
-            "large": "/assets/works/large/20190625_lady_fashion_selection.jpg"
-        },
-        "date": "2019-06-25"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20191116_odango.png",
-            "large": "/assets/works/large/20191116_odango.png"
-        },
-        "date": "2019-11-16"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2019",
-            "世界樹の迷宮"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20191201_sq4_on_sale.jpg",
-            "large": "/assets/works/large/20191201_sq4_on_sale.jpg"
-        },
-        "date": "2019-12-19"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "世界樹の迷宮"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20200101_morinezumi.jpg",
-            "large": "/assets/works/large/20200101_morinezumi.jpg"
-        },
-        "date": "2020-01-01"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20200220_exp.png",
-            "large": "/assets/works/large/20200220_exp.png"
-        },
-        "date": "2020-02-20"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "ゼルダの伝説",
-            "スマブラ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20200830_kagayaku_zelda.png",
-            "large": "/assets/works/large/20200830_kagayaku_zelda.png"
-        },
-        "date": "2020-08-30"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "どうぶつの森"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20201006_my_kenk.jpg",
-            "large": "/assets/works/large/20201006_my_kenk.jpg"
-        },
-        "date": "2020-10-06"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "もだねちゃん",
-            "どうぶつの森"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20201006_my_modane.jpg",
-            "large": "/assets/works/large/20201006_my_modane.jpg"
-        },
-        "date": "2020-10-06"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20201203_discordbot_mdn_tube.jpg",
-            "large": "/assets/works/large/20201203_discordbot_mdn_tube.jpg"
-        },
-        "date": "2020-12-03"
-    },
-    {
-        "title": "modane wallpaper",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20201224_modane_sakura.jpg",
-            "large": "/assets/works/large/20201224_modane_sakura.jpg"
-        },
-        "date": "2020-12-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2020",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20201224_modane_wallpaper.png",
-            "large": "/assets/works/large/20201224_modane_wallpaper.png"
-        },
-        "date": "2020-12-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210101_modane_kotoyoro.png",
-            "large": "/assets/works/large/20210101_modane_kotoyoro.png"
-        },
-        "date": "2021-01-01"
-    },
-    {
-        "title": "ピックアップ！ゼルダ様！！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ゼルダの伝説",
-            "スマブラ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210114_pickup_zelda.jpg",
-            "large": "/assets/works/large/20210114_pickup_zelda.jpg"
-        },
-        "date": "2021-01-14"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210120_modane_aki.png",
-            "large": "/assets/works/large/20210120_modane_aki.png"
-        },
-        "date": "2021-01-20"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "うごくメモ帳"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20210130_modane_ugo.gif",
-            "large": "/assets/works/gif/20210130_modane_ugo.gif"
-        },
-        "date": "2021-01-30"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "モンスターハンター"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210321_modane_kisei.jpg",
-            "large": "/assets/works/large/20210321_modane_kisei.jpg"
-        },
-        "date": "2021-03-21"
-    },
-    {
-        "title": "カムラの里の弓使い！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "モンスターハンター"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210508_modane_yumi.jpg",
-            "large": "/assets/works/large/20210508_modane_yumi.jpg"
-        },
-        "date": "2021-05-08"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210515_modane_yahho.jpg",
-            "large": "/assets/works/large/20210515_modane_yahho.jpg"
-        },
-        "date": "2021-05-15"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "うごくメモ帳"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20210523_nhnk.gif",
-            "large": "/assets/works/gif/20210523_nhnk.gif"
-        },
-        "date": "2021-05-23"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "うごくメモ帳"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20210523_rl.gif",
-            "large": "/assets/works/gif/20210523_rl.gif"
-        },
-        "date": "2021-05-23"
-    },
-    {
-        "title": "カムラの里の太刀使い！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "モンスターハンター"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210523_tomu_tachi.jpg",
-            "large": "/assets/works/large/20210523_tomu_tachi.jpg"
-        },
-        "date": "2021-05-23"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "うごくメモ帳",
-            "ポケモン",
-            "スマブラ"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20210526_smyi_2.gif",
-            "large": "/assets/works/gif/20210526_smyi_2.gif"
-        },
-        "date": "2021-05-26"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "うごくメモ帳"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20210526_mtp.gif",
-            "large": "/assets/works/gif/20210526_mtp.gif"
-        },
-        "date": "2021-05-26"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210529_modane_art.png",
-            "large": "/assets/works/large/20210529_modane_art.png"
-        },
-        "date": "2021-05-29"
-    },
-    {
-        "title": "ネラってけスプラチャージャーコラボ！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210619_mochio.jpg",
-            "large": "/assets/works/large/20210619_mochio.jpg"
-        },
-        "date": "2021-06-19"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210723_modane_sleep.png",
-            "large": "/assets/works/large/20210723_modane_sleep.png"
-        },
-        "date": "2021-07-23"
-    },
-    {
-        "title": "おしゃべりぼっと！もだねちゃん",
-        "category": "Developments",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "python"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210731_discordbot_mdn.png",
-            "large": "/assets/works/large/20210731_discordbot_mdn.png"
-        },
-        "date": "2021-07-31"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210710_modane_moda.jpg",
-            "large": "/assets/works/large/20210710_modane_moda.jpg"
-        },
-        "date": "2021-07-10"
-    },
-    {
-        "title": "ぴょんぴょこデュアルスイーパーイチゴ！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210711_dual_ichigo.jpg",
-            "large": "/assets/works/large/20210711_dual_ichigo.jpg"
-        },
-        "date": "2021-07-11"
-    },
-    {
-        "title": "モダネチャン ※パロディ作品です https://youtu.be/OVuYIMa5XBw",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "パロディ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210717_modane_nandemo.jpg",
-            "large": "/assets/works/large/20210717_modane_nandemo.jpg"
-        },
-        "date": "2021-07-17"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "パロディ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210723_modane_amonus.jpg",
-            "large": "/assets/works/large/20210723_modane_amonus.jpg"
-        },
-        "date": "2021-07-23"
-    },
-    {
-        "title": "力強く、美しく！",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート",
-            "モンスターハンター"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210731_chikara.jpg",
-            "large": "/assets/works/large/20210731_chikara.jpg"
-        },
-        "date": "2021-07-31"
-    },
-    {
-        "title": "おもちサン家の PC 紹介",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210806_omochi_logo.png",
-            "large": "/assets/works/large/20210806_omochi_logo.png"
-        },
-        "date": "2021-08-06"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210806_omochi_yukkuri.png",
-            "large": "/assets/works/large/20210806_omochi_yukkuri.png"
-        },
-        "date": "2021-08-06"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "世界樹の迷宮"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210807_setoha.jpg",
-            "large": "/assets/works/large/20210807_setoha.jpg"
-        },
-        "date": "2021-08-07"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210824_modane_wado.jpg",
-            "large": "/assets/works/large/20210824_modane_wado.jpg"
-        },
-        "date": "2021-08-24"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "ファンアート"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20210923_rphpb.jpg",
-            "large": "/assets/works/large/20210923_rphpb.jpg"
-        },
-        "date": "2021-09-23"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20211014_moda.jpg",
-            "large": "/assets/works/large/20211014_moda.jpg"
-        },
-        "date": "2021-10-14"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20211015_modane_kanzenrikai.jpg",
-            "large": "/assets/works/large/20211015_modane_kanzenrikai.jpg"
-        },
-        "date": "2021-10-15"
-    },
-    {
-        "title": "ねんどろいど もだねちゃん！",
-        "category": "Others",
-        "tags": [
-            "2021",
-            "もだねちゃん",
-            "ねんどろいど"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20211016_modane_nendoro.jpg",
-            "large": "/assets/works/large/20211016_modane_nendoro.jpg"
-        },
-        "date": "2021-10-16"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20211218_modane_mc.png",
-            "large": "/assets/works/large/20211218_modane_mc.png"
-        },
-        "date": "2021-12-18"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2021",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20211123_modane_komarigao.jpg",
-            "large": "/assets/works/large/20211123_modane_komarigao.jpg"
-        },
-        "date": "2021-11-23"
-    },
-    {
-        "title": "untitled",
-        "category": "Others",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220611_modane_aa.jpg",
-            "large": "/assets/works/large/20220611_modane_aa.jpg"
-        },
-        "date": "2022-06-11"
-    },
-    {
-        "title": "untitled",
-        "category": "Others",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220630_modane_orgm.jpg",
-            "large": "/assets/works/large/20220630_modane_orgm.jpg"
-        },
-        "date": "2022-06-30"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220108_modane_cur_open.png",
-            "large": "/assets/works/large/20220108_modane_cur_open.png"
-        },
-        "date": "2022-01-08"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220108_modane_cur_close.png",
-            "large": "/assets/works/large/20220108_modane_cur_close.png"
-        },
-        "date": "2022-01-08"
-    },
-    {
-        "title": "#かろえぐWIN",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "ファンアート",
-            "ポケモン",
-            "スマブラ"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220504_kregwin.jpg",
-            "large": "/assets/works/large/20220504_kregwin.jpg"
-        },
-        "date": "2022-05-04"
-    },
-    {
-        "title": "Modane CO2 Watcher",
-        "category": "Developments",
-        "tags": [
-            "2022",
-            "もだねちゃん",
-            "c",
-            "raspberry-pi"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220807_modane_co2_watcher.jpg",
-            "large": "/assets/works/large/20220807_modane_co2_watcher.jpg"
-        },
-        "date": "2022-08-07"
-    },
-    {
-        "title": "エエヤン",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "ファンアート"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20220813_eeyan.jpg",
-            "large": "/assets/works/large/20220813_eeyan.jpg"
-        },
-        "date": "2022-08-13"
-    },
-    {
-        "title": "untitled",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "スプラトゥーン"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20221013_spinner.jpg",
-            "large": "/assets/works/large/20221013_spinner.jpg"
-        },
-        "date": "2022-10-13"
-    },
-    {
-        "title": "Hello, Mastodon!",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20221108_hello_mastodon.jpg",
-            "large": "/assets/works/large/20221108_hello_mastodon.jpg"
-        },
-        "date": "2022-11-08"
-    },
-    {
-        "title": "KeM's Clew",
-        "category": "Developments",
-        "tags": [
-            "2022",
-            "website",
-            "javascript"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20221123_kems_clew.png",
-            "large": "/assets/works/large/20221123_kems_clew.png"
-        },
-        "date": "2022-11-23"
-    },
-    {
-        "title": "バイト戦士 もだねちゃん！",
-        "category": "Illustrations",
-        "tags": [
-            "2022",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20221218_modane_part.jpg",
-            "large": "/assets/works/large/20221218_modane_part.jpg"
-        },
-        "date": "2022-12-18"
-    },
-    {
-        "title": "#けっぱれタルマエ",
-        "category": "Illustrations",
-        "tags": [
-            "2023",
-            "ウマ娘"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20231025_keppare.jpg",
-            "large": "/assets/works/large/20231025_keppare.jpg"
-        },
-        "date": "2023-10-25"
-    },
-    {
-        "title": "modane-live2d-widget",
-        "category": "Developments",
-        "tags": [
-            "2023",
-            "もだねちゃん",
-            "live2d"
-        ],
-        "images": {
-            "thumb": "/assets/works/large/20231027_modane_live2d_widget.png",
-            "large": "/assets/works/large/20231027_modane_live2d_widget.png"
-        },
-        "date": "2023-10-27"
-    },
-    {
-        "title": "Today's Target",
-        "category": "Illustrations",
-        "tags": [
-            "2023",
-            "提供"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20231216_todays_target.jpg",
-            "large": "/assets/works/large/20231216_todays_target.jpg"
-        },
-        "date": "2023-12-16"
-    },
-    {
-        "title": "今年は実家に帰ります",
-        "category": "Illustrations",
-        "tags": [
-            "2023",
-            "うごくメモ帳",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20231230_homecoming.gif",
-            "large": "/assets/works/gif/20231230_homecoming.gif"
-        },
-        "date": "2023-12-30"
-    },
-    {
-        "title": "今向かってます",
-        "category": "Illustrations",
-        "tags": [
-            "2024",
-            "うごくメモ帳",
-            "もだねちゃん"
-        ],
-        "images": {
-            "thumb": "/assets/works/gif/20240106_homecoming_colored.gif",
-            "large": "/assets/works/gif/20240106_homecoming_colored.gif"
-        },
-        "date": "2024-01-06"
-    },
-    {
-        "title": "タルマエチャン",
-        "category": "Illustrations",
-        "tags": [
-            "2024",
-            "ウマ娘"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20240127_tarumaechan.jpg",
-            "large": "/assets/works/large/20240127_tarumaechan.jpg"
-        },
-        "date": "2024-01-27"
-    },
-    {
-        "title": "TODAY'S TARGET",
-        "category": "Illustrations",
-        "tags": [
-            "2024",
-            "提供"
-        ],
-        "images": {
-            "thumb": "/assets/works/thumb/20240209_todays_target.jpg",
-            "large": "/assets/works/large/20240209_todays_target.jpg"
-        },
-        "date": "2024-02-09"
-    }
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2013", "うごくメモ帳", "世界樹の迷宮"],
+    "images": {
+      "thumb": "/assets/works/gif/20130724_ikaku.gif",
+      "large": "/assets/works/gif/20130724_ikaku.gif"
+    },
+    "date": "2013-07-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2013", "うごくメモ帳", "モンスターハンター"],
+    "images": {
+      "thumb": "/assets/works/gif/20130724_lagia.gif",
+      "large": "/assets/works/gif/20130724_lagia.gif"
+    },
+    "date": "2013-07-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2013", "うごくメモ帳", "ポケモン"],
+    "images": {
+      "thumb": "/assets/works/gif/20130724_mismagius.gif",
+      "large": "/assets/works/gif/20130724_mismagius.gif"
+    },
+    "date": "2013-07-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2013", "うごくメモ帳"],
+    "images": {
+      "thumb": "/assets/works/gif/20130724_ugo3d.gif",
+      "large": "/assets/works/gif/20130724_ugo3d.gif"
+    },
+    "date": "2013-07-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2017", "ファンアート", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20170611_sqiq.jpg",
+      "large": "/assets/works/large/20170611_sqiq.jpg"
+    },
+    "date": "2017-06-11"
+  },
+  {
+    "title": "FINAL JUDGEMENT 断罪ちゃん",
+    "category": "Illustrations",
+    "tags": ["2017", "ファンアート"],
+    "images": {
+      "thumb": "/assets/works/thumb/20170616_fj.png",
+      "large": "/assets/works/large/20170616_fj.png"
+    },
+    "date": "2017-06-16"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2018", "ポケモン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20180427_429.jpg",
+      "large": "/assets/works/large/20180427_429.jpg"
+    },
+    "date": "2018-04-27"
+  },
+  {
+    "title": "ながさきいでんこちゃんぽん",
+    "category": "Illustrations",
+    "tags": ["2018", "ファンアート", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20180103_nid.png",
+      "large": "/assets/works/large/20180103_nid.png"
+    },
+    "date": "2018-01-03"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2018", "世界樹の迷宮"],
+    "images": {
+      "thumb": "/assets/works/thumb/20180714_swordman.PNG",
+      "large": "/assets/works/large/20180714_swordman.PNG"
+    },
+    "date": "2018-07-14"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2019", "ゼルダの伝説", "スマブラ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20190119_rkgk_zelda.JPG",
+      "large": "/assets/works/large/20190119_rkgk_zelda.JPG"
+    },
+    "date": "2019-01-19"
+  },
+  {
+    "title": "ワクワクハジけろ バブルランチャー！",
+    "category": "Illustrations",
+    "tags": ["2019", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20190403_wakuwaku_bubble.png",
+      "large": "/assets/works/large/20190403_wakuwaku_bubble.png"
+    },
+    "date": "2019-04-03"
+  },
+  {
+    "title": "ミヌいてイヌいて バレルスピナー！",
+    "category": "Illustrations",
+    "tags": ["2019", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20190403_minu_inu_spinner.jpg",
+      "large": "/assets/works/large/20190403_minu_inu_spinner.jpg"
+    },
+    "date": "2019-04-03"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2019", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20190403_coo.jpg",
+      "large": "/assets/works/large/20190403_coo.jpg"
+    },
+    "date": "2019-04-03"
+  },
+  {
+    "title": "レディ・ファッション・セレクション！",
+    "category": "Illustrations",
+    "tags": ["2019", "ファンアート", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20190625_lady_fashion_selection.jpg",
+      "large": "/assets/works/large/20190625_lady_fashion_selection.jpg"
+    },
+    "date": "2019-06-25"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2019", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20191116_odango.png",
+      "large": "/assets/works/large/20191116_odango.png"
+    },
+    "date": "2019-11-16"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2019", "世界樹の迷宮"],
+    "images": {
+      "thumb": "/assets/works/thumb/20191201_sq4_on_sale.jpg",
+      "large": "/assets/works/large/20191201_sq4_on_sale.jpg"
+    },
+    "date": "2019-12-19"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "世界樹の迷宮"],
+    "images": {
+      "thumb": "/assets/works/thumb/20200101_morinezumi.jpg",
+      "large": "/assets/works/large/20200101_morinezumi.jpg"
+    },
+    "date": "2020-01-01"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20200220_exp.png",
+      "large": "/assets/works/large/20200220_exp.png"
+    },
+    "date": "2020-02-20"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "ゼルダの伝説", "スマブラ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20200830_kagayaku_zelda.png",
+      "large": "/assets/works/large/20200830_kagayaku_zelda.png"
+    },
+    "date": "2020-08-30"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "どうぶつの森"],
+    "images": {
+      "thumb": "/assets/works/thumb/20201006_my_kenk.jpg",
+      "large": "/assets/works/large/20201006_my_kenk.jpg"
+    },
+    "date": "2020-10-06"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "もだねちゃん", "どうぶつの森"],
+    "images": {
+      "thumb": "/assets/works/thumb/20201006_my_modane.jpg",
+      "large": "/assets/works/large/20201006_my_modane.jpg"
+    },
+    "date": "2020-10-06"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20201203_discordbot_mdn_tube.jpg",
+      "large": "/assets/works/large/20201203_discordbot_mdn_tube.jpg"
+    },
+    "date": "2020-12-03"
+  },
+  {
+    "title": "modane wallpaper",
+    "category": "Illustrations",
+    "tags": ["2020", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20201224_modane_sakura.jpg",
+      "large": "/assets/works/large/20201224_modane_sakura.jpg"
+    },
+    "date": "2020-12-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2020", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20201224_modane_wallpaper.png",
+      "large": "/assets/works/large/20201224_modane_wallpaper.png"
+    },
+    "date": "2020-12-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210101_modane_kotoyoro.png",
+      "large": "/assets/works/large/20210101_modane_kotoyoro.png"
+    },
+    "date": "2021-01-01"
+  },
+  {
+    "title": "ピックアップ！ゼルダ様！！",
+    "category": "Illustrations",
+    "tags": ["2021", "ゼルダの伝説", "スマブラ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210114_pickup_zelda.jpg",
+      "large": "/assets/works/large/20210114_pickup_zelda.jpg"
+    },
+    "date": "2021-01-14"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210120_modane_aki.png",
+      "large": "/assets/works/large/20210120_modane_aki.png"
+    },
+    "date": "2021-01-20"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん", "うごくメモ帳"],
+    "images": {
+      "thumb": "/assets/works/gif/20210130_modane_ugo.gif",
+      "large": "/assets/works/gif/20210130_modane_ugo.gif"
+    },
+    "date": "2021-01-30"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん", "モンスターハンター"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210321_modane_kisei.jpg",
+      "large": "/assets/works/large/20210321_modane_kisei.jpg"
+    },
+    "date": "2021-03-21"
+  },
+  {
+    "title": "カムラの里の弓使い！",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん", "モンスターハンター"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210508_modane_yumi.jpg",
+      "large": "/assets/works/large/20210508_modane_yumi.jpg"
+    },
+    "date": "2021-05-08"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210515_modane_yahho.jpg",
+      "large": "/assets/works/large/20210515_modane_yahho.jpg"
+    },
+    "date": "2021-05-15"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "うごくメモ帳"],
+    "images": {
+      "thumb": "/assets/works/gif/20210523_nhnk.gif",
+      "large": "/assets/works/gif/20210523_nhnk.gif"
+    },
+    "date": "2021-05-23"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "うごくメモ帳"],
+    "images": {
+      "thumb": "/assets/works/gif/20210523_rl.gif",
+      "large": "/assets/works/gif/20210523_rl.gif"
+    },
+    "date": "2021-05-23"
+  },
+  {
+    "title": "カムラの里の太刀使い！",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "モンスターハンター"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210523_tomu_tachi.jpg",
+      "large": "/assets/works/large/20210523_tomu_tachi.jpg"
+    },
+    "date": "2021-05-23"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "うごくメモ帳", "ポケモン", "スマブラ"],
+    "images": {
+      "thumb": "/assets/works/gif/20210526_smyi_2.gif",
+      "large": "/assets/works/gif/20210526_smyi_2.gif"
+    },
+    "date": "2021-05-26"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "うごくメモ帳"],
+    "images": {
+      "thumb": "/assets/works/gif/20210526_mtp.gif",
+      "large": "/assets/works/gif/20210526_mtp.gif"
+    },
+    "date": "2021-05-26"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210529_modane_art.png",
+      "large": "/assets/works/large/20210529_modane_art.png"
+    },
+    "date": "2021-05-29"
+  },
+  {
+    "title": "ネラってけスプラチャージャーコラボ！",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210619_mochio.jpg",
+      "large": "/assets/works/large/20210619_mochio.jpg"
+    },
+    "date": "2021-06-19"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210723_modane_sleep.png",
+      "large": "/assets/works/large/20210723_modane_sleep.png"
+    },
+    "date": "2021-07-23"
+  },
+  {
+    "title": "おしゃべりぼっと！もだねちゃん",
+    "category": "Developments",
+    "tags": ["2021", "もだねちゃん", "python"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210731_discordbot_mdn.png",
+      "large": "/assets/works/large/20210731_discordbot_mdn.png"
+    },
+    "date": "2021-07-31"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210710_modane_moda.jpg",
+      "large": "/assets/works/large/20210710_modane_moda.jpg"
+    },
+    "date": "2021-07-10"
+  },
+  {
+    "title": "ぴょんぴょこデュアルスイーパーイチゴ！",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210711_dual_ichigo.jpg",
+      "large": "/assets/works/large/20210711_dual_ichigo.jpg"
+    },
+    "date": "2021-07-11"
+  },
+  {
+    "title": "モダネチャン ※パロディ作品です https://youtu.be/OVuYIMa5XBw",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん", "パロディ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210717_modane_nandemo.jpg",
+      "large": "/assets/works/large/20210717_modane_nandemo.jpg"
+    },
+    "date": "2021-07-17"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん", "パロディ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210723_modane_amonus.jpg",
+      "large": "/assets/works/large/20210723_modane_amonus.jpg"
+    },
+    "date": "2021-07-23"
+  },
+  {
+    "title": "力強く、美しく！",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート", "モンスターハンター"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210731_chikara.jpg",
+      "large": "/assets/works/large/20210731_chikara.jpg"
+    },
+    "date": "2021-07-31"
+  },
+  {
+    "title": "おもちサン家の PC 紹介",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210806_omochi_logo.png",
+      "large": "/assets/works/large/20210806_omochi_logo.png"
+    },
+    "date": "2021-08-06"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210806_omochi_yukkuri.png",
+      "large": "/assets/works/large/20210806_omochi_yukkuri.png"
+    },
+    "date": "2021-08-06"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "世界樹の迷宮"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210807_setoha.jpg",
+      "large": "/assets/works/large/20210807_setoha.jpg"
+    },
+    "date": "2021-08-07"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210824_modane_wado.jpg",
+      "large": "/assets/works/large/20210824_modane_wado.jpg"
+    },
+    "date": "2021-08-24"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "ファンアート"],
+    "images": {
+      "thumb": "/assets/works/thumb/20210923_rphpb.jpg",
+      "large": "/assets/works/large/20210923_rphpb.jpg"
+    },
+    "date": "2021-09-23"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20211014_moda.jpg",
+      "large": "/assets/works/large/20211014_moda.jpg"
+    },
+    "date": "2021-10-14"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20211015_modane_kanzenrikai.jpg",
+      "large": "/assets/works/large/20211015_modane_kanzenrikai.jpg"
+    },
+    "date": "2021-10-15"
+  },
+  {
+    "title": "ねんどろいど もだねちゃん！",
+    "category": "Others",
+    "tags": ["2021", "もだねちゃん", "ねんどろいど"],
+    "images": {
+      "thumb": "/assets/works/thumb/20211016_modane_nendoro.jpg",
+      "large": "/assets/works/large/20211016_modane_nendoro.jpg"
+    },
+    "date": "2021-10-16"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20211218_modane_mc.png",
+      "large": "/assets/works/large/20211218_modane_mc.png"
+    },
+    "date": "2021-12-18"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2021", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20211123_modane_komarigao.jpg",
+      "large": "/assets/works/large/20211123_modane_komarigao.jpg"
+    },
+    "date": "2021-11-23"
+  },
+  {
+    "title": "untitled",
+    "category": "Others",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220611_modane_aa.jpg",
+      "large": "/assets/works/large/20220611_modane_aa.jpg"
+    },
+    "date": "2022-06-11"
+  },
+  {
+    "title": "untitled",
+    "category": "Others",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220630_modane_orgm.jpg",
+      "large": "/assets/works/large/20220630_modane_orgm.jpg"
+    },
+    "date": "2022-06-30"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220108_modane_cur_open.png",
+      "large": "/assets/works/large/20220108_modane_cur_open.png"
+    },
+    "date": "2022-01-08"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220108_modane_cur_close.png",
+      "large": "/assets/works/large/20220108_modane_cur_close.png"
+    },
+    "date": "2022-01-08"
+  },
+  {
+    "title": "#かろえぐWIN",
+    "category": "Illustrations",
+    "tags": ["2022", "ファンアート", "ポケモン", "スマブラ"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220504_kregwin.jpg",
+      "large": "/assets/works/large/20220504_kregwin.jpg"
+    },
+    "date": "2022-05-04"
+  },
+  {
+    "title": "Modane CO2 Watcher",
+    "category": "Developments",
+    "tags": ["2022", "もだねちゃん", "c", "raspberry-pi"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220807_modane_co2_watcher.jpg",
+      "large": "/assets/works/large/20220807_modane_co2_watcher.jpg"
+    },
+    "date": "2022-08-07"
+  },
+  {
+    "title": "エエヤン",
+    "category": "Illustrations",
+    "tags": ["2022", "ファンアート"],
+    "images": {
+      "thumb": "/assets/works/thumb/20220813_eeyan.jpg",
+      "large": "/assets/works/large/20220813_eeyan.jpg"
+    },
+    "date": "2022-08-13"
+  },
+  {
+    "title": "untitled",
+    "category": "Illustrations",
+    "tags": ["2022", "スプラトゥーン"],
+    "images": {
+      "thumb": "/assets/works/thumb/20221013_spinner.jpg",
+      "large": "/assets/works/large/20221013_spinner.jpg"
+    },
+    "date": "2022-10-13"
+  },
+  {
+    "title": "Hello, Mastodon!",
+    "category": "Illustrations",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20221108_hello_mastodon.jpg",
+      "large": "/assets/works/large/20221108_hello_mastodon.jpg"
+    },
+    "date": "2022-11-08"
+  },
+  {
+    "title": "KeM's Clew",
+    "category": "Developments",
+    "tags": ["2022", "website", "javascript"],
+    "images": {
+      "thumb": "/assets/works/thumb/20221123_kems_clew.png",
+      "large": "/assets/works/large/20221123_kems_clew.png"
+    },
+    "date": "2022-11-23"
+  },
+  {
+    "title": "バイト戦士 もだねちゃん！",
+    "category": "Illustrations",
+    "tags": ["2022", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/thumb/20221218_modane_part.jpg",
+      "large": "/assets/works/large/20221218_modane_part.jpg"
+    },
+    "date": "2022-12-18"
+  },
+  {
+    "title": "#けっぱれタルマエ",
+    "category": "Illustrations",
+    "tags": ["2023", "ウマ娘"],
+    "images": {
+      "thumb": "/assets/works/thumb/20231025_keppare.jpg",
+      "large": "/assets/works/large/20231025_keppare.jpg"
+    },
+    "date": "2023-10-25"
+  },
+  {
+    "title": "modane-live2d-widget",
+    "category": "Developments",
+    "tags": ["2023", "もだねちゃん", "live2d"],
+    "images": {
+      "thumb": "/assets/works/large/20231027_modane_live2d_widget.png",
+      "large": "/assets/works/large/20231027_modane_live2d_widget.png"
+    },
+    "date": "2023-10-27"
+  },
+  {
+    "title": "Today's Target",
+    "category": "Illustrations",
+    "tags": ["2023", "提供"],
+    "images": {
+      "thumb": "/assets/works/thumb/20231216_todays_target.jpg",
+      "large": "/assets/works/large/20231216_todays_target.jpg"
+    },
+    "date": "2023-12-16"
+  },
+  {
+    "title": "今年は実家に帰ります",
+    "category": "Illustrations",
+    "tags": ["2023", "うごくメモ帳", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/gif/20231230_homecoming.gif",
+      "large": "/assets/works/gif/20231230_homecoming.gif"
+    },
+    "date": "2023-12-30"
+  },
+  {
+    "title": "今向かってます",
+    "category": "Illustrations",
+    "tags": ["2024", "うごくメモ帳", "もだねちゃん"],
+    "images": {
+      "thumb": "/assets/works/gif/20240106_homecoming_colored.gif",
+      "large": "/assets/works/gif/20240106_homecoming_colored.gif"
+    },
+    "date": "2024-01-06"
+  },
+  {
+    "title": "タルマエチャン",
+    "category": "Illustrations",
+    "tags": ["2024", "ウマ娘"],
+    "images": {
+      "thumb": "/assets/works/thumb/20240127_tarumaechan.jpg",
+      "large": "/assets/works/large/20240127_tarumaechan.jpg"
+    },
+    "date": "2024-01-27"
+  },
+  {
+    "title": "TODAY'S TARGET",
+    "category": "Illustrations",
+    "tags": ["2024", "提供"],
+    "images": {
+      "thumb": "/assets/works/thumb/20240209_todays_target.jpg",
+      "large": "/assets/works/large/20240209_todays_target.jpg"
+    },
+    "date": "2024-02-09"
+  }
 ]
