@@ -35,8 +35,9 @@
 
 .site-title {
   @include relative-font-size(1.65);
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 400;
+  font-weight: $base-font-weight;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   font-style: normal;
   position: relative;
   left: -0.12em;
