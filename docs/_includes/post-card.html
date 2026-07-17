@@ -15,7 +15,7 @@
 
   <!-- プレビュー -->
   <div class="post-excerpt">
-    {{ post.excerpt | strip_html | strip_newlines | strip | truncatewords: 30 }}
+    {{ post.excerpt | strip_html | strip_newlines | strip | truncate: 50, '…' }}
   </div>
 
   <!-- タグクラウド -->
