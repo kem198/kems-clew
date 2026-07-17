@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "絵の勉強をしているよ"
+title: "人生の夏休み中です"
 description: ""
 preview: ""
 category: 日記
@@ -11,7 +11,7 @@ date: 2026-07-17
 lastmod: 2026-07-17
 ---
 
-久々に書きたくなったので更新。
+ちょうどよいタイミングなので久々に更新。
 
 ## これまでのあらすじ
 
@@ -24,17 +24,19 @@ lastmod: 2026-07-17
 
 **くぅ〜疲れましたw**
 
-……ということで、2026 年 7 月現在、療養しつつ人生の夏休み (かっこいい表現) 中です。
+……ということで、ここ数年間は突っ走ったりコケたりしてました。
+
+2026 年 7 月現在は、療養しつつ人生の夏休み (かっこいい表現) 中です。
 
 ## 絵の勉強をしているよ
 
-退職後は、ずっとやりたかった絵の勉強をしたり、デッサン教室に通っています。ここ数年はずっと SE としての勉強ばかりだったので、優先順位を落としていました。
+退職後は、ずっとやりたかった絵の勉強をしたり、デッサン教室に通っています。ずっと SE としての勉強ばかりだったので、優先順位を落としていました。
 
-![1]({{ baseurl | append: "/assets/notes/2026-07-17-learning-to-draw/20260107132216-147.jpg" | relative_url }})
+![1]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260107132216-147.jpg" | relative_url }})
 
-![2]({{ baseurl | append: "/assets/notes/2026-07-17-learning-to-draw/20260306181430-1.jpg" | relative_url }})
+![2]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260306181430-1.jpg" | relative_url }})
 
-![3]({{ baseurl | append: "/assets/notes/2026-07-17-learning-to-draw/20260316195052-5.jpg" | relative_url }})
+![3]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260316195052-5.jpg" | relative_url }})
 
 アウトプットは下記からどうぞ。名義を「藍鉄」として再出発しています。
 
