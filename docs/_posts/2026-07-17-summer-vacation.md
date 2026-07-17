@@ -8,7 +8,7 @@ tags:
   - misc
   - drawing
 date: 2026-07-17
-lastmod: 2026-07-17
+lastmod: 2026-07-18
 ---
 
 ちょうどよいタイミングなので久々に更新。
@@ -36,7 +36,7 @@ lastmod: 2026-07-17
 
 ![1]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260107132216-147.jpg" | relative_url }})
 
-![2]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260306181430-1.jpg" | relative_url }})
+![2]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260107132216-34.jpg" | relative_url }})
 
 ![3]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260316195052-5.jpg" | relative_url }})
 
