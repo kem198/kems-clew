@@ -79,11 +79,21 @@
   .page-link {
     color: $color-white;
     line-height: $base-line-height;
+    margin: 0;
+    padding: 0 2px;
+  }
 
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+  .trigger {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-sep {
+    color: $color-white;
+    margin: 0;
+    display: inline-block;
+    line-height: $base-line-height;
   }
 
   @include media-query($on-palm) {
