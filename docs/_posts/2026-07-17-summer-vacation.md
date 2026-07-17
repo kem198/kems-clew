@@ -38,7 +38,7 @@ lastmod: 2026-07-17
 
 ![3]({{ baseurl | append: "/assets/notes/2026-07-17-summer-vacation/20260316195052-5.jpg" | relative_url }})
 
-アウトプットは下記からどうぞ。絵関連の名義は「藍鉄」として再出発しています。
+アウトプットは下記からどうぞ。絵関連は「藍鉄」という名義で再出発しています。
 
 - [pixiv](https://www.pixiv.net/users/7791923) (「リールロールスウェット」以降)
 - [X](https://x.com/a1tetsu)
