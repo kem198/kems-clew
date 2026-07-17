@@ -1,11 +1,9 @@
 <li class="post-card">
-
   <a href="{{ post.url | relative_url }}"></a>
 
   <!-- 日付 -->
   <div class="post-meta">
     <div class="post-date">{{ post.date | date: site.minima.date_format }}</div>
-
   </div>
 
   <!-- タイトル -->
@@ -17,7 +15,7 @@
 
   <!-- プレビュー -->
   <div class="post-excerpt">
-    {{ post.excerpt }}
+    {{ post.excerpt | strip_html | strip_newlines | strip | truncatewords: 30 }}
   </div>
 
   <!-- タグクラウド -->
