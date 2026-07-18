@@ -31,7 +31,7 @@ lastmod: 2026-07-18
 ## 3D モデル・素材ライブラリ
 
 - [Sketchfab](https://sketchfab.com/)
-    - [Écorché Male Musclenames Anatomy - 3D model](https://sketchfab.com/3d-models/ecorche-male-musclenames-anatomy-33162ec759e04d2985dbbdf4ec908d66)
+    - [chrisfischerart](https://sketchfab.com/chrisfischerart)
     - [Velicsek Artistic Anatomy (@VAA)](https://sketchfab.com/VAA)
     - [docgfx](https://sketchfab.com/docgfx)
     - [shoes - sneaker - A 3D model collection by horitora - Sketchfab](https://sketchfab.com/horitora/collections/shoes-sneaker-68e374544b00472c8dbf9891232a4b57)
