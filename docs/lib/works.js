@@ -1,203 +1,217 @@
-$(function () {
+document.addEventListener("DOMContentLoaded", function () {
   /* ==================================================
    * Works Masonry レイアウト
    * ================================================== */
-  $(".works-container").each(function () {
-    // 変数・配列の宣言
-    const $container = $(this);
-    const $loadMoreButton = $("#load-more"); // 追加ボタン
-    const $filter = $("#works-form"); // フィルタリングのフォーム
-    let addItemCount = 20; // 一度に表示するアイテム数
-    let added = 0; // 表示済みのアイテム数
-    let allData = []; // すべての JSON データ
-    let tags = []; // JSON から取得したタグの配列
-    let filteredData = []; // フィルタリングされた JSON データ
+  const containers = document.querySelectorAll(".works-container");
 
-    // Home の場合は3つのみを表示するため addItemCount を変更
-    if ($("#home").length) {
-      addItemCount = 3;
+  containers.forEach(function (container) {
+    // スコープ化された要素参照を参照する
+    // ID が子要素でなくルートにある場合は document 側を参照する
+    const loadMoreButton =
+      container.querySelector("#load-more") ||
+      document.getElementById("load-more");
+    const filterForm =
+      container.querySelector("#works-form") ||
+      document.getElementById("works-form");
+    const worksTags =
+      container.querySelector("#works-tags") ||
+      document.getElementById("works-tags");
+
+    let addItemCount = document.getElementById("home") ? 3 : 20;
+    let added = 0;
+    let allData = [];
+    let tags = [];
+    let filteredData = [];
+
+    // masonry インスタンスを保持
+    let msnry = null;
+    if (window.Masonry) {
+      msnry = new Masonry(container, {
+        itemSelector: ".works-item",
+        columnWidth: 216,
+        gutter: 16,
+        fitWidth: true,
+        transitionDuration: 0,
+      });
     }
 
-    // オプションを設定して Masonry を準備
-    $container.masonry({
-      itemSelector: ".works-item", // 要素のセレクタ
-      columnWidth: 216, // カラムの幅
-      gutter: 16, // カラム間の左右の隙間
-      fitWidth: true, // 親の幅を自動調整して中央揃え
-      transitionDuration: "none", // デフォルトの transition を削除（CSS と競合するため）
-    });
+    // GLightbox を初期化する
+    let lightbox = null;
+    if (window.GLightbox) {
+      lightbox = GLightbox({ selector: ".works-item a" });
+    }
 
-    // Colorbox の共通設定（複数回バインドされないよう外側で一度だけ設定）
-    $container.on("click", "a", function () {
-      // noop: colorbox は要素単位で初期化するためここでは何もしない
-    });
-
-    // Colorbox の画像をクリックしても閉じる（グローバルで一度だけ）
-    $("#colorbox")
-      .off("click")
-      .on("click", function () {
-        $.colorbox.close();
-      });
-
-    // アイテムを生成しドキュメントに挿入する関数
-    function addItems(isFilter) {
-      const elements = [];
-      const slicedData = filteredData.slice(added, added + addItemCount);
-
-      // slicedData の要素ごとに DOM 要素を生成
-      $.each(slicedData, function (i, item) {
-        const itemHTML = `
+    function createItems(slicedData) {
+      const beforeCount = container.querySelectorAll(".works-item").length;
+      slicedData.forEach(function (item) {
+        const href = item.images && item.images.large ? item.images.large : "#";
+        const thumb = item.images && item.images.thumb ? item.images.thumb : "";
+        const title = item.title || "";
+        const date = item.date || "";
+        const html = `
           <li class="works-item is-loading">
-            <a href="${item.images && item.images.large ? item.images.large : "#"}">
-              <img src="${item.images && item.images.thumb ? item.images.thumb : ""}" alt="${item.title || ""}">
+            <a href="${href}">
+              <img src="${thumb}" alt="${title}">
               <span class="caption">
                 <span class="inner">
-                  <b class="title">${item.title || ""}</b>
-                  <time class="date" datetime="${item.date || ""}">${item.date || ""}</time>
+                  <b class="title">${title}</b>
+                  <time class="date" datetime="${date}">${date}</time>
                 </span>
               </span>
             </a>
           </li>`;
-        elements.push($(itemHTML).get(0));
+        container.insertAdjacentHTML("beforeend", html);
       });
 
-      if (elements.length === 0) {
-        $loadMoreButton.hide();
+      const allItems = container.querySelectorAll(".works-item");
+      const newItems = Array.prototype.slice.call(allItems, beforeCount);
+      return newItems;
+    }
+
+    function addItems(isFilter) {
+      const slicedData = filteredData.slice(added, added + addItemCount);
+      if (!slicedData.length) {
+        if (loadMoreButton) loadMoreButton.style.display = "none";
         return;
       }
 
-      // DOM 要素の配列をコンテナに挿入
-      $container.append(elements);
+      const newElems = createItems(slicedData);
 
-      // 画像読み込み後に Masonry レイアウトを更新
-      $container.imagesLoaded(function () {
-        $loadMoreButton.removeClass("is-loading");
-        $(elements).removeClass("is-loading");
-        $container.masonry("appended", elements);
-
-        // フィルタリング時は再配置
-        if (isFilter) {
-          $container.masonry();
-        }
-      });
-
-      // 追加した要素のリンクへ Colorbox を設定（既存要素に再設定しない）
-      $(elements)
-        .find("a")
-        .not("#home-more a")
-        .colorbox({
-          maxWidth: "100%",
-          maxHeight: "100%",
-          opacity: "0.75", // 背景の透明度
-          returnFocus: false, // モーダルを閉じたときにフォーカスを戻さない
-          reposition: false, // リサイズ時に位置変更しない
-          title: function () {
-            return $(this).find(".inner").html();
-          },
+      // imagesLoaded があれば待機してから Masonry を更新
+      if (window.imagesLoaded) {
+        imagesLoaded(container, { background: true }, function () {
+          newElems.forEach(function (el) {
+            el.classList.remove("is-loading");
+          });
+          if (msnry) msnry.appended(newElems);
+          if (isFilter && msnry) msnry.layout();
+          if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
         });
+      } else {
+        // フォールバック
+        newElems.forEach(function (el) {
+          el.classList.remove("is-loading");
+        });
+        if (msnry) {
+          msnry.appended(newElems);
+          if (isFilter) msnry.layout();
+        }
+        if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
+      }
 
-      // 追加済みアイテム数の更新
+      // Lightbox を再初期化 (GLightbox の場合は自動で拾うが、確実に更新)
+      if (lightbox && typeof lightbox.reload === "function") {
+        lightbox.reload();
+      }
+
       added += slicedData.length;
 
-      // JSON データがすべて追加し終わっていたら追加ボタンを消す
-      if (added < filteredData.length) {
-        $loadMoreButton.show();
-      } else {
-        $loadMoreButton.hide();
+      if (loadMoreButton) {
+        loadMoreButton.style.display =
+          added < filteredData.length ? "" : "none";
       }
     }
 
-    // タグを JSON から取得してサイドメニューへ表示する関数
     function appendTags(data) {
-      // 取得した JSON 内のタグ情報を二次元配列として格納
       const multiTags = [];
-      for (let i in data) {
-        if (data[i].tags) {
-          multiTags.push(data[i].tags);
-        }
-      }
-
-      // 一次元に変換したタグ配列から重複を排除した Set オブジェクトを作成
+      data.forEach(function (d) {
+        if (d.tags) multiTags.push(d.tags);
+      });
       const setTags = new Set(multiTags.flat());
       tags = Array.from(setTags).sort();
 
-      // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
-      $.each(tags, function (i, item) {
-        const tagHTML = `
-          <li class="tag">
-            <input type="radio" name="filter" id="${item}" value="${item}">
-            <label for="${item}">#${item}</label>
-          </li>`;
-        $("#works-tags").append(tagHTML);
+      if (!worksTags) return;
+      tags.forEach(function (t) {
+        const li = document.createElement("li");
+        li.className = "tag";
+        li.innerHTML = `<input type="radio" name="filter" id="${t}" value="${t}"><label for="${t}">#${t}</label>`;
+        worksTags.appendChild(li);
       });
     }
 
-    // アイテムをフィルタリングする関数
-    function filterItems() {
-      // まずトップへ戻る
+    function filterItems(key) {
+      // スクロールトップ
       window.scrollTo({ top: 0, behavior: "auto" });
 
-      const key = $(this).val(); // チェックされたラジオボタンの value
+      // 既存アイテムを Masonry から削除
+      if (msnry) {
+        const items = container.querySelectorAll(".works-item");
+        msnry.remove(items);
+      } else {
+        container.querySelectorAll(".works-item").forEach(function (el) {
+          el.remove();
+        });
+      }
 
-      // 追加済みの Masonry アイテムを取得して削除
-      const masonryItems = $container.masonry("getItemElements");
-      $container.masonry("remove", masonryItems);
-
-      // フィルタリング済みアイテムのデータと追加済みアイテム数をリセット
       filteredData = [];
       added = 0;
 
       if (key === "All") {
-        // All がチェックされた場合、すべての JSON データを格納
         filteredData = allData;
-        $(".works-h2").removeClass("filter-selected");
+        document.querySelectorAll(".works-h2").forEach(function (h) {
+          h.classList.remove("filter-selected");
+        });
       } else if (["Developments", "Illustrations", "Others"].includes(key)) {
-        // カテゴリの場合
-        filteredData = $.grep(allData, function (item) {
+        filteredData = allData.filter(function (item) {
           return item.category === key;
         });
-        $(".works-h2").text(key).addClass("filter-selected");
+        document.querySelectorAll(".works-h2").forEach(function (h) {
+          h.textContent = key;
+          h.classList.add("filter-selected");
+        });
       } else {
-        // タグによるフィルタ
-        filteredData = $.grep(allData, function (item) {
+        filteredData = allData.filter(function (item) {
           return item.tags && item.tags.includes(key);
         });
-        $(".works-h2")
-          .html('<i class="fa-solid fa-hashtag"></i>' + key)
-          .addClass("filter-selected");
+        document.querySelectorAll(".works-h2").forEach(function (h) {
+          h.innerHTML = '<i class="fa-solid fa-hashtag"></i>' + key;
+          h.classList.add("filter-selected");
+        });
       }
 
-      // アイテムを追加
       addItems(true);
     }
 
-    // Works ギャラリーを初期化する関数
     function initWorks(data) {
-      // 取得した JSON データを格納
-      allData = data.slice();
-
-      // 新しい順（降順）で表示するため配列を逆順にする
-      allData.reverse();
-
-      // 最初の状態ではフィルタリングせずそのまま全データを渡す
+      allData = data.slice().reverse();
       filteredData = allData;
-
-      // 最初のアイテム群を表示
       addItems();
 
-      // 追加ボタンがクリックされたら追加で表示
-      $loadMoreButton.off("click").on("click", function () {
-        addItems();
-      });
+      if (loadMoreButton) {
+        loadMoreButton.removeEventListener("click", addItems);
+        loadMoreButton.addEventListener("click", function () {
+          addItems(false);
+        });
+      }
 
-      // フィルターのラジオボタンが変更されたらフィルタリングを実行
-      $filter.off("change").on("change", 'input[type="radio"]', filterItems);
+      if (filterForm) {
+        // 単純な委譲: ラジオ変更を監視
+        filterForm.removeEventListener("change", onFilterChange);
+        filterForm.addEventListener("change", onFilterChange);
+      }
     }
 
-    // JSON を取得しタグ表示と初期化を実行
-    $.getJSON("/assets/works/content.json").done(function (data) {
-      appendTags(data);
-      initWorks(data);
-    });
+    function onFilterChange(e) {
+      const target = e.target;
+      if (!target) return;
+      if (target.matches('input[type="radio"][name="filter"]')) {
+        filterItems(target.value);
+      }
+    }
+
+    // JSON を取得して初期化
+    fetch("/assets/works/content.json")
+      .then(function (res) {
+        if (!res.ok) throw new Error("Failed to load JSON");
+        return res.json();
+      })
+      .then(function (data) {
+        appendTags(data);
+        initWorks(data);
+      })
+      .catch(function (err) {
+        // エラー時のフォールバック: コンソール出力
+        console.error("works.json load error:", err);
+      });
   });
 });
