@@ -50,7 +50,19 @@ lastmod: 2026-07-18
 
 ## 解説記事
 
+### 目
+
 - [【ダテ式お絵かき塾】分かっているようで分かっていない？目の構造とは](https://unlimitedream.com/2021/12/11/about-eye-structure/)
+- [MMDモデルの目の構造について(備忘録)：ブロマガ - ニコニコチャンネル](https://site.nicovideo.jp/ch/userblomaga_thanks/archive/ar1419793)
+
+### パース
+
+- [消失点が画面外にあるときの描き方｜真ん中ー真ん中分割法｜後藤（元アニメ背景17年）の自習室](https://www.gotonojisyuushitu.com/archives/443)
+- [絵のメイキング⑧　消失点で待ってる｜鰤尾みちる / ブリテイル](https://note.com/amphibianplane/n/naf19ee245c4c)
+
+### その他
+
+- [今更聞けない線の引き方とペンの握り方 : Ixy(いくしー)のお絵かき情報ブログ](https://ixy.blog.jp/archives/2437080.html)
 
 ## 動画
 
