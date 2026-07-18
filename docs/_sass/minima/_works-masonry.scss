@@ -38,44 +38,53 @@
 }
 
 .works-container {
-  display: flex;
+  /* CSS Grid を使った Masonry ライクレイアウト
+     - ソース順に左→右で配置される
+     - grid-auto-rows の高さを小さくして、各要素の高さに応じて span を計算する
+     - works.js 側で各 .works-item に grid-row-end を設定して空きを埋める */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+  grid-auto-rows: 8px; /* 行高さの基準（JS で参照） */
+  gap: 16px;
   margin: 0 auto;
-  min-height: 720px; // 遷移時にフッターが一瞬ちらつくため最小高さを設定して見えなくする
 }
 
 // 見出し 初期状態では非表示
 .works-h2 {
-  display: none!important;
+  display: none !important;
   margin-top: 0;
 
   // フィルターが付与されたら表示
   &.filter-selected {
-    display: block!important;
+    display: block !important;
   }
 }
 
 .works-item {
-  margin-top: 0;
-  margin-bottom: 16px;
-  width: 216px;
+  margin: 0;
   list-style: none;
   border-radius: 8px;
   background: $base-bg-color-main;
   transition: 0.3s;
   transition-timing-function: ease-out;
 
-  // 読み込み中は非表示にする
-  // 画像の読込完了後、JS 処理で .is-loading が削除され表示される
+  // 画像読み込み中は非表示にする
   &.is-loading {
     opacity: 0;
   }
 
-  // アイテムの画像は角丸のカードのような見た目で表示
+  // 要素高さに応じて JS で grid-row-end を設定するため、内部は幅100%にしておく
+  a,
+  figure {
+    display: block;
+    width: 100%;
+  }
+
   img {
     width: 100%;
     border: 1px solid $base-btn-color;
     border-radius: 8px;
-    vertical-align: top; /* a タグでできる隙間を消す */
+    vertical-align: top;
     object-fit: cover;
     transition: 0.3s;
     transition-timing-function: ease-out;
@@ -118,13 +127,12 @@
   }
 }
 
-
-
 /* ==================================================
 * Works / サイドメニュー
 * ================================================== */
 #works-form {
-  label, input {
+  label,
+  input {
     cursor: pointer;
     user-select: none;
   }
@@ -143,7 +151,7 @@
   margin-top: 30px;
 }
 
-.works-right-nav section:first-child{
+.works-right-nav section:first-child {
   margin-top: 0;
 }
 
@@ -188,7 +196,12 @@
     padding: 4px 10px 4px;
     border-radius: 20px;
     background: $color-unselected;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* タブレット・SP 端末でタップ時のグレー表示をしない */
+    -webkit-tap-highlight-color: rgba(
+      0,
+      0,
+      0,
+      0
+    ); /* タブレット・SP 端末でタップ時のグレー表示をしない */
   }
 
   input:checked + label {

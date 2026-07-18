@@ -23,18 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let tags = [];
     let filteredData = [];
 
-    // masonry インスタンスを保持
-    let msnry = null;
-    if (window.Masonry) {
-      msnry = new Masonry(container, {
-        itemSelector: ".works-item",
-        columnWidth: 216,
-        gutter: 16,
-        fitWidth: true,
-        transitionDuration: 0,
-      });
-    }
-
     // GLightbox を初期化する
     let lightbox = null;
     if (window.GLightbox) {
@@ -68,6 +56,40 @@ document.addEventListener("DOMContentLoaded", function () {
       return newItems;
     }
 
+    function resizeItem(el) {
+      // compute and set grid row span based on element height
+      const style = window.getComputedStyle(container);
+      const rowHeight = parseInt(style.getPropertyValue("grid-auto-rows")) || 8;
+      const rowGap =
+        parseInt(style.getPropertyValue("gap")) ||
+        parseInt(style.getPropertyValue("grid-row-gap")) ||
+        16;
+      const img = el.querySelector("img");
+      const caption = el.querySelector(".caption");
+      const imgHeight = img
+        ? img.getBoundingClientRect().height
+        : el.getBoundingClientRect().height;
+      const captionHeight = caption
+        ? caption.getBoundingClientRect().height
+        : 0;
+      const totalHeight = imgHeight + captionHeight;
+      const rowSpan = Math.max(
+        1,
+        Math.ceil((totalHeight + rowGap) / (rowHeight + rowGap)),
+      );
+      el.style.gridRowEnd = "span " + rowSpan;
+    }
+
+    let resizeTimer = null;
+    function resizeAllItems() {
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        container.querySelectorAll(".works-item").forEach(function (el) {
+          resizeItem(el);
+        });
+      }, 150);
+    }
+
     function addItems(isFilter) {
       const slicedData = filteredData.slice(added, added + addItemCount);
       if (!slicedData.length) {
@@ -77,31 +99,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const newElems = createItems(slicedData);
 
-      // imagesLoaded があれば待機してから Masonry を更新
-      if (window.imagesLoaded) {
-        imagesLoaded(container, { background: true }, function () {
-          newElems.forEach(function (el) {
-            el.classList.remove("is-loading");
-          });
-          if (msnry) msnry.appended(newElems);
-          if (isFilter && msnry) msnry.layout();
-          if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
-        });
-      } else {
-        // フォールバック
-        newElems.forEach(function (el) {
+      // CSS カラムを使うため Masonry スクリプトは不要。
+      // 画像の読み込みが完了したら個別に .is-loading を外して表示する。
+      newElems.forEach(function (el) {
+        const img = el.querySelector("img");
+        const show = function () {
           el.classList.remove("is-loading");
-        });
-        if (msnry) {
-          msnry.appended(newElems);
-          if (isFilter) msnry.layout();
+          // set grid row span when image is ready
+          resizeItem(el);
+        };
+        if (img) {
+          if (img.complete) {
+            show();
+          } else {
+            img.addEventListener("load", show, { once: true });
+            img.addEventListener("error", show, { once: true });
+          }
+        } else {
+          show();
         }
-        if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
-      }
+      });
+      // ensure all items recalculated after a short delay
+      resizeAllItems();
+      if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
 
-      // Lightbox を再初期化 (GLightbox の場合は自動で拾うが、確実に更新)
-      if (lightbox && typeof lightbox.reload === "function") {
-        lightbox.reload();
+      // Lightbox を再初期化 (GLightbox の API に合わせて呼び出す)
+      if (lightbox) {
+        if (typeof lightbox.reload === "function") {
+          lightbox.reload();
+        } else if (typeof lightbox.refresh === "function") {
+          lightbox.refresh();
+        }
       }
 
       added += slicedData.length;
@@ -110,6 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
         loadMoreButton.style.display =
           added < filteredData.length ? "" : "none";
       }
+    }
+
+    function onLoadMoreClick() {
+      addItems(false);
     }
 
     function appendTags(data) {
@@ -133,15 +165,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // スクロールトップ
       window.scrollTo({ top: 0, behavior: "auto" });
 
-      // 既存アイテムを Masonry から削除
-      if (msnry) {
-        const items = container.querySelectorAll(".works-item");
-        msnry.remove(items);
-      } else {
-        container.querySelectorAll(".works-item").forEach(function (el) {
-          el.remove();
-        });
-      }
+      // 既存アイテムを削除
+      container.querySelectorAll(".works-item").forEach(function (el) {
+        el.remove();
+      });
 
       filteredData = [];
       added = 0;
@@ -178,10 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
       addItems();
 
       if (loadMoreButton) {
-        loadMoreButton.removeEventListener("click", addItems);
-        loadMoreButton.addEventListener("click", function () {
-          addItems(false);
-        });
+        loadMoreButton.removeEventListener("click", onLoadMoreClick);
+        loadMoreButton.addEventListener("click", onLoadMoreClick);
       }
 
       if (filterForm) {
@@ -189,6 +214,10 @@ document.addEventListener("DOMContentLoaded", function () {
         filterForm.removeEventListener("change", onFilterChange);
         filterForm.addEventListener("change", onFilterChange);
       }
+
+      // ウィンドウリサイズ時に再計算
+      window.removeEventListener("resize", resizeAllItems);
+      window.addEventListener("resize", resizeAllItems);
     }
 
     function onFilterChange(e) {
