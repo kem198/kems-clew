@@ -30,29 +30,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function createItems(slicedData) {
-      const beforeCount = container.querySelectorAll(".works-item").length;
+      const fragment = document.createDocumentFragment();
+      const newItems = [];
+
       slicedData.forEach(function (item) {
         const href = item.images && item.images.large ? item.images.large : "#";
         const thumb = item.images && item.images.thumb ? item.images.thumb : "";
         const title = item.title || "";
         const date = item.date || "";
-        const html = `
-          <li class="works-item is-loading">
-            <a href="${href}">
-              <img src="${thumb}" alt="${title}">
-              <span class="caption">
-                <span class="inner">
-                  <b class="title">${title}</b>
-                  <time class="date" datetime="${date}">${date}</time>
-                </span>
-              </span>
-            </a>
-          </li>`;
-        container.insertAdjacentHTML("beforeend", html);
+
+        const li = document.createElement("li");
+        li.className = "works-item is-loading";
+
+        const a = document.createElement("a");
+        a.href = href;
+
+        const imgEl = document.createElement("img");
+        imgEl.src = thumb;
+        imgEl.alt = title;
+
+        const spanCaption = document.createElement("span");
+        spanCaption.className = "caption";
+
+        const spanInner = document.createElement("span");
+        spanInner.className = "inner";
+
+        const bTitle = document.createElement("b");
+        bTitle.className = "title";
+        bTitle.textContent = title;
+
+        const timeEl = document.createElement("time");
+        timeEl.className = "date";
+        timeEl.setAttribute("datetime", date);
+        timeEl.textContent = date;
+
+        spanInner.appendChild(bTitle);
+        spanInner.appendChild(timeEl);
+        spanCaption.appendChild(spanInner);
+
+        a.appendChild(imgEl);
+        a.appendChild(spanCaption);
+        li.appendChild(a);
+
+        fragment.appendChild(li);
+        newItems.push(li);
       });
 
-      const allItems = container.querySelectorAll(".works-item");
-      const newItems = Array.prototype.slice.call(allItems, beforeCount);
+      container.appendChild(fragment);
       return newItems;
     }
 
