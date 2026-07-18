@@ -46,30 +46,18 @@ $(function () {
 
       // slicedData の要素ごとに DOM 要素を生成
       $.each(slicedData, function (i, item) {
-        const itemHTML =
-          '<li class="works-item is-loading">' +
-          '<a href="' +
-          item.images.large +
-          '">' +
-          '<img src="' +
-          item.images.thumb +
-          '" alt="' +
-          item.title +
-          '">' +
-          '<span class="caption">' +
-          '<span class="inner">' +
-          '<b class="title">' +
-          item.title +
-          "</b>" +
-          '<time class="date" datetime="' +
-          item.date +
-          '">' +
-          item.date +
-          "</time>" +
-          "</span>" +
-          "</span>" +
-          "</a>" +
-          "</li>";
+        const itemHTML = `
+          <li class="works-item is-loading">
+            <a href="${item.images && item.images.large ? item.images.large : "#"}">
+              <img src="${item.images && item.images.thumb ? item.images.thumb : ""}" alt="${item.title || ""}">
+              <span class="caption">
+                <span class="inner">
+                  <b class="title">${item.title || ""}</b>
+                  <time class="date" datetime="${item.date || ""}">${item.date || ""}</time>
+                </span>
+              </span>
+            </a>
+          </li>`;
         elements.push($(itemHTML).get(0));
       });
 
@@ -135,19 +123,11 @@ $(function () {
 
       // タグ配列の要素ごとに DOM 要素を生成し HTML へ挿入
       $.each(tags, function (i, item) {
-        const tagHTML =
-          '<li class="tag">' +
-          '<input type="radio" name="filter" id="' +
-          item +
-          '" value="' +
-          item +
-          '">' +
-          '<label for="' +
-          item +
-          '">#' +
-          item +
-          "</label>" +
-          "</li>";
+        const tagHTML = `
+          <li class="tag">
+            <input type="radio" name="filter" id="${item}" value="${item}">
+            <label for="${item}">#${item}</label>
+          </li>`;
         $("#works-tags").append(tagHTML);
       });
     }
