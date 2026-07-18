@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // GLightbox を初期化する
     let lightbox = null;
     if (window.GLightbox) {
-      lightbox = GLightbox({ selector: ".works-item a" });
+      lightbox = GLightbox({
+        selector: ".works-item a",
+        openEffect: "fade",
+        closeEffect: "none",
+        slideEffect: "slide",
+      });
     }
 
     function createItems(slicedData) {
