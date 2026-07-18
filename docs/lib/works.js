@@ -83,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function resizeItem(el) {
       // compute and set grid row span based on element height
       // use cached rowHeight/rowGap when available to avoid repeated style reads
-      const rowHeight = typeof cachedRowHeight === "number" ? cachedRowHeight : 8;
+      const rowHeight =
+        typeof cachedRowHeight === "number" ? cachedRowHeight : 8;
       const rowGap = typeof cachedRowGap === "number" ? cachedRowGap : 16;
       const img = el.querySelector("img");
       const caption = el.querySelector(".caption");
@@ -94,7 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
         ? caption.getBoundingClientRect().height
         : 0;
       const totalHeight = imgHeight + captionHeight;
-      const rowSpan = Math.max(1, Math.ceil((totalHeight + rowGap) / (rowHeight + rowGap)));
+      const rowSpan = Math.max(
+        1,
+        Math.ceil((totalHeight + rowGap) / (rowHeight + rowGap)),
+      );
       el.style.gridRowEnd = "span " + rowSpan;
     }
 
@@ -105,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateRowMetrics() {
       const style = window.getComputedStyle(container);
       const rh = parseFloat(style.getPropertyValue("grid-auto-rows"));
-      const gapVal = style.getPropertyValue("gap") || style.getPropertyValue("grid-row-gap");
+      const gapVal =
+        style.getPropertyValue("gap") || style.getPropertyValue("grid-row-gap");
       const rg = parseFloat(gapVal);
       cachedRowHeight = Number.isFinite(rh) && rh > 0 ? rh : 8;
       cachedRowGap = Number.isFinite(rg) ? rg : 16;
