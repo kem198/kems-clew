@@ -10,18 +10,14 @@ date: 2026-07-18
 lastmod: 2026-07-18
 ---
 
-お絵描き初心者が参考にしているサイトのまとめ。
-
-- 書籍や参考資料の他、メンタル面で参考になったものも掲載しています。
-- 各ブラウザごとにブックマークを管理するのが面倒なので作りました。
-- 適宜更新しています。
+お絵描き初心者が参考にしているサイトや資料のまとめ。適宜更新しています。
 
 ## 書籍
 
-- [やさしい人物画](https://www.maar.com/shop/technique/drawing/isbn9784837301035)
-- [やさしい顔と手の描き方](https://www.maar.com/shop/technique/drawing/isbn9784837301073)
-- [加々美高浩が全力で教える「手」の描き方](https://www.sbcr.jp/product/4797399851/)
-- [動きとシワがよくわかる 衣服の描き方図鑑 服の仕組みから角度別の描き方まで](https://hj-gihousho.com/book/3748)
+- [やさしい人物画 - マール社](https://www.maar.com/shop/technique/drawing/isbn9784837301035)
+- [やさしい顔と手の描き方 - マール社](https://www.maar.com/shop/technique/drawing/isbn9784837301073)
+- [加々美高浩が全力で教える「手」の描き方 \| SBクリエイティブ](https://www.sbcr.jp/product/4797399851/)
+- [動きとシワがよくわかる 衣服の描き方図鑑 服の仕組みから角度別の描き方まで \| ホビージャパンの技法書](https://hj-gihousho.com/book/3748)
 
 ## 資料
 
@@ -47,25 +43,24 @@ lastmod: 2026-07-18
 
 ## 動画
 
-### イラスト系チャンネル
+### 技法
 
-- [さいとうなおき2](https://www.youtube.com/@saitonaoki2)
-    - [絵で燃え尽きてしまいます。やる気を持続させる方法は？](https://www.youtube.com/watch?v=m1yUED8Fcow&t=352s)
-- [絵葉ましろのちゃんねる](https://www.youtube.com/@eva_mashiro)
-    - [【継続10年超】兼業ガチ勢が気づいた創作時間の錬金術](https://www.youtube.com/watch?v=CQnOzQGqyPM&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=6&t=386s)
-- [ディープブリザード](https://www.youtube.com/@deepblizzard)
-    - [初心者でもわかる！グリザイユ画法【超入門講座\#35】](https://www.youtube.com/watch?v=nl99s-V3g5w)
-- [サイケ・デリック](https://www.youtube.com/@Saikedelic)
-    - [（途中で筆が止まる現象）プロが解説します！！](https://www.youtube.com/watch?v=pKGOdR7B_wc&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=11)
-    - [サボると絵が上手くなる！！役立つ知識をイラストレーターがお届けします。](https://www.youtube.com/watch?v=sVxm8W-BLSU)
-- [めれらる](https://www.youtube.com/@めれらる)
+- [ディープブリザード / 初心者でもわかる！グリザイユ画法【超入門…](https://www.youtube.com/watch?v=nl99s-V3g5w)
+- [サイケ・デリック / サボると絵が上手くなる！！役立つ知識をイラ…](https://www.youtube.com/watch?v=sVxm8W-BLSU)
+- [サイケ・デリック / （途中で筆が止まる現象）プロが解説します！！](https://www.youtube.com/watch?v=pKGOdR7B_wc&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=11)
+- [めれらる / 厚塗りのやり方がわかるかもしれないイラストメイキング【イ…](https://www.youtube.com/watch?v=kfHGdkZbLDU&t=310s)
+- [桜井政博のゲーム作るには / モヤっとさせるな 【エフェクト】](https://www.youtube.com/watch?v=7vGEEUjCJdY)
+- [桜井政博のゲーム作るには / 素材を描かず、光を描く 【グラフィック】](https://www.youtube.com/watch?v=WqwtzP-TCnw)
+
+### メンタル
+
+- [絵葉ましろのちゃんねる / 【継続10年超】兼業ガチ勢が気づいた創作時間の錬金術](https://www.youtube.com/watch?v=CQnOzQGqyPM&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=6&t=386s)
+- [さいとうなおき2 / 絵で燃え尽きてしまいます。やる気を持続させる方法は？](https://www.youtube.com/watch?v=m1yUED8Fcow&t=352s)
 
 ### 未分類
 
-- [桜井政博のゲーム作るには / モヤっとさせるな 【エフェクト】](https://www.youtube.com/watch?v=7vGEEUjCJdY)
-- [桜井政博のゲーム作るには / 素材を描かず、光を描く 【グラフィック】](https://www.youtube.com/watch?v=WqwtzP-TCnw)
-- [スマブラや人生に本気になれない視聴者にアツいアドバイスをするザクレイ【スマブラSP】](https://www.youtube.com/watch?v=9AZxvlgYltI)
-- [誰も知らない全てが残念なデュエマ漫画をボロクソレビュー【デュエルマスターズ】](https://www.youtube.com/watch?v=nE7xENYSOZo&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=91)
+- [スマブラや人生に本気になれない視聴者にアツいアドバイスをするザクレイ【ス…](https://www.youtube.com/watch?v=9AZxvlgYltI)
+- [誰も知らない全てが残念なデュエマ漫画をボロクソレビュー【デュ…](https://www.youtube.com/watch?v=nE7xENYSOZo&list=FLJ8bxXEc4pZQ7KlFkVBsgyg&index=91)
 
 ## クロッキー
 
