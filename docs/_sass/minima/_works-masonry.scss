@@ -45,12 +45,12 @@
 
 // 見出し 初期状態では非表示
 .works-h2 {
-  display: none!important;
+  display: none !important;
   margin-top: 0;
 
   // フィルターが付与されたら表示
   &.filter-selected {
-    display: block!important;
+    display: block !important;
   }
 }
 
@@ -64,8 +64,7 @@
   transition: 0.3s;
   transition-timing-function: ease-out;
 
-  // 読み込み中は非表示にする
-  // 画像の読込完了後、JS 処理で .is-loading が削除され表示される
+  // 画像読み込み中は非表示にする
   &.is-loading {
     opacity: 0;
   }
@@ -75,7 +74,7 @@
     width: 100%;
     border: 1px solid $base-btn-color;
     border-radius: 8px;
-    vertical-align: top; /* a タグでできる隙間を消す */
+    vertical-align: top;
     object-fit: cover;
     transition: 0.3s;
     transition-timing-function: ease-out;
@@ -124,7 +123,8 @@
 * Works / サイドメニュー
 * ================================================== */
 #works-form {
-  label, input {
+  label,
+  input {
     cursor: pointer;
     user-select: none;
   }
@@ -143,7 +143,7 @@
   margin-top: 30px;
 }
 
-.works-right-nav section:first-child{
+.works-right-nav section:first-child {
   margin-top: 0;
 }
 
@@ -188,7 +188,12 @@
     padding: 4px 10px 4px;
     border-radius: 20px;
     background: $color-unselected;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* タブレット・SP 端末でタップ時のグレー表示をしない */
+    -webkit-tap-highlight-color: rgba(
+      0,
+      0,
+      0,
+      0
+    ); /* タブレット・SP 端末でタップ時のグレー表示をしない */
   }
 
   input:checked + label {
