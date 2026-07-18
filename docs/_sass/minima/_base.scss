@@ -1,14 +1,25 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
-
-
 
 /**
  * Basic styling
@@ -17,14 +28,15 @@ html {
   // scroll-behavior: smooth;
 }
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
   color: $base-text-color;
   background-color: $base-bg-color-sub;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
@@ -36,19 +48,25 @@ body {
   }
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * `main` element
@@ -70,8 +88,6 @@ main {
   }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -79,7 +95,7 @@ main {
   // minima の max-width から flex-basis へ変更
   // https://qiita.com/shizen-shin/items/dc8d096300cde63dc8a8
   flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
-  flex-basis:         calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+  flex-basis: calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
 
   // Flexbox からコンテンツはみ出る問題を完全に解決する
   // https://qiita.com/mpyw/items/dfc63c1fed5dfc5eda26
@@ -94,7 +110,7 @@ main {
 
   @include media-query($on-laptop) {
     flex-basis: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
-    flex-basis:         calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
+    flex-basis: calc(#{$content-width} - (#{$spacing-unit} * 2 - 30px));
   }
 
   .side-nav {
@@ -117,7 +133,6 @@ main {
   }
 }
 
-
 /**
  * Hamburger menu
  */
@@ -130,7 +145,6 @@ main {
 }
 
 @include media-query($on-laptop) {
-
   .right-wrapper {
     position: fixed;
     left: 0;
@@ -178,7 +192,6 @@ main {
 
   // チェックされたらスタイルを適用
   #menu-btn-check:checked ~ {
-
     // メニューを画面内へ
     .right-wrapper {
       bottom: 104px;
@@ -196,8 +209,6 @@ main {
   }
 }
 
-
-
 /**
  * Images
  */
@@ -205,8 +216,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -219,12 +228,11 @@ figcaption {
   font-size: $font-size-small;
 }
 
-
-
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit * 0.75;
 }
 
@@ -235,16 +243,17 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
@@ -270,7 +279,6 @@ a {
   }
 }
 
-
 /**
  * Blockquotes
  */
@@ -286,8 +294,6 @@ blockquote {
     margin-bottom: 0;
   }
 }
-
-
 
 /**
  * Code formatting
@@ -305,13 +311,12 @@ code {
   padding: 1px 5px;
 
   &.language-plaintext {
-    background: rgba(0,0,0,.08);
+    background: rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     padding: 0.1rem 0.4rem;
     overflow-wrap: break-word;
   }
 }
-
 
 pre {
   padding: 8px 12px;
@@ -325,7 +330,6 @@ pre {
   }
 }
 
-
 /**
  * hr
  */
@@ -334,8 +338,6 @@ hr {
   border-bottom: 1px solid $color-grey-light;
   margin: 4rem 1rem;
 }
-
-
 
 /**
  * Clearfix
@@ -346,19 +348,17 @@ hr {
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$color-grey};
-    padding-right: 5px;
-    vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$color-grey};
+  padding-right: 5px;
+  vertical-align: text-top;
 }
 
 .social-media-list {
@@ -366,8 +366,6 @@ hr {
     padding-top: 5px;
   }
 }
-
-
 
 /**
  * Tables
@@ -387,7 +385,8 @@ table {
       background-color: lighten($color-grey-thin, 6%);
     }
   }
-  th, td {
+  th,
+  td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
