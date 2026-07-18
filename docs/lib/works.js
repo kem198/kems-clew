@@ -26,44 +26,80 @@ document.addEventListener("DOMContentLoaded", function () {
     // GLightbox を初期化する
     let lightbox = null;
     if (window.GLightbox) {
-      lightbox = GLightbox({ selector: ".works-item a" });
+      lightbox = GLightbox({
+        selector: ".works-item a",
+        openEffect: "fade",
+        closeEffect: "none",
+        slideEffect: "slide",
+      });
     }
 
+    /**
+     * 指定されたデータスライスから DOM 要素を生成し、
+     * フラグメントと作成した要素の配列を返す
+     * @param { Array < Object > } slicedData - ワーク項目の配列
+     * @returns { { fragment: DocumentFragment, newItems: HTMLElement[] } }
+     */
     function createItems(slicedData) {
-      const beforeCount = container.querySelectorAll(".works-item").length;
+      const fragment = document.createDocumentFragment();
+      const newItems = [];
+
       slicedData.forEach(function (item) {
         const href = item.images && item.images.large ? item.images.large : "#";
         const thumb = item.images && item.images.thumb ? item.images.thumb : "";
         const title = item.title || "";
         const date = item.date || "";
-        const html = `
-          <li class="works-item is-loading">
-            <a href="${href}">
-              <img src="${thumb}" alt="${title}">
-              <span class="caption">
-                <span class="inner">
-                  <b class="title">${title}</b>
-                  <time class="date" datetime="${date}">${date}</time>
-                </span>
-              </span>
-            </a>
-          </li>`;
-        container.insertAdjacentHTML("beforeend", html);
+
+        const li = document.createElement("li");
+        li.className = "works-item is-loading";
+
+        const a = document.createElement("a");
+        a.href = href;
+
+        const imgEl = document.createElement("img");
+        imgEl.src = thumb;
+        imgEl.alt = title;
+
+        const spanCaption = document.createElement("span");
+        spanCaption.className = "caption";
+
+        const spanInner = document.createElement("span");
+        spanInner.className = "inner";
+
+        const bTitle = document.createElement("b");
+        bTitle.className = "title";
+        bTitle.textContent = title;
+
+        const timeEl = document.createElement("time");
+        timeEl.className = "date";
+        timeEl.setAttribute("datetime", date);
+        timeEl.textContent = date;
+
+        spanInner.appendChild(bTitle);
+        spanInner.appendChild(timeEl);
+        spanCaption.appendChild(spanInner);
+
+        a.appendChild(imgEl);
+        a.appendChild(spanCaption);
+        li.appendChild(a);
+
+        fragment.appendChild(li);
+        newItems.push(li);
       });
 
-      const allItems = container.querySelectorAll(".works-item");
-      const newItems = Array.prototype.slice.call(allItems, beforeCount);
-      return newItems;
+      return { fragment: fragment, newItems: newItems };
     }
 
+    /**
+     * 要素の高さを計算し、CSS グリッドの行スパンを設定する
+     * @param { HTMLElement } el - 対象の要素
+     */
     function resizeItem(el) {
       // compute and set grid row span based on element height
-      const style = window.getComputedStyle(container);
-      const rowHeight = parseInt(style.getPropertyValue("grid-auto-rows")) || 8;
-      const rowGap =
-        parseInt(style.getPropertyValue("gap")) ||
-        parseInt(style.getPropertyValue("grid-row-gap")) ||
-        16;
+      // use cached rowHeight/rowGap when available to avoid repeated style reads
+      const rowHeight =
+        typeof cachedRowHeight === "number" ? cachedRowHeight : 8;
+      const rowGap = typeof cachedRowGap === "number" ? cachedRowGap : 16;
       const img = el.querySelector("img");
       const caption = el.querySelector(".caption");
       const imgHeight = img
@@ -80,45 +116,105 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.gridRowEnd = "span " + rowSpan;
     }
 
+    // cached metrics for grid calculations to reduce getComputedStyle calls
+    let cachedRowHeight = null;
+    let cachedRowGap = null;
+
+    /**
+     * コンテナの CSS メトリクスを読み取り、行高さとギャップ値をキャッシュする
+     */
+    function updateRowMetrics() {
+      const style = window.getComputedStyle(container);
+      const rh = parseFloat(style.getPropertyValue("grid-auto-rows"));
+      const gapVal =
+        style.getPropertyValue("gap") || style.getPropertyValue("grid-row-gap");
+      const rg = parseFloat(gapVal);
+      cachedRowHeight = Number.isFinite(rh) && rh > 0 ? rh : 8;
+      cachedRowGap = Number.isFinite(rg) ? rg : 16;
+    }
+
     let resizeTimer = null;
+    /**
+     * コンテナ内の全アイテムをデバウンス付きで再計算する
+     */
     function resizeAllItems() {
       if (resizeTimer) clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
+        // refresh cached metrics once per batch
+        updateRowMetrics();
         container.querySelectorAll(".works-item").forEach(function (el) {
           resizeItem(el);
         });
       }, 150);
     }
 
-    function addItems(isFilter) {
-      const slicedData = filteredData.slice(added, added + addItemCount);
-      if (!slicedData.length) {
-        if (loadMoreButton) loadMoreButton.style.display = "none";
-        return;
-      }
+    /**
+     * 画像が準備できるまで待機する ( decode() が利用可能な場合はそれを優先する ) 。
+     * @param { HTMLImageElement } img - 画像要素
+     * @returns { Promise < void > }
+     */
+    function waitForImage(img) {
+      return new Promise(function (resolve) {
+        if (!img) return resolve();
+        if (img.complete) return resolve();
+        if (typeof img.decode === "function") {
+          img
+            .decode()
+            .then(function () {
+              resolve();
+            })
+            .catch(function () {
+              // fallback to load/error events
+              const onFinish = function () {
+                resolve();
+              };
+              img.addEventListener("load", onFinish, { once: true });
+              img.addEventListener("error", onFinish, { once: true });
+            });
+        } else {
+          const onFinish = function () {
+            resolve();
+          };
+          img.addEventListener("load", onFinish, { once: true });
+          img.addEventListener("error", onFinish, { once: true });
+        }
+      });
+    }
 
-      const newElems = createItems(slicedData);
+    /**
+     * 次にレンダリングするデータのスライスを返す
+     * @returns { Array < Object > } sliced data
+     */
+    function getNextSlice() {
+      return filteredData.slice(added, added + addItemCount);
+    }
 
-      // CSS カラムを使うため Masonry スクリプトは不要。
-      // 画像の読み込みが完了したら個別に .is-loading を外して表示する。
-      newElems.forEach(function (el) {
+    /**
+     * 指定したデータスライスを描画する :
+     * 要素生成、追加、画像処理、レイアウト更新、ライトボックス再初期化、UI 状態更新を行う
+     * @param { Array < Object > } slicedData - 描画対象のデータ配列
+     */
+    function renderItems(slicedData) {
+      const created = createItems(slicedData);
+      container.appendChild(created.fragment);
+
+      const elems = created.newItems;
+
+      elems.forEach(function (el) {
         const img = el.querySelector("img");
-        const show = function () {
+        var show = function () {
           el.classList.remove("is-loading");
           // set grid row span when image is ready
           resizeItem(el);
         };
+
         if (img) {
-          if (img.complete) {
-            show();
-          } else {
-            img.addEventListener("load", show, { once: true });
-            img.addEventListener("error", show, { once: true });
-          }
+          waitForImage(img).then(show);
         } else {
           show();
         }
       });
+
       // ensure all items recalculated after a short delay
       resizeAllItems();
       if (loadMoreButton) loadMoreButton.classList.remove("is-loading");
@@ -140,11 +236,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    /**
+     * 次のバッチを追加するオーケストレータ ( 軽量なラッパー ) 。
+     * @param { boolean } isFilter - フィルタ変更による呼び出しかどうか
+     */
+    function addItems(isFilter) {
+      const slicedData = getNextSlice();
+      if (!slicedData.length) {
+        if (loadMoreButton) loadMoreButton.style.display = "none";
+        return;
+      }
+      renderItems(slicedData);
+    }
+
+    /**
+     * 「 load more 」ボタンのクリックハンドラ。
+     * @returns { void }
+     */
     function onLoadMoreClick() {
       addItems(false);
     }
 
     function appendTags(data) {
+      /**
+       * データからユニークなタグを抽出し、安全な DOM 入力要素を構築する
+       * @param { Array < Object > } data
+       */
       const multiTags = [];
       data.forEach(function (d) {
         if (d.tags) multiTags.push(d.tags);
@@ -153,14 +270,43 @@ document.addEventListener("DOMContentLoaded", function () {
       tags = Array.from(setTags).sort();
 
       if (!worksTags) return;
+      // clear existing
+      while (worksTags.firstChild) worksTags.removeChild(worksTags.firstChild);
+
+      function sanitizeId(str) {
+        return (
+          "tag-" +
+          String(str)
+            .toLowerCase()
+            .replace(/[^a-z0-9_-]+/g, "-")
+        ).replace(/^-+|-+$/g, "");
+      }
+
       tags.forEach(function (t) {
         const li = document.createElement("li");
         li.className = "tag";
-        li.innerHTML = `<input type="radio" name="filter" id="${t}" value="${t}"><label for="${t}">#${t}</label>`;
+
+        const id = sanitizeId(t);
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "filter";
+        input.id = id;
+        input.value = t;
+
+        const label = document.createElement("label");
+        label.htmlFor = id;
+        label.textContent = "#" + t;
+
+        li.appendChild(input);
+        li.appendChild(label);
         worksTags.appendChild(li);
       });
     }
 
+    /**
+     * カテゴリまたはタグでフィルタを適用し、現在のアイテムをクリアして再描画する
+     * @param { string } key - フィルタキー ( "All" 、カテゴリ名またはタグ )
+     */
     function filterItems(key) {
       // スクロールトップ
       window.scrollTo({ top: 0, behavior: "auto" });
@@ -199,6 +345,10 @@ document.addEventListener("DOMContentLoaded", function () {
       addItems(true);
     }
 
+    /**
+     * Works の状態を初期化し、イベントリスナをバインドする
+     * @param { Array < Object > } data - JSON から読み込んだワーク項目の配列
+     */
     function initWorks(data) {
       allData = data.slice().reverse();
       filteredData = allData;
@@ -220,6 +370,10 @@ document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("resize", resizeAllItems);
     }
 
+    /**
+     * フィルタ用ラジオ入力に対する委譲された change ハンドラ
+     * @param { Event } e
+     */
     function onFilterChange(e) {
       const target = e.target;
       if (!target) return;
@@ -228,19 +382,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    /**
+     * JSON を読み込み、Works UI を初期化する。fetch が失敗した場合は
+     * コンテナ内にインラインのエラーメッセージを表示する
+     * @returns { Promise < void > }
+     */
+    function loadData() {
+      return fetch("/assets/works/content.json")
+        .then(function (res) {
+          if (!res.ok) throw new Error("Failed to load JSON");
+          return res.json();
+        })
+        .then(function (data) {
+          appendTags(data);
+          initWorks(data);
+        })
+        .catch(function (err) {
+          // エラー時はコンソールへ出力する
+          console.error("works.json load error:", err);
+        });
+    }
+
     // JSON を取得して初期化
-    fetch("/assets/works/content.json")
-      .then(function (res) {
-        if (!res.ok) throw new Error("Failed to load JSON");
-        return res.json();
-      })
-      .then(function (data) {
-        appendTags(data);
-        initWorks(data);
-      })
-      .catch(function (err) {
-        // エラー時のフォールバック: コンソール出力
-        console.error("works.json load error:", err);
-      });
+    loadData();
   });
 });
