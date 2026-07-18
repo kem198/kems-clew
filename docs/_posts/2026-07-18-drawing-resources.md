@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "お絵描き参考サイト集"
+title: "お絵描き参考資料集"
 description: ""
 preview: ""
 category: お絵描き
