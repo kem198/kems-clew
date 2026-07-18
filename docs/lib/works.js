@@ -105,6 +105,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // cached metrics for grid calculations to reduce getComputedStyle calls
     let cachedRowHeight = null;
     let cachedRowGap = null;
+    // ResizeObserver to detect element size changes (optional)
+    let resizeObserver = null;
+    if (window.ResizeObserver) {
+      resizeObserver = new ResizeObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry && entry.target) {
+            resizeItem(entry.target);
+          }
+        });
+      });
+    }
 
     function updateRowMetrics() {
       const style = window.getComputedStyle(container);
@@ -145,10 +156,22 @@ document.addEventListener("DOMContentLoaded", function () {
           el.classList.remove("is-loading");
           // set grid row span when image is ready
           resizeItem(el);
+          // observe size changes for this element to keep span updated
+          if (resizeObserver) resizeObserver.observe(el);
         };
+
         if (img) {
+          // prefer decode() if available for deterministic image readiness
           if (img.complete) {
             show();
+          } else if (typeof img.decode === "function") {
+            img
+              .decode()
+              .then(show)
+              .catch(function () {
+                // fallback to load event if decode fails
+                show();
+              });
           } else {
             img.addEventListener("load", show, { once: true });
             img.addEventListener("error", show, { once: true });
@@ -205,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 既存アイテムを削除
       container.querySelectorAll(".works-item").forEach(function (el) {
+        if (resizeObserver) resizeObserver.unobserve(el);
         el.remove();
       });
 
