@@ -119,17 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // cached metrics for grid calculations to reduce getComputedStyle calls
     let cachedRowHeight = null;
     let cachedRowGap = null;
-    // ResizeObserver to detect element size changes (optional)
-    let resizeObserver = null;
-    if (window.ResizeObserver) {
-      resizeObserver = new ResizeObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry && entry.target) {
-            resizeItem(entry.target);
-          }
-        });
-      });
-    }
 
     /**
      * コンテナの CSS メトリクスを読み取り、行高さとギャップ値をキャッシュする
@@ -217,8 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
           el.classList.remove("is-loading");
           // set grid row span when image is ready
           resizeItem(el);
-          // observe size changes for this element to keep span updated
-          if (resizeObserver) resizeObserver.observe(el);
         };
 
         if (img) {
@@ -326,7 +313,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 既存アイテムを削除
       container.querySelectorAll(".works-item").forEach(function (el) {
-        if (resizeObserver) resizeObserver.unobserve(el);
         el.remove();
       });
 
@@ -402,30 +388,18 @@ document.addEventListener("DOMContentLoaded", function () {
      * @returns { Promise < void > }
      */
     function loadData() {
-      var errorEl = container.querySelector(".works-error");
-      if (!errorEl) {
-        errorEl = document.createElement("div");
-        errorEl.className = "works-error";
-        errorEl.style.display = "none";
-        container.appendChild(errorEl);
-      }
-
       return fetch("/assets/works/content.json")
         .then(function (res) {
           if (!res.ok) throw new Error("Failed to load JSON");
           return res.json();
         })
         .then(function (data) {
-          errorEl.style.display = "none";
           appendTags(data);
           initWorks(data);
         })
         .catch(function (err) {
-          // エラー時のフォールバック: コンソール出力 + UI 表示
+          // エラー時はコンソールへ出力する
           console.error("works.json load error:", err);
-          errorEl.textContent =
-            "作品の読み込みに失敗しました。再読み込みしてください。";
-          errorEl.style.display = "block";
         });
     }
 
