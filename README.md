@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> このリポジトリはアーカイブ済みです。  
+> 今後のサイト更新は [kem198/kems-clew-next](https://github.com/kem198/kems-clew-next) で管理します。
+
 <!-- omit in toc -->
 # KeM's Clew
 
